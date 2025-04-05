@@ -1,0 +1,5 @@
+com\qa\labeler\FailedRunLabeler.class
+myrunner\FailedRun.class
+com\qa\reporter\CustomCucumberFormatter.class
+com\qa\labeler\SuiteRunLabeler.class
+myrunner\SuiteRunnerTest.class

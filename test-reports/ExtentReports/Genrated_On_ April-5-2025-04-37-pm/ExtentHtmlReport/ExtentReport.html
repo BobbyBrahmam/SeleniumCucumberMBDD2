@@ -1,0 +1,3490 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title></title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'></span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Apr 5, 2025 04:37:59 pm</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@allure.label.story:Verify_that_the_user_is_able_to_resize_the_inner_box_equal_to_the_outer_box</a></li>
+					<li><a href='#'>@Draft</a></li>
+					<li><a href='#'>@allure.label.feature:Feature-Handle_Widgets</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_the_user_is_able_to_see_the_tooltip_after_hovering_on_the_button</a></li>
+					<li><a href='#'>@allure.label.epic:Epic-Widgets_Page</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_auto_complete_suggestions</a></li>
+					<li><a href='#'>@allure.label.epic:Epic-Interactions_Page</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_user_is_able_to_add_a_new_records</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_form</a></li>
+					<li><a href='#'>@Regression</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_the_user_is_able_to_drag_and_drop</a></li>
+					<li><a href='#'>@allure.label.feature:Feature-Handling_Elements</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_user_is_able_to_download_and_upload_a_file</a></li>
+					<li><a href='#'>@allure.label.epic:Epic-Alerts_and_Frames</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_old_dropdrown</a></li>
+					<li><a href='#'>@allure.label.owner=Bobby</a></li>
+					<li><a href='#'>@allure.label.story:User_is_able_to_do_window_handling</a></li>
+					<li><a href='#'>@allure.label.feature:Feature-Handle_Alerts_and_Frames_and_Windows</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_user_is_able_to_sort_the_number_list</a></li>
+					<li><a href='#'>@allure.label.story:User_is_able_to_handle_all_kinds_of_alerts</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_the_user_is_able_to_delete_all_existing_records_in_data_table</a></li>
+					<li><a href='#'>@Retest</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_parallelly_in_the_form</a></li>
+					<li><a href='#'>@ReRun</a></li>
+					<li><a href='#'>@TestOne</a></li>
+					<li><a href='#'>@allure.label.feature:Feature-Handling_Interactions</a></li>
+					<li><a href='#'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_sub-menu_item</a></li>
+					<li><a href='#'>@allure.label.epic:Epic-Handling_Elements</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='strong'>4</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>24</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>172</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Feature-Handle Alerts and Frames and Windows</span>
+						<span class='test-time'>Apr 5, 2025 04:38:01 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='2' status='pass'>
+
+	<span class='duration right label'>00 00 51.990</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User is able to handle all kinds of alerts</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@allure.label.epic:Epic-Alerts_and_Frames</span>
+				<span class='category label'>@allure.label.feature:Feature-Handle_Alerts_and_Frames_and_Windows</span>
+				<span class='category label'>@allure.label.owner=Bobby</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReRun</span>
+				<span class='category label'>@allure.label.story:User_is_able_to_handle_all_kinds_of_alerts</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='3' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</div>
+
+
+		</li>
+		<li test-id='4' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_open_alerts_frames_and_windows_pane())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open AlertsFramesAndWindows pane</div>
+
+
+		</li>
+		<li test-id='5' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_open_alerts_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Alerts page</div>
+
+
+		</li>
+		<li test-id='6' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_click_on_normal_alert_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on normal alert button</div>
+
+
+		</li>
+		<li test-id='7' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_see_the_normal_alert())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the normal alert</div>
+
+
+		</li>
+		<li test-id='8' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_accept_the_normal_alert())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I accept the normal alert</div>
+
+
+		</li>
+		<li test-id='9' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_see_the_normal_alert_closed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the normal alert closed</div>
+
+
+		</li>
+		<li test-id='10' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_click_on_delayed_alert_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on delayed alert button</div>
+
+
+		</li>
+		<li test-id='11' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_see_the_delayed_alert_button_after_seconds(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the delayed alert after 5 seconds</div>
+
+
+		</li>
+		<li test-id='12' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_click_accept_the_delayed_alert())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click accept the delayed alert</div>
+
+
+		</li>
+		<li test-id='13' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_see_the_delayed_alert_closed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the delayed alert closed</div>
+
+
+		</li>
+		<li test-id='14' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_click_on_confirmation_alert_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on confirmation alert button</div>
+
+
+		</li>
+		<li test-id='15' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_see_the_confirmation_alert_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the confirmation alert</div>
+
+
+		</li>
+		<li test-id='16' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_click_ok_on_confirmation_alert())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click ok on confirmation alert</div>
+
+
+		</li>
+		<li test-id='17' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_see_that_the_confirmation_alert_get_closed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see that the confirmation alert get closed</div>
+
+
+		</li>
+		<li test-id='18' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_click_on_prompt_alert_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on prompt alert button</div>
+
+
+		</li>
+		<li test-id='19' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_see_the_prompt_alert())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the prompt alert</div>
+
+
+		</li>
+		<li test-id='20' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_enter_some_text_and_click_ok_on_prompt_alert(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I enter some value "Bobby" and click ok on prompt alert</div>
+
+
+		</li>
+		<li test-id='21' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AlertsSteps.i_see_the_prompt_alert_dissapear_and_the_text_diplayed(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the prompt alert dissapear and the text "Bobby" diplayed</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='23' status='pass'>
+
+	<span class='duration right label'>00 00 29.494</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User is able to do window handling</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@allure.label.epic:Epic-Alerts_and_Frames</span>
+				<span class='category label'>@allure.label.story:User_is_able_to_do_window_handling</span>
+				<span class='category label'>@allure.label.feature:Feature-Handle_Alerts_and_Frames_and_Windows</span>
+				<span class='category label'>@TestOne</span>
+				<span class='category label'>@allure.label.owner=Bobby</span>
+				<span class='category label'>@Regression</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='24' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</div>
+
+
+		</li>
+		<li test-id='25' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_open_alerts_frames_and_windows_pane())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open AlertsFramesAndWindows pane</div>
+
+
+		</li>
+		<li test-id='26' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.BrowserWindowsSteps.i_open_browser_windows_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Browser Windows page</div>
+
+
+		</li>
+		<li test-id='27' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.BrowserWindowsSteps.i_click_on_new_tab_windows())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on new tab button</div>
+
+
+		</li>
+		<li test-id='28' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.BrowserWindowsSteps.i_switch_to_new_tab())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I try switching to new tab</div>
+
+
+		</li>
+		<li test-id='29' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.BrowserWindowsSteps.i_am_able_to_switch_to_new_tab())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I am able to switch to new tab</div>
+
+
+		</li>
+		<li test-id='30' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.BrowserWindowsSteps.i_switch_to_main_tab())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I try switching to main tab</div>
+
+
+		</li>
+		<li test-id='31' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.BrowserWindowsSteps.i_am_able_to_switch_to_main_tab(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I am able to switch to main tab "https://demoqa.com/browser-windows"</div>
+
+
+		</li>
+		<li test-id='32' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.BrowserWindowsSteps.i_click_on_new_windows_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on new window button</div>
+
+
+		</li>
+		<li test-id='33' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.BrowserWindowsSteps.i_try_switching_to_new_window(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I try switching to new window "https://demoqa.com/sample"</div>
+
+
+		</li>
+		<li test-id='34' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.BrowserWindowsSteps.i_am_able_to_switch_to_new_window())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I am able to switch to new window</div>
+
+
+		</li>
+		<li test-id='35' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.BrowserWindowsSteps.i_try_switching_back_to_main_window())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I try switching back to main window</div>
+
+
+		</li>
+		<li test-id='36' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.BrowserWindowsSteps.i_am_able_to_switch_to_main_window(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I am able to switch to main window "https://demoqa.com/browser-windows"</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>Feature-Handling Elements</span>
+						<span class='test-time'>Apr 5, 2025 04:39:23 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario outline node' test-id='39' status='pass'>
+
+	<span class='duration right label'>00 01 25.009</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Verify that user is able to fill the user details form</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>fullName</td><td>emailAddress</td><td>currentAddress</td><td>permanentAddress</td></tr><tr><td>"Arjun Suravaram"</td><td>"arjunsuravaram@gmail.com"</td><td>"abc123street"</td><td>"abc123street"</td></tr><tr><td>"Bobby Brahmama"</td><td>"bobybrahmam@gmail.com"</td><td>"qwe123street"</td><td>"aksdflkstreet"</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='40' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that user is able to fill the user details form</div>
+
+				<div class='category-list'>
+						<span class='category label'>@allure.label.feature:Feature-Handling_Elements</span>
+						<span class='category label'>@TestOne</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_form</span>
+						<span class='category label'>@allure.label.epic:Epic-Handling_Elements</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='41' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='42' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open elements pane</h6>
+
+				</li>
+				<li test-id='43' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_go_to_text_box_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I go to text box page</h6>
+
+				</li>
+				<li test-id='44' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_full_name(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I enter the full name "Arjun Suravaram"</h6>
+
+				</li>
+				<li test-id='45' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_eamil_address(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I enter the eamil address "arjunsuravaram@gmail.com"</h6>
+
+				</li>
+				<li test-id='46' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_current_address(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I enter the current address "abc123street"</h6>
+
+				</li>
+				<li test-id='47' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_permanent_address(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I enter the permanent address "abc123street"</h6>
+
+				</li>
+				<li test-id='48' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_submit_the_form()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I submit the form</h6>
+
+				</li>
+				<li test-id='49' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_see_the_details_getting_populated()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the details getting populated</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='51' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that user is able to fill the user details form</div>
+
+				<div class='category-list'>
+						<span class='category label'>@allure.label.feature:Feature-Handling_Elements</span>
+						<span class='category label'>@TestOne</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_form</span>
+						<span class='category label'>@allure.label.epic:Epic-Handling_Elements</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='52' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='53' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open elements pane</h6>
+
+				</li>
+				<li test-id='54' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_go_to_text_box_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I go to text box page</h6>
+
+				</li>
+				<li test-id='55' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_full_name(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I enter the full name "Bobby Brahmama"</h6>
+
+				</li>
+				<li test-id='56' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_eamil_address(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I enter the eamil address "bobybrahmam@gmail.com"</h6>
+
+				</li>
+				<li test-id='57' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_current_address(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I enter the current address "qwe123street"</h6>
+
+				</li>
+				<li test-id='58' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_permanent_address(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I enter the permanent address "aksdflkstreet"</h6>
+
+				</li>
+				<li test-id='59' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_submit_the_form()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I submit the form</h6>
+
+				</li>
+				<li test-id='60' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_see_the_details_getting_populated()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the details getting populated</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='62' status='pass'>
+
+	<span class='duration right label'>00 01 05.019</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Verify that user is able to fill the user details parallelly in the form</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>fullName</td><td>emailAddress</td><td>currentAddress</td><td>permanentAddress</td></tr><tr><td>"Arjun Suravaram"</td><td>"arjunsuravaram@gmail.com"</td><td>"abc123street"</td><td>"abc123street"</td></tr><tr><td>"Bobby Brahmam"</td><td>"bobybrahmam@gmail.com"</td><td>"qwe123street"</td><td>"aksdflkstreet"</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='63' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that user is able to fill the user details parallelly in the form</div>
+
+				<div class='category-list'>
+						<span class='category label'>@allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_parallelly_in_the_form</span>
+						<span class='category label'>@allure.label.feature:Feature-Handling_Elements</span>
+						<span class='category label'>@TestOne</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.epic:Epic-Handling_Elements</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='64' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='65' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open elements pane</h6>
+
+				</li>
+				<li test-id='66' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_go_to_text_box_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I go to text box page</h6>
+
+				</li>
+				<li test-id='67' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_details(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I enter the details "Arjun Suravaram", "arjunsuravaram@gmail.com", "abc123street", "abc123street"</h6>
+
+				</li>
+				<li test-id='68' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_submit_the_form()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I submit the form</h6>
+
+				</li>
+				<li test-id='69' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_see_the_details_getting_populated()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the details getting populated</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='71' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that user is able to fill the user details parallelly in the form</div>
+
+				<div class='category-list'>
+						<span class='category label'>@allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_parallelly_in_the_form</span>
+						<span class='category label'>@allure.label.feature:Feature-Handling_Elements</span>
+						<span class='category label'>@TestOne</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.epic:Epic-Handling_Elements</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='72' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='73' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open elements pane</h6>
+
+				</li>
+				<li test-id='74' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_go_to_text_box_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I go to text box page</h6>
+
+				</li>
+				<li test-id='75' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_details(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I enter the details "Bobby Brahmam", "bobybrahmam@gmail.com", "qwe123street", "aksdflkstreet"</h6>
+
+				</li>
+				<li test-id='76' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_submit_the_form()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I submit the form</h6>
+
+				</li>
+				<li test-id='77' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.TextBoxFormSteps.i_see_the_details_getting_populated()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the details getting populated</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='79' status='pass'>
+
+	<span class='duration right label'>00 00 49.110</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify that the user is able to delete all existing records in data table</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@allure.label.feature:Feature-Handling_Elements</span>
+				<span class='category label'>@allure.label.owner=Bobby</span>
+				<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_delete_all_existing_records_in_data_table</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@allure.label.epic:Epic-Handling_Elements</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='80' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</div>
+
+
+		</li>
+		<li test-id='81' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_open_elements_pane())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open elements pane</div>
+
+
+		</li>
+		<li test-id='82' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.ManageDataTableSteps.i_open_webtables_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open WebTables page</div>
+
+
+		</li>
+		<li test-id='83' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.ManageDataTableSteps.i_see_the_existing_records())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the existing records</div>
+
+
+		</li>
+		<li test-id='84' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.ManageDataTableSteps.i_delete_all_existing_records())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I delete all existing records</div>
+
+
+		</li>
+		<li test-id='85' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.ManageDataTableSteps.all_records_are_deleted())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then All records are deleted</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='87' status='pass'>
+
+	<span class='duration right label'>00 00 54.368</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Verify that user is able to add a new records</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>First Name</td><td>Last Name</td><td>Email</td><td>Age</td><td>Salary</td><td>Department</td></tr><tr><td>Dhoni</td><td>Mahendra Singh</td><td>dhoni@gmail.com</td><td>30</td><td>50000</td><td>Coaching</td></tr><tr><td>Kohli</td><td>Virat</td><td>viratkohli@yahoomail.com</td><td>31</td><td>10000</td><td>Finance</td></tr><tr><td>Rohit</td><td>Sharma</td><td>rohitsharma200@gmail.com</td><td>29</td><td>70000</td><td>HR</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='88' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that user is able to add a new records</div>
+
+				<div class='category-list'>
+						<span class='category label'>@allure.label.feature:Feature-Handling_Elements</span>
+						<span class='category label'>@Draft</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.story:Verify_that_user_is_able_to_add_a_new_records</span>
+						<span class='category label'>@allure.label.epic:Epic-Handling_Elements</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='89' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='90' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open elements pane</h6>
+
+				</li>
+				<li test-id='91' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_open_webtables_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open WebTables page</h6>
+
+				</li>
+				<li test-id='92' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_open_the_registration_form()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open the registration form</h6>
+
+				</li>
+				<li test-id='93' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.I_fill_the_registration_form_with_the_details(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I fill the registration form with the details "Dhoni", "Mahendra Singh", "dhoni@gmail.com", 30, 50000, "Coaching"</h6>
+
+				</li>
+				<li test-id='94' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_submit_the_registratin_form()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I submit the registratin form</h6>
+
+				</li>
+				<li test-id='95' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_see_the_record_with_the_details_added(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,io.cucumber.datatable.DataTable)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the record with the details "Dhoni", "Mahendra Singh", "dhoni@gmail.com", 30, 50000, "Coaching" added</h6>
+
+							<div class="node-step"><table class='markup-table table '><tr><td>First Name</td><td>Last Name</td><td>Email</td><td>Age</td><td>Salary</td><td>Department</td></tr></table></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='97' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that user is able to add a new records</div>
+
+				<div class='category-list'>
+						<span class='category label'>@allure.label.feature:Feature-Handling_Elements</span>
+						<span class='category label'>@Draft</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.story:Verify_that_user_is_able_to_add_a_new_records</span>
+						<span class='category label'>@allure.label.epic:Epic-Handling_Elements</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='98' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='99' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open elements pane</h6>
+
+				</li>
+				<li test-id='100' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_open_webtables_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open WebTables page</h6>
+
+				</li>
+				<li test-id='101' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_open_the_registration_form()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open the registration form</h6>
+
+				</li>
+				<li test-id='102' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.I_fill_the_registration_form_with_the_details(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I fill the registration form with the details "Kohli", "Virat", "viratkohli@yahoomail.com", 31, 10000, "Finance"</h6>
+
+				</li>
+				<li test-id='103' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_submit_the_registratin_form()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I submit the registratin form</h6>
+
+				</li>
+				<li test-id='104' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_see_the_record_with_the_details_added(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,io.cucumber.datatable.DataTable)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the record with the details "Kohli", "Virat", "viratkohli@yahoomail.com", 31, 10000, "Finance" added</h6>
+
+							<div class="node-step"><table class='markup-table table '><tr><td>First Name</td><td>Last Name</td><td>Email</td><td>Age</td><td>Salary</td><td>Department</td></tr></table></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='106' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that user is able to add a new records</div>
+
+				<div class='category-list'>
+						<span class='category label'>@allure.label.feature:Feature-Handling_Elements</span>
+						<span class='category label'>@Draft</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.story:Verify_that_user_is_able_to_add_a_new_records</span>
+						<span class='category label'>@allure.label.epic:Epic-Handling_Elements</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='107' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='108' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open elements pane</h6>
+
+				</li>
+				<li test-id='109' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_open_webtables_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open WebTables page</h6>
+
+				</li>
+				<li test-id='110' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_open_the_registration_form()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open the registration form</h6>
+
+				</li>
+				<li test-id='111' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.I_fill_the_registration_form_with_the_details(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I fill the registration form with the details "Rohit", "Sharma", "rohitsharma200@gmail.com", 29, 70000, "HR"</h6>
+
+				</li>
+				<li test-id='112' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_submit_the_registratin_form()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I submit the registratin form</h6>
+
+				</li>
+				<li test-id='113' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.ManageDataTableSteps.i_see_the_record_with_the_details_added(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,io.cucumber.datatable.DataTable)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the record with the details "Rohit", "Sharma", "rohitsharma200@gmail.com", 29, 70000, "HR" added</h6>
+
+							<div class="node-step"><table class='markup-table table '><tr><td>First Name</td><td>Last Name</td><td>Email</td><td>Age</td><td>Salary</td><td>Department</td></tr></table></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='115' status='pass'>
+
+	<span class='duration right label'>00 00 09.446</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify that user is able to download and upload a file</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@allure.label.feature:Feature-Handling_Elements</span>
+				<span class='category label'>@TestOne</span>
+				<span class='category label'>@allure.label.owner=Bobby</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@allure.label.story:Verify_that_user_is_able_to_download_and_upload_a_file</span>
+				<span class='category label'>@allure.label.epic:Epic-Handling_Elements</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='116' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</div>
+
+
+		</li>
+		<li test-id='117' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_open_elements_pane())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open elements pane</div>
+
+
+		</li>
+		<li test-id='118' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.FileDownloadAndUploadSteps.i_open_upload_download_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open upload-download page</div>
+
+
+		</li>
+		<li test-id='119' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.FileDownloadAndUploadSteps.i_download_the_file())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I download the file</div>
+
+
+		</li>
+		<li test-id='120' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.FileDownloadAndUploadSteps.i_see_the_file_got_downloaded())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the file got downloaded</div>
+
+
+		</li>
+		<li test-id='121' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.FileDownloadAndUploadSteps.i_upload_the_file())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I upload the file</div>
+
+
+		</li>
+		<li test-id='122' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.FileDownloadAndUploadSteps.i_see_the_file_got_uploaded())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the file got uploaded</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='124'>
+					<div class='test-heading'>
+						<span class='test-name'>Feature-Handling Interactions</span>
+						<span class='test-time'>Apr 5, 2025 04:43:46 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='125' status='pass'>
+
+	<span class='duration right label'>00 00 33.628</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify that user is able to sort the number list</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@allure.label.story:Verify_that_user_is_able_to_sort_the_number_list</span>
+				<span class='category label'>@allure.label.epic:Epic-Interactions_Page</span>
+				<span class='category label'>@Draft</span>
+				<span class='category label'>@allure.label.owner=Bobby</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@allure.label.feature:Feature-Handling_Interactions</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='126' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</div>
+
+
+		</li>
+		<li test-id='127' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_open_interactions_pane())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open interactions pane</div>
+
+
+		</li>
+		<li test-id='128' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.DragAndDropSortableSteps.i_open_sortable_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open sortable page</div>
+
+
+		</li>
+		<li test-id='129' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.DragAndDropSortableSteps.i_re_sort_the_list_in_reverse_order())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I re-sort the list in reverse order</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='131' status='pass'>
+
+	<span class='duration right label'>00 00 11.613</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify that the user is able to drag and drop</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@allure.label.epic:Epic-Interactions_Page</span>
+				<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_drag_and_drop</span>
+				<span class='category label'>@allure.label.owner=Bobby</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReRun</span>
+				<span class='category label'>@allure.label.feature:Feature-Handling_Interactions</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='132' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</div>
+
+
+		</li>
+		<li test-id='133' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_open_interactions_pane())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open interactions pane</div>
+
+
+		</li>
+		<li test-id='134' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.DragAndDropSteps.i_open_droppable_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Droppable page</div>
+
+
+		</li>
+		<li test-id='135' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.DragAndDropSteps.i_see_the_drag_and_drop_elements())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the drag and drop elements</div>
+
+
+		</li>
+		<li test-id='136' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.DragAndDropSteps.i_drag_and_drop_the_element())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I drag and drop the element</div>
+
+
+		</li>
+		<li test-id='137' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.DragAndDropSteps.i_see_element_got_dropped(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see element got dropped displaying the message "Dropped!"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='139' status='pass'>
+
+	<span class='duration right label'>00 00 10.490</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify that the user is able to resize the inner box equal to the outer box</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@allure.label.epic:Epic-Interactions_Page</span>
+				<span class='category label'>@allure.label.owner=Bobby</span>
+				<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_resize_the_inner_box_equal_to_the_outer_box</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@allure.label.feature:Feature-Handling_Interactions</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='140' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</div>
+
+
+		</li>
+		<li test-id='141' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_open_interactions_pane())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open interactions pane</div>
+
+
+		</li>
+		<li test-id='142' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.ResizableSteps.i_open_resizable_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Resizable page</div>
+
+
+		</li>
+		<li test-id='143' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.ResizableSteps.i_hold_and_drag_the_inner_resizable_equal_to_outer_box())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I hold and drag the inner resizable equal to outer box</div>
+
+
+		</li>
+		<li test-id='144' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.ResizableSteps.i_see_the_inner_box_aligned_with_the_outer_box())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the inner box aligned with the outer box</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='146'>
+					<div class='test-heading'>
+						<span class='test-name'>Feature-Handle Widgets</span>
+						<span class='test-time'>Apr 5, 2025 04:44:41 pm</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+	<div class='test-desc'>  This test attempts to create a label with specified title</div>
+
+<div class='scenario node' test-id='147' status='pass'>
+
+	<span class='duration right label'>00 00 27.512</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify that the user is able to select the sub-menu item</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_sub-menu_item</span>
+				<span class='category label'>@TestOne</span>
+				<span class='category label'>@Draft</span>
+				<span class='category label'>@allure.label.owner=Bobby</span>
+				<span class='category label'>@allure.label.epic:Epic-Widgets_Page</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@allure.label.feature:Feature-Handle_Widgets</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='148' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</div>
+
+
+		</li>
+		<li test-id='149' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open widgets pane</div>
+
+
+		</li>
+		<li test-id='150' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.MenuSteps.i_open_menu_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Menu page</div>
+
+
+		</li>
+		<li test-id='151' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.MenuSteps.i_see_the_menu_bar())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the menu bar</div>
+
+
+		</li>
+		<li test-id='152' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.MenuSteps.i_hover_on_the_main_menu_bar(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I hover on the "second" main menu</div>
+
+
+		</li>
+		<li test-id='153' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.MenuSteps.i_see_the_menu_list(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the "second" main menu list</div>
+
+
+		</li>
+		<li test-id='154' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.MenuSteps.i_hover_on_the_sub_menu(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I hover on sub menu of "second" main menu</div>
+
+
+		</li>
+		<li test-id='155' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.MenuSteps.i_see_the_sub_menu(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the sub menu list of "second" main menu</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='157' status='pass'>
+
+	<span class='duration right label'>00 00 30.832</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify that the user is able to select the auto complete suggestions</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TestOne</span>
+				<span class='category label'>@Draft</span>
+				<span class='category label'>@allure.label.owner=Bobby</span>
+				<span class='category label'>@allure.label.epic:Epic-Widgets_Page</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@allure.label.feature:Feature-Handle_Widgets</span>
+				<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_auto_complete_suggestions</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='158' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</div>
+
+
+		</li>
+		<li test-id='159' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open widgets pane</div>
+
+
+		</li>
+		<li test-id='160' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AutoCompleteSteps.i_open_auto_complete_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Auto-Complete page</div>
+
+
+		</li>
+		<li test-id='161' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AutoCompleteSteps.i_enter_the_initial_letter_of_a_word())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I enter the initial letter of a word</div>
+
+
+		</li>
+		<li test-id='162' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AutoCompleteSteps.i_see_the_related_suggestions())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the related suggestions</div>
+
+
+		</li>
+		<li test-id='163' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AutoCompleteSteps.i_select_the_first_suggestion())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I select the first suggestion</div>
+
+
+		</li>
+		<li test-id='164' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.AutoCompleteSteps.i_see_the_selected_suggestion_got_entered(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the selected suggestion "Black" got entered</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='166' status='pass'>
+
+	<span class='duration right label'>00 02 39.242</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Verify that the user is able to select the values from bootstrap dropdrown</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>value</td></tr><tr><td>"Group 1, option 1"</td></tr><tr><td>"Group 1, option 2"</td></tr><tr><td>"Group 2, option 1"</td></tr><tr><td>"Group 2, option 2"</td></tr><tr><td>"A root option"</td></tr><tr><td>"Another root option"</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='167' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that the user is able to select the values from bootstrap dropdrown</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Retest</span>
+						<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@allure.label.epic:Epic-Widgets_Page</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.feature:Feature-Handle_Widgets</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='168' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='169' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open widgets pane</h6>
+
+				</li>
+				<li test-id='170' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Select Menu page</h6>
+
+				</li>
+				<li test-id='171' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='172' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I select the option "Group 1, option 1" in the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='173' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the "Group 1, option 1" get selected</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='175' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that the user is able to select the values from bootstrap dropdrown</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Retest</span>
+						<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@allure.label.epic:Epic-Widgets_Page</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.feature:Feature-Handle_Widgets</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='176' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='177' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open widgets pane</h6>
+
+				</li>
+				<li test-id='178' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Select Menu page</h6>
+
+				</li>
+				<li test-id='179' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='180' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I select the option "Group 1, option 2" in the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='181' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the "Group 1, option 2" get selected</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='183' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that the user is able to select the values from bootstrap dropdrown</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Retest</span>
+						<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@allure.label.epic:Epic-Widgets_Page</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.feature:Feature-Handle_Widgets</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='184' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='185' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open widgets pane</h6>
+
+				</li>
+				<li test-id='186' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Select Menu page</h6>
+
+				</li>
+				<li test-id='187' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='188' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I select the option "Group 2, option 1" in the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='189' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the "Group 2, option 1" get selected</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='191' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that the user is able to select the values from bootstrap dropdrown</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Retest</span>
+						<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@allure.label.epic:Epic-Widgets_Page</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.feature:Feature-Handle_Widgets</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='192' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='193' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open widgets pane</h6>
+
+				</li>
+				<li test-id='194' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Select Menu page</h6>
+
+				</li>
+				<li test-id='195' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='196' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I select the option "Group 2, option 2" in the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='197' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the "Group 2, option 2" get selected</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='199' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that the user is able to select the values from bootstrap dropdrown</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Retest</span>
+						<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@allure.label.epic:Epic-Widgets_Page</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.feature:Feature-Handle_Widgets</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='200' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='201' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open widgets pane</h6>
+
+				</li>
+				<li test-id='202' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Select Menu page</h6>
+
+				</li>
+				<li test-id='203' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='204' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I select the option "A root option" in the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='205' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the "A root option" get selected</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='207' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify that the user is able to select the values from bootstrap dropdrown</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Retest</span>
+						<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown</span>
+						<span class='category label'>@allure.label.owner=Bobby</span>
+						<span class='category label'>@allure.label.epic:Epic-Widgets_Page</span>
+						<span class='category label'>@Regression</span>
+						<span class='category label'>@allure.label.feature:Feature-Handle_Widgets</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='208' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</h6>
+
+				</li>
+				<li test-id='209' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open widgets pane</h6>
+
+				</li>
+				<li test-id='210' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Select Menu page</h6>
+
+				</li>
+				<li test-id='211' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='212' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I select the option "Another root option" in the bootstrap dropdown</h6>
+
+				</li>
+				<li test-id='213' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the "Another root option" get selected</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='215' status='pass'>
+
+	<span class='duration right label'>00 00 19.485</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify that the user is able to select the values from old dropdrown</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Draft</span>
+				<span class='category label'>@allure.label.owner=Bobby</span>
+				<span class='category label'>@allure.label.epic:Epic-Widgets_Page</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_old_dropdrown</span>
+				<span class='category label'>@allure.label.feature:Feature-Handle_Widgets</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='216' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</div>
+
+
+		</li>
+		<li test-id='217' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open widgets pane</div>
+
+
+		</li>
+		<li test-id='218' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Select Menu page</div>
+
+
+		</li>
+		<li test-id='219' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.SelectMenuSteps.i_see_the_old_dropdown())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the old dropdown</div>
+
+
+		</li>
+		<li test-id='220' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.SelectMenuSteps.I_am_able_to_select_all_the_options_in_the_old_dropdown(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I am able to select all the options in the old dropdown</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>value</td></tr><tr><td>Red</td></tr><tr><td>Blue</td></tr><tr><td>Green</td></tr><tr><td>Yellow</td></tr><tr><td>Purple</td></tr><tr><td>Black</td></tr><tr><td>White</td></tr><tr><td>Voilet</td></tr><tr><td>Indigo</td></tr><tr><td>Magenta</td></tr><tr><td>Aqua</td></tr></table></div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='222' status='pass'>
+
+	<span class='duration right label'>00 00 28.554</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify that the user is able to see the tooltip after hovering on the button</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Retest</span>
+				<span class='category label'>@allure.label.story:Verify_that_the_user_is_able_to_see_the_tooltip_after_hovering_on_the_button</span>
+				<span class='category label'>@allure.label.owner=Bobby</span>
+				<span class='category label'>@allure.label.epic:Epic-Widgets_Page</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@allure.label.feature:Feature-Handle_Widgets</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='223' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to ToolsQA HomePage</div>
+
+
+		</li>
+		<li test-id='224' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I open widgets pane</div>
+
+
+		</li>
+		<li test-id='225' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.ToolTipSteps.i_open_tool_tips_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I open Tool Tips page</div>
+
+
+		</li>
+		<li test-id='226' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.ToolTipSteps.i_hover_on_the_given_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I hover on the given button</div>
+
+
+		</li>
+		<li test-id='227' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.qa.stepDefinitions.ToolTipSteps.i_see_the_tool_tip_with_the_tip_message(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I see the tool tip with the tip message "You hovered over the Button"</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_the_user_is_able_to_resize_the_inner_box_equal_to_the_outer_box</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:44:31 pm</td>
+										<td class='linked' test-id='139'>Verify that the user is able to resize the inner box equal to the outer box</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Draft</span>
+						<span class='category-status right'>
+						<span class='label pass'>7</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 7</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:42:42 pm</td>
+										<td class='linked' test-id='88'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:42:54 pm</td>
+										<td class='linked' test-id='97'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:05 pm</td>
+										<td class='linked' test-id='106'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:46 pm</td>
+										<td class='linked' test-id='125'>Verify that user is able to sort the number list</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:41 pm</td>
+										<td class='linked' test-id='147'>Verify that the user is able to select the sub-menu item</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:45:09 pm</td>
+										<td class='linked' test-id='157'>Verify that the user is able to select the auto complete suggestions</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:48:19 pm</td>
+										<td class='linked' test-id='215'>Verify that the user is able to select the values from old dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.feature:Feature-Handle_Widgets</span>
+						<span class='category-status right'>
+						<span class='label pass'>10</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 10</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:44:41 pm</td>
+										<td class='linked' test-id='147'>Verify that the user is able to select the sub-menu item</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:45:09 pm</td>
+										<td class='linked' test-id='157'>Verify that the user is able to select the auto complete suggestions</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:45:40 pm</td>
+										<td class='linked' test-id='167'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:12 pm</td>
+										<td class='linked' test-id='175'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:38 pm</td>
+										<td class='linked' test-id='183'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:09 pm</td>
+										<td class='linked' test-id='191'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:40 pm</td>
+										<td class='linked' test-id='199'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:58 pm</td>
+										<td class='linked' test-id='207'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:48:19 pm</td>
+										<td class='linked' test-id='215'>Verify that the user is able to select the values from old dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:48:39 pm</td>
+										<td class='linked' test-id='222'>Verify that the user is able to see the tooltip after hovering on the button</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_the_user_is_able_to_see_the_tooltip_after_hovering_on_the_button</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:48:39 pm</td>
+										<td class='linked' test-id='222'>Verify that the user is able to see the tooltip after hovering on the button</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.epic:Epic-Widgets_Page</span>
+						<span class='category-status right'>
+						<span class='label pass'>10</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 10</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:44:41 pm</td>
+										<td class='linked' test-id='147'>Verify that the user is able to select the sub-menu item</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:45:09 pm</td>
+										<td class='linked' test-id='157'>Verify that the user is able to select the auto complete suggestions</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:45:40 pm</td>
+										<td class='linked' test-id='167'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:12 pm</td>
+										<td class='linked' test-id='175'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:38 pm</td>
+										<td class='linked' test-id='183'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:09 pm</td>
+										<td class='linked' test-id='191'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:40 pm</td>
+										<td class='linked' test-id='199'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:58 pm</td>
+										<td class='linked' test-id='207'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:48:19 pm</td>
+										<td class='linked' test-id='215'>Verify that the user is able to select the values from old dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:48:39 pm</td>
+										<td class='linked' test-id='222'>Verify that the user is able to see the tooltip after hovering on the button</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_auto_complete_suggestions</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:45:09 pm</td>
+										<td class='linked' test-id='157'>Verify that the user is able to select the auto complete suggestions</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.epic:Epic-Interactions_Page</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:43:46 pm</td>
+										<td class='linked' test-id='125'>Verify that user is able to sort the number list</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:19 pm</td>
+										<td class='linked' test-id='131'>Verify that the user is able to drag and drop</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:31 pm</td>
+										<td class='linked' test-id='139'>Verify that the user is able to resize the inner box equal to the outer box</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_user_is_able_to_add_a_new_records</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:42:42 pm</td>
+										<td class='linked' test-id='88'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:42:54 pm</td>
+										<td class='linked' test-id='97'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:05 pm</td>
+										<td class='linked' test-id='106'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_form</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:39:23 pm</td>
+										<td class='linked' test-id='40'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:40:14 pm</td>
+										<td class='linked' test-id='51'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Regression</span>
+						<span class='category-status right'>
+						<span class='label pass'>24</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 24</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:38:01 pm</td>
+										<td class='linked' test-id='2'>User is able to handle all kinds of alerts</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:38:53 pm</td>
+										<td class='linked' test-id='23'>User is able to do window handling</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:39:23 pm</td>
+										<td class='linked' test-id='40'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:40:14 pm</td>
+										<td class='linked' test-id='51'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:40:48 pm</td>
+										<td class='linked' test-id='63'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:41:40 pm</td>
+										<td class='linked' test-id='71'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:41:53 pm</td>
+										<td class='linked' test-id='79'>Verify that the user is able to delete all existing records in data table</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:42:42 pm</td>
+										<td class='linked' test-id='88'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:42:54 pm</td>
+										<td class='linked' test-id='97'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:05 pm</td>
+										<td class='linked' test-id='106'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:36 pm</td>
+										<td class='linked' test-id='115'>Verify that user is able to download and upload a file</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:46 pm</td>
+										<td class='linked' test-id='125'>Verify that user is able to sort the number list</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:19 pm</td>
+										<td class='linked' test-id='131'>Verify that the user is able to drag and drop</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:31 pm</td>
+										<td class='linked' test-id='139'>Verify that the user is able to resize the inner box equal to the outer box</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:41 pm</td>
+										<td class='linked' test-id='147'>Verify that the user is able to select the sub-menu item</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:45:09 pm</td>
+										<td class='linked' test-id='157'>Verify that the user is able to select the auto complete suggestions</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:45:40 pm</td>
+										<td class='linked' test-id='167'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:12 pm</td>
+										<td class='linked' test-id='175'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:38 pm</td>
+										<td class='linked' test-id='183'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:09 pm</td>
+										<td class='linked' test-id='191'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:40 pm</td>
+										<td class='linked' test-id='199'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:58 pm</td>
+										<td class='linked' test-id='207'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:48:19 pm</td>
+										<td class='linked' test-id='215'>Verify that the user is able to select the values from old dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:48:39 pm</td>
+										<td class='linked' test-id='222'>Verify that the user is able to see the tooltip after hovering on the button</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_the_user_is_able_to_drag_and_drop</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:44:19 pm</td>
+										<td class='linked' test-id='131'>Verify that the user is able to drag and drop</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.feature:Feature-Handling_Elements</span>
+						<span class='category-status right'>
+						<span class='label pass'>9</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 9</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:39:23 pm</td>
+										<td class='linked' test-id='40'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:40:14 pm</td>
+										<td class='linked' test-id='51'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:40:48 pm</td>
+										<td class='linked' test-id='63'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:41:40 pm</td>
+										<td class='linked' test-id='71'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:41:53 pm</td>
+										<td class='linked' test-id='79'>Verify that the user is able to delete all existing records in data table</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:42:42 pm</td>
+										<td class='linked' test-id='88'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:42:54 pm</td>
+										<td class='linked' test-id='97'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:05 pm</td>
+										<td class='linked' test-id='106'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:36 pm</td>
+										<td class='linked' test-id='115'>Verify that user is able to download and upload a file</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_user_is_able_to_download_and_upload_a_file</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:43:36 pm</td>
+										<td class='linked' test-id='115'>Verify that user is able to download and upload a file</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.epic:Epic-Alerts_and_Frames</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:38:01 pm</td>
+										<td class='linked' test-id='2'>User is able to handle all kinds of alerts</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:38:53 pm</td>
+										<td class='linked' test-id='23'>User is able to do window handling</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown</span>
+						<span class='category-status right'>
+						<span class='label pass'>6</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 6</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:45:40 pm</td>
+										<td class='linked' test-id='167'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:12 pm</td>
+										<td class='linked' test-id='175'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:38 pm</td>
+										<td class='linked' test-id='183'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:09 pm</td>
+										<td class='linked' test-id='191'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:40 pm</td>
+										<td class='linked' test-id='199'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:58 pm</td>
+										<td class='linked' test-id='207'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_old_dropdrown</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:48:19 pm</td>
+										<td class='linked' test-id='215'>Verify that the user is able to select the values from old dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.owner=Bobby</span>
+						<span class='category-status right'>
+						<span class='label pass'>24</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 24</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:38:01 pm</td>
+										<td class='linked' test-id='2'>User is able to handle all kinds of alerts</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:38:53 pm</td>
+										<td class='linked' test-id='23'>User is able to do window handling</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:39:23 pm</td>
+										<td class='linked' test-id='40'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:40:14 pm</td>
+										<td class='linked' test-id='51'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:40:48 pm</td>
+										<td class='linked' test-id='63'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:41:40 pm</td>
+										<td class='linked' test-id='71'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:41:53 pm</td>
+										<td class='linked' test-id='79'>Verify that the user is able to delete all existing records in data table</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:42:42 pm</td>
+										<td class='linked' test-id='88'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:42:54 pm</td>
+										<td class='linked' test-id='97'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:05 pm</td>
+										<td class='linked' test-id='106'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:36 pm</td>
+										<td class='linked' test-id='115'>Verify that user is able to download and upload a file</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:46 pm</td>
+										<td class='linked' test-id='125'>Verify that user is able to sort the number list</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:19 pm</td>
+										<td class='linked' test-id='131'>Verify that the user is able to drag and drop</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:31 pm</td>
+										<td class='linked' test-id='139'>Verify that the user is able to resize the inner box equal to the outer box</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:41 pm</td>
+										<td class='linked' test-id='147'>Verify that the user is able to select the sub-menu item</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:45:09 pm</td>
+										<td class='linked' test-id='157'>Verify that the user is able to select the auto complete suggestions</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:45:40 pm</td>
+										<td class='linked' test-id='167'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:12 pm</td>
+										<td class='linked' test-id='175'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:38 pm</td>
+										<td class='linked' test-id='183'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:09 pm</td>
+										<td class='linked' test-id='191'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:40 pm</td>
+										<td class='linked' test-id='199'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:58 pm</td>
+										<td class='linked' test-id='207'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:48:19 pm</td>
+										<td class='linked' test-id='215'>Verify that the user is able to select the values from old dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:48:39 pm</td>
+										<td class='linked' test-id='222'>Verify that the user is able to see the tooltip after hovering on the button</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:User_is_able_to_do_window_handling</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:38:53 pm</td>
+										<td class='linked' test-id='23'>User is able to do window handling</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.feature:Feature-Handle_Alerts_and_Frames_and_Windows</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:38:01 pm</td>
+										<td class='linked' test-id='2'>User is able to handle all kinds of alerts</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:38:53 pm</td>
+										<td class='linked' test-id='23'>User is able to do window handling</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_user_is_able_to_sort_the_number_list</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:43:46 pm</td>
+										<td class='linked' test-id='125'>Verify that user is able to sort the number list</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:User_is_able_to_handle_all_kinds_of_alerts</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:38:01 pm</td>
+										<td class='linked' test-id='2'>User is able to handle all kinds of alerts</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_the_user_is_able_to_delete_all_existing_records_in_data_table</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:41:53 pm</td>
+										<td class='linked' test-id='79'>Verify that the user is able to delete all existing records in data table</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Retest</span>
+						<span class='category-status right'>
+						<span class='label pass'>7</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 7</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:45:40 pm</td>
+										<td class='linked' test-id='167'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:12 pm</td>
+										<td class='linked' test-id='175'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:46:38 pm</td>
+										<td class='linked' test-id='183'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:09 pm</td>
+										<td class='linked' test-id='191'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:40 pm</td>
+										<td class='linked' test-id='199'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:47:58 pm</td>
+										<td class='linked' test-id='207'>Verify that the user is able to select the values from bootstrap dropdrown</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:48:39 pm</td>
+										<td class='linked' test-id='222'>Verify that the user is able to see the tooltip after hovering on the button</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_parallelly_in_the_form</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:40:48 pm</td>
+										<td class='linked' test-id='63'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:41:40 pm</td>
+										<td class='linked' test-id='71'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@ReRun</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:38:01 pm</td>
+										<td class='linked' test-id='2'>User is able to handle all kinds of alerts</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:19 pm</td>
+										<td class='linked' test-id='131'>Verify that the user is able to drag and drop</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TestOne</span>
+						<span class='category-status right'>
+						<span class='label pass'>8</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 8</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:38:53 pm</td>
+										<td class='linked' test-id='23'>User is able to do window handling</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:39:23 pm</td>
+										<td class='linked' test-id='40'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:40:14 pm</td>
+										<td class='linked' test-id='51'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:40:48 pm</td>
+										<td class='linked' test-id='63'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:41:40 pm</td>
+										<td class='linked' test-id='71'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:36 pm</td>
+										<td class='linked' test-id='115'>Verify that user is able to download and upload a file</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:41 pm</td>
+										<td class='linked' test-id='147'>Verify that the user is able to select the sub-menu item</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:45:09 pm</td>
+										<td class='linked' test-id='157'>Verify that the user is able to select the auto complete suggestions</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.feature:Feature-Handling_Interactions</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:43:46 pm</td>
+										<td class='linked' test-id='125'>Verify that user is able to sort the number list</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:19 pm</td>
+										<td class='linked' test-id='131'>Verify that the user is able to drag and drop</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:44:31 pm</td>
+										<td class='linked' test-id='139'>Verify that the user is able to resize the inner box equal to the outer box</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.story:Verify_that_the_user_is_able_to_select_the_sub-menu_item</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:44:41 pm</td>
+										<td class='linked' test-id='147'>Verify that the user is able to select the sub-menu item</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@allure.label.epic:Epic-Handling_Elements</span>
+						<span class='category-status right'>
+						<span class='label pass'>9</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 9</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 5, 2025 04:39:23 pm</td>
+										<td class='linked' test-id='40'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:40:14 pm</td>
+										<td class='linked' test-id='51'>Verify that user is able to fill the user details form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:40:48 pm</td>
+										<td class='linked' test-id='63'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:41:40 pm</td>
+										<td class='linked' test-id='71'>Verify that user is able to fill the user details parallelly in the form</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:41:53 pm</td>
+										<td class='linked' test-id='79'>Verify that the user is able to delete all existing records in data table</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:42:42 pm</td>
+										<td class='linked' test-id='88'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:42:54 pm</td>
+										<td class='linked' test-id='97'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:05 pm</td>
+										<td class='linked' test-id='106'>Verify that user is able to add a new records</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 5, 2025 04:43:36 pm</td>
+										<td class='linked' test-id='115'>Verify that user is able to download and upload a file</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>4</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>24</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>172</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Apr 5, 2025 04:37:59 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Apr 5, 2025 04:49:07 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 11 08.279</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>version</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td>os</td>
+								<td>windows</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_the_user_is_able_to_resize_the_inner_box_equal_to_the_outer_box</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Draft</td>
+							<td>7</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.feature:Feature-Handle_Widgets</td>
+							<td>10</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_the_user_is_able_to_see_the_tooltip_after_hovering_on_the_button</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.epic:Epic-Widgets_Page</td>
+							<td>10</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_the_user_is_able_to_select_the_auto_complete_suggestions</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.epic:Epic-Interactions_Page</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_user_is_able_to_add_a_new_records</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_form</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Regression</td>
+							<td>24</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_the_user_is_able_to_drag_and_drop</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.feature:Feature-Handling_Elements</td>
+							<td>9</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_user_is_able_to_download_and_upload_a_file</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.epic:Epic-Alerts_and_Frames</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown</td>
+							<td>6</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_old_dropdrown</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.owner=Bobby</td>
+							<td>24</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:User_is_able_to_do_window_handling</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.feature:Feature-Handle_Alerts_and_Frames_and_Windows</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_user_is_able_to_sort_the_number_list</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:User_is_able_to_handle_all_kinds_of_alerts</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_the_user_is_able_to_delete_all_existing_records_in_data_table</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Retest</td>
+							<td>7</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_parallelly_in_the_form</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@ReRun</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TestOne</td>
+							<td>8</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.feature:Feature-Handling_Interactions</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.story:Verify_that_the_user_is_able_to_select_the_sub-menu_item</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@allure.label.epic:Epic-Handling_Elements</td>
+							<td>9</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 4,
+				passParent: 4,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 24,
+				passChild: 24,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 172,
+				passGrandChild: 172,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Feature-Handle Alerts and Frames and Windows":81.601,"Feature-Handling Elements":263.02,"Feature-Handling Interactions":55.747,"Feature-Handle Widgets":265.671
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>

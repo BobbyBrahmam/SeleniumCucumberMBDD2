@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="myrunner.SuiteRunnerTest" time="659.612" tests="172" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="E:\Programming\workspace\SeleniumCucumberMBDD2\target\test-classes;E:\Programming\workspace\SeleniumCucumberMBDD2\target\classes;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-java\4.30.0\selenium-java-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-api\4.30.0\selenium-api-4.30.0.jar;C:\Users\hp\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.30.0\selenium-chrome-driver-4.30.0.jar;C:\Users\hp\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.30.0\selenium-chromium-driver-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-json\4.30.0\selenium-json-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.30.0\selenium-manager-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v132\4.30.0\selenium-devtools-v132-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.30.0\selenium-devtools-v133-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v134\4.30.0\selenium-devtools-v134-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.30.0\selenium-edge-driver-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.30.0\selenium-firefox-driver-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-http\4.30.0\selenium-http-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.30.0\selenium-ie-driver-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.30.0\selenium-remote-driver-4.30.0.jar;C:\Users\hp\.m2\repository\com\google\guava\guava\33.4.5-jre\guava-33.4.5-jre.jar;C:\Users\hp\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\hp\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\hp\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\hp\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-api\1.48.0\opentelemetry-api-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-context\1.48.0\opentelemetry-context-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.48.0\opentelemetry-exporter-logging-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.48.0\opentelemetry-sdk-common-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.48.0\opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.48.0\opentelemetry-sdk-extension-autoconfigure-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.48.0\opentelemetry-sdk-trace-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.48.0\opentelemetry-sdk-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.48.0\opentelemetry-sdk-metrics-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.48.0\opentelemetry-sdk-logs-1.48.0.jar;C:\Users\hp\.m2\repository\net\bytebuddy\byte-buddy\1.17.2\byte-buddy-1.17.2.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-os\4.30.0\selenium-os-4.30.0.jar;C:\Users\hp\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.30.0\selenium-safari-driver-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-support\4.30.0\selenium-support-4.30.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-java\7.14.0\cucumber-java-7.14.0.jar;C:\Users\hp\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-junit\7.14.0\cucumber-junit-7.14.0.jar;C:\Users\hp\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\hp\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-core\7.14.0\cucumber-core-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-gherkin\7.14.0\cucumber-gherkin-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.14.0\cucumber-gherkin-messages-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\hp\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\hp\.m2\repository\io\cucumber\tag-expressions\5.0.6\tag-expressions-5.0.6.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\hp\.m2\repository\io\cucumber\datatable\7.14.0\datatable-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-plugin\7.14.0\cucumber-plugin-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\docstring\7.14.0\docstring-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\hp\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\hp\.m2\repository\io\cucumber\ci-environment\9.2.0\ci-environment-9.2.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-picocontainer\7.14.0\cucumber-picocontainer-7.14.0.jar;C:\Users\hp\.m2\repository\org\picocontainer\picocontainer\2.15\picocontainer-2.15.jar;C:\Users\hp\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\hp\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\hp\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\hp\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\hp\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\hp\.m2\repository\org\junit\vintage\junit-vintage-engine\5.10.0\junit-vintage-engine-5.10.0.jar;C:\Users\hp\.m2\repository\org\slf4j\slf4j-simple\2.0.9\slf4j-simple-2.0.9.jar;C:\Users\hp\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\hp\.m2\repository\com\aventstack\extentreports\5.1.0\extentreports-5.1.0.jar;C:\Users\hp\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\hp\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\hp\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\hp\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\hp\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.9.0\extentreports-cucumber7-adapter-1.9.0.jar;C:\Users\hp\.m2\repository\com\aventstack\klov-reporter\5.0.9\klov-reporter-5.0.9.jar;C:\Users\hp\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\hp\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\hp\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\hp\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\hp\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\hp\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\hp\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\hp\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\hp\.m2\repository\tech\grasshopper\htmlextentreporter\1.0.1\htmlextentreporter-1.0.1.jar;C:\Users\hp\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\hp\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\hp\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\hp\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\hp\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\hp\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\hp\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\hp\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\hp\.m2\repository\org\yaml\snakeyaml\2.0\snakeyaml-2.0.jar;C:\Users\hp\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\hp\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\hp\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\hp\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.29.1\allure-cucumber7-jvm-2.29.1.jar;C:\Users\hp\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\hp\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\hp\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\hp\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\hp\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="webdriver.chrome.silentOutput" value="true"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\hp\AppData\Local\Temp\surefire5170792104700575756\surefirebooter-20250405170833337_3.jar C:\Users\hp\AppData\Local\Temp\surefire5170792104700575756 2025-04-05T17-08-33_039-jvmRun1 surefire-20250405170833337_1tmp surefire_0-20250405170833337_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="myrunner.SuiteRunnerTest"/>
+    <property name="surefire.test.class.path" value="E:\Programming\workspace\SeleniumCucumberMBDD2\target\test-classes;E:\Programming\workspace\SeleniumCucumberMBDD2\target\classes;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-java\4.30.0\selenium-java-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-api\4.30.0\selenium-api-4.30.0.jar;C:\Users\hp\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.30.0\selenium-chrome-driver-4.30.0.jar;C:\Users\hp\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.30.0\selenium-chromium-driver-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-json\4.30.0\selenium-json-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.30.0\selenium-manager-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v132\4.30.0\selenium-devtools-v132-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v133\4.30.0\selenium-devtools-v133-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v134\4.30.0\selenium-devtools-v134-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.30.0\selenium-edge-driver-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.30.0\selenium-firefox-driver-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-http\4.30.0\selenium-http-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.30.0\selenium-ie-driver-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.30.0\selenium-remote-driver-4.30.0.jar;C:\Users\hp\.m2\repository\com\google\guava\guava\33.4.5-jre\guava-33.4.5-jre.jar;C:\Users\hp\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\hp\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\hp\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\hp\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-api\1.48.0\opentelemetry-api-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-context\1.48.0\opentelemetry-context-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.48.0\opentelemetry-exporter-logging-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.48.0\opentelemetry-sdk-common-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.48.0\opentelemetry-sdk-extension-autoconfigure-spi-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.48.0\opentelemetry-sdk-extension-autoconfigure-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.48.0\opentelemetry-sdk-trace-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.48.0\opentelemetry-sdk-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.48.0\opentelemetry-sdk-metrics-1.48.0.jar;C:\Users\hp\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.48.0\opentelemetry-sdk-logs-1.48.0.jar;C:\Users\hp\.m2\repository\net\bytebuddy\byte-buddy\1.17.2\byte-buddy-1.17.2.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-os\4.30.0\selenium-os-4.30.0.jar;C:\Users\hp\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.30.0\selenium-safari-driver-4.30.0.jar;C:\Users\hp\.m2\repository\org\seleniumhq\selenium\selenium-support\4.30.0\selenium-support-4.30.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-java\7.14.0\cucumber-java-7.14.0.jar;C:\Users\hp\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-junit\7.14.0\cucumber-junit-7.14.0.jar;C:\Users\hp\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\hp\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-core\7.14.0\cucumber-core-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-gherkin\7.14.0\cucumber-gherkin-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.14.0\cucumber-gherkin-messages-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\hp\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\hp\.m2\repository\io\cucumber\tag-expressions\5.0.6\tag-expressions-5.0.6.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\hp\.m2\repository\io\cucumber\datatable\7.14.0\datatable-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-plugin\7.14.0\cucumber-plugin-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\docstring\7.14.0\docstring-7.14.0.jar;C:\Users\hp\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\hp\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\hp\.m2\repository\io\cucumber\ci-environment\9.2.0\ci-environment-9.2.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-picocontainer\7.14.0\cucumber-picocontainer-7.14.0.jar;C:\Users\hp\.m2\repository\org\picocontainer\picocontainer\2.15\picocontainer-2.15.jar;C:\Users\hp\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\hp\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\hp\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\hp\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\hp\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\hp\.m2\repository\org\junit\vintage\junit-vintage-engine\5.10.0\junit-vintage-engine-5.10.0.jar;C:\Users\hp\.m2\repository\org\slf4j\slf4j-simple\2.0.9\slf4j-simple-2.0.9.jar;C:\Users\hp\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\hp\.m2\repository\com\aventstack\extentreports\5.1.0\extentreports-5.1.0.jar;C:\Users\hp\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\hp\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\hp\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\hp\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\hp\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.9.0\extentreports-cucumber7-adapter-1.9.0.jar;C:\Users\hp\.m2\repository\com\aventstack\klov-reporter\5.0.9\klov-reporter-5.0.9.jar;C:\Users\hp\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\hp\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\hp\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\hp\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\hp\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\hp\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\hp\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\hp\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\hp\.m2\repository\tech\grasshopper\htmlextentreporter\1.0.1\htmlextentreporter-1.0.1.jar;C:\Users\hp\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\hp\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\hp\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\hp\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\hp\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\hp\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\hp\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\hp\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\hp\.m2\repository\org\yaml\snakeyaml\2.0\snakeyaml-2.0.jar;C:\Users\hp\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\hp\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\hp\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\hp\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.29.1\allure-cucumber7-jvm-2.29.1.jar;C:\Users\hp\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\hp\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\hp\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\hp\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\hp\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\hp"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="E:\Programming\workspace\SeleniumCucumberMBDD2"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="rerunFile" value="E:\Programming\workspace\SeleniumCucumberMBDD2/src/test/resources/failedrerun.txt"/>
+    <property name="surefire.real.class.path" value="C:\Users\hp\AppData\Local\Temp\surefire5170792104700575756\surefirebooter-20250405170833337_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.6+9-LTS-190"/>
+    <property name="user.name" value="hp"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\hp\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\hp\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.6"/>
+    <property name="user.dir" value="E:\Programming\workspace\SeleniumCucumberMBDD2"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:\WINDOWS.X64_213000_db_home\bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;;C:\Program Files\Java\jdk-17\bin;C:\Program Files\Apache\apache-maven-3.8.6\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Users\hp\AppData\Local\GitHubDesktop\bin;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\hp\AppData\Roaming\npm;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.6+9-LTS-190"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="I navigate to ToolsQA HomePage" classname="User is able to handle all kinds of alerts" time="9.121">
+    <system-out><![CDATA[
+@allure.label.owner=Bobby @allure.label.epic:Epic-Alerts_and_Frames @allure.label.feature:Feature-Handle_Alerts_and_Frames_and_Windows @Regression @ReRun @allure.label.story:User_is_able_to_handle_all_kinds_of_alerts
+Scenario: User is able to handle all kinds of alerts                  &amp#27;[90m# src/test/java/com/qa/features/AlertsFramesAndWindows.feature:11&amp#27;[0m
+&amp#27;[34mUser is able to handle all kinds of alerts&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open AlertsFramesAndWindows pane" classname="User is able to handle all kinds of alerts" time="0.438">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Alerts page" classname="User is able to handle all kinds of alerts" time="0.348">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open AlertsFramesAndWindows pane&amp#27;[0m                             &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_alerts_frames_and_windows_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I click on normal alert button" classname="User is able to handle all kinds of alerts" time="2.088">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Alerts page&amp#27;[0m                                              &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_open_alerts_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the normal alert" classname="User is able to handle all kinds of alerts" time="0.044">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on normal alert button&amp#27;[0m                                  &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_click_on_normal_alert_button()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I accept the normal alert" classname="User is able to handle all kinds of alerts" time="0.018">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the normal alert&amp#27;[0m                                         &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_see_the_normal_alert()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the normal alert closed" classname="User is able to handle all kinds of alerts" time="3.202">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI accept the normal alert&amp#27;[0m                                      &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_accept_the_normal_alert()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I click on delayed alert button" classname="User is able to handle all kinds of alerts" time="0.198">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the normal alert closed&amp#27;[0m                                  &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_see_the_normal_alert_closed()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the delayed alert after 5 seconds" classname="User is able to handle all kinds of alerts" time="5.105">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on delayed alert button&amp#27;[0m                                &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_click_on_delayed_alert_button()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I click accept the delayed alert" classname="User is able to handle all kinds of alerts" time="0.012">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the delayed alert after &amp#27;[0m&amp#27;[32m&amp#27;[1m5&amp#27;[0m&amp#27;[32m seconds&amp#27;[0m                        &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_see_the_delayed_alert_button_after_seconds(int)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the delayed alert closed" classname="User is able to handle all kinds of alerts" time="2.097">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click accept the delayed alert&amp#27;[0m                               &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_click_accept_the_delayed_alert()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I click on confirmation alert button" classname="User is able to handle all kinds of alerts" time="0.165">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the delayed alert closed&amp#27;[0m                                 &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_see_the_delayed_alert_closed()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the confirmation alert" classname="User is able to handle all kinds of alerts" time="0.009">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on confirmation alert button&amp#27;[0m                           &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_click_on_confirmation_alert_button()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I click ok on confirmation alert" classname="User is able to handle all kinds of alerts" time="0.021">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the confirmation alert&amp#27;[0m                                   &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_see_the_confirmation_alert_button()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see that the confirmation alert get closed" classname="User is able to handle all kinds of alerts" time="3.119">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click ok on confirmation alert&amp#27;[0m                               &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_click_ok_on_confirmation_alert()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I click on prompt alert button" classname="User is able to handle all kinds of alerts" time="0.159">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see that the confirmation alert get closed&amp#27;[0m                   &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_see_that_the_confirmation_alert_get_closed()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the prompt alert" classname="User is able to handle all kinds of alerts" time="0.018">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on prompt alert button&amp#27;[0m                                 &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_click_on_prompt_alert_button()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter some value &quot;Bobby&quot; and click ok on prompt alert" classname="User is able to handle all kinds of alerts" time="0.042">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the prompt alert&amp#27;[0m                                         &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_see_the_prompt_alert()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the prompt alert dissapear and the text &quot;Bobby&quot; diplayed" classname="User is able to handle all kinds of alerts" time="2.172">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI enter some value &amp#27;[0m&amp#27;[32m&amp#27;[1m"Bobby"&amp#27;[0m&amp#27;[32m and click ok on prompt alert&amp#27;[0m        &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_enter_some_text_and_click_ok_on_prompt_alert(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="User is able to do window handling" time="2.94">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the prompt alert dissapear and the text &amp#27;[0m&amp#27;[32m&amp#27;[1m"Bobby"&amp#27;[0m&amp#27;[32m diplayed&amp#27;[0m &amp#27;[90m# com.qa.stepDefinitions.AlertsSteps.i_see_the_prompt_alert_dissapear_and_the_text_diplayed(java.lang.String)&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Alerts_and_Frames @allure.label.feature:Feature-Handle_Alerts_and_Frames_and_Windows @Regression @TestOne @allure.label.story:User_is_able_to_do_window_handling
+Scenario: User is able to do window handling                                   &amp#27;[90m# src/test/java/com/qa/features/AlertsFramesAndWindows.feature:33&amp#27;[0m
+&amp#27;[34mUser is able to do window handling&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open AlertsFramesAndWindows pane" classname="User is able to do window handling" time="23.488">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                         &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Browser Windows page" classname="User is able to do window handling" time="0.182">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open AlertsFramesAndWindows pane&amp#27;[0m                                      &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_alerts_frames_and_windows_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I click on new tab button" classname="User is able to do window handling" time="0.6">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Browser Windows page&amp#27;[0m                                              &amp#27;[90m# com.qa.stepDefinitions.BrowserWindowsSteps.i_open_browser_windows_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I try switching to new tab" classname="User is able to do window handling" time="0.007">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI click on new tab button&amp#27;[0m                                                &amp#27;[90m# com.qa.stepDefinitions.BrowserWindowsSteps.i_click_on_new_tab_windows()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I am able to switch to new tab" classname="User is able to do window handling" time="0.434">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI try switching to new tab&amp#27;[0m                                               &amp#27;[90m# com.qa.stepDefinitions.BrowserWindowsSteps.i_switch_to_new_tab()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I try switching to main tab" classname="User is able to do window handling" time="0.042">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI am able to switch to new tab&amp#27;[0m                                          &amp#27;[90m# com.qa.stepDefinitions.BrowserWindowsSteps.i_am_able_to_switch_to_new_tab()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I am able to switch to main tab &quot;https://demoqa.com/browser-windows&quot;" classname="User is able to do window handling" time="0.962">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI try switching to main tab&amp#27;[0m                                              &amp#27;[90m# com.qa.stepDefinitions.BrowserWindowsSteps.i_switch_to_main_tab()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I click on new window button" classname="User is able to do window handling" time="0.506">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI am able to switch to main tab &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://demoqa.com/browser-windows"&amp#27;[0m    &amp#27;[90m# com.qa.stepDefinitions.BrowserWindowsSteps.i_am_able_to_switch_to_main_tab(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I try switching to new window &quot;https://demoqa.com/sample&quot;" classname="User is able to do window handling" time="0.342">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI click on new window button&amp#27;[0m                                            &amp#27;[90m# com.qa.stepDefinitions.BrowserWindowsSteps.i_click_on_new_windows_button()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I am able to switch to new window" classname="User is able to do window handling" time="0.079">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI try switching to new window &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://demoqa.com/sample"&amp#27;[0m                &amp#27;[90m# com.qa.stepDefinitions.BrowserWindowsSteps.i_try_switching_to_new_window(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I try switching back to main window" classname="User is able to do window handling" time="0.127">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI am able to switch to new window&amp#27;[0m                                       &amp#27;[90m# com.qa.stepDefinitions.BrowserWindowsSteps.i_am_able_to_switch_to_new_window()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I am able to switch to main window &quot;https://demoqa.com/browser-windows&quot;" classname="User is able to do window handling" time="0.041">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI try switching back to main window&amp#27;[0m                                     &amp#27;[90m# com.qa.stepDefinitions.BrowserWindowsSteps.i_try_switching_back_to_main_window()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that user is able to fill the user details form #1" time="25.041">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI am able to switch to main window &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://demoqa.com/browser-windows"&amp#27;[0m &amp#27;[90m# com.qa.stepDefinitions.BrowserWindowsSteps.i_am_able_to_switch_to_main_window(java.lang.String)&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Handling_Elements @allure.label.feature:Feature-Handling_Elements @TestOne @Regression @allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_form
+Scenario Outline: Verify that user is able to fill the user details form &amp#27;[90m# src/test/java/com/qa/features/Elements.feature:22&amp#27;[0m
+&amp#27;[34mVerify that user is able to fill the user details form&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open elements pane" classname="Verify that user is able to fill the user details form #1" time="0.298">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                   &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I go to text box page" classname="Verify that user is able to fill the user details form #1" time="0.456">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open elements pane&amp#27;[0m                                              &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter the full name &quot;Arjun Suravaram&quot;" classname="Verify that user is able to fill the user details form #1" time="1.204">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI go to text box page&amp#27;[0m                                              &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_go_to_text_box_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter the eamil address &quot;arjunsuravaram@gmail.com&quot;" classname="Verify that user is able to fill the user details form #1" time="0.461">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter the full name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Arjun Suravaram"&amp#27;[0m                            &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_full_name(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter the current address &quot;abc123street&quot;" classname="Verify that user is able to fill the user details form #1" time="0.245">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter the eamil address &amp#27;[0m&amp#27;[32m&amp#27;[1m"arjunsuravaram@gmail.com"&amp#27;[0m               &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_eamil_address(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter the permanent address &quot;abc123street&quot;" classname="Verify that user is able to fill the user details form #1" time="0.23">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter the current address &amp#27;[0m&amp#27;[32m&amp#27;[1m"abc123street"&amp#27;[0m                         &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_current_address(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I submit the form" classname="Verify that user is able to fill the user details form #1" time="0.542">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter the permanent address &amp#27;[0m&amp#27;[32m&amp#27;[1m"abc123street"&amp#27;[0m                       &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_permanent_address(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the details getting populated" classname="Verify that user is able to fill the user details form #1" time="0.309">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI submit the form&amp#27;[0m                                                  &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_submit_the_form()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that user is able to fill the user details form #2" time="8.376">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the details getting populated&amp#27;[0m                               &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_see_the_details_getting_populated()&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Handling_Elements @allure.label.feature:Feature-Handling_Elements @TestOne @Regression @allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_form
+Scenario Outline: Verify that user is able to fill the user details form &amp#27;[90m# src/test/java/com/qa/features/Elements.feature:23&amp#27;[0m
+&amp#27;[34mVerify that user is able to fill the user details form&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open elements pane" classname="Verify that user is able to fill the user details form #2" time="0.303">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                   &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I go to text box page" classname="Verify that user is able to fill the user details form #2" time="0.324">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open elements pane&amp#27;[0m                                              &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter the full name &quot;Bobby Brahmama&quot;" classname="Verify that user is able to fill the user details form #2" time="1.815">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI go to text box page&amp#27;[0m                                              &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_go_to_text_box_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter the eamil address &quot;bobybrahmam@gmail.com&quot;" classname="Verify that user is able to fill the user details form #2" time="0.547">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter the full name &amp#27;[0m&amp#27;[32m&amp#27;[1m"Bobby Brahmama"&amp#27;[0m                             &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_full_name(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter the current address &quot;qwe123street&quot;" classname="Verify that user is able to fill the user details form #2" time="0.521">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter the eamil address &amp#27;[0m&amp#27;[32m&amp#27;[1m"bobybrahmam@gmail.com"&amp#27;[0m                  &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_eamil_address(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter the permanent address &quot;aksdflkstreet&quot;" classname="Verify that user is able to fill the user details form #2" time="0.249">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter the current address &amp#27;[0m&amp#27;[32m&amp#27;[1m"qwe123street"&amp#27;[0m                         &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_current_address(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I submit the form" classname="Verify that user is able to fill the user details form #2" time="0.355">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter the permanent address &amp#27;[0m&amp#27;[32m&amp#27;[1m"aksdflkstreet"&amp#27;[0m                      &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_permanent_address(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the details getting populated" classname="Verify that user is able to fill the user details form #2" time="0.426">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI submit the form&amp#27;[0m                                                  &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_submit_the_form()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that user is able to fill the user details parallelly in the form #1" time="8.793">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the details getting populated&amp#27;[0m                               &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_see_the_details_getting_populated()&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Handling_Elements @allure.label.feature:Feature-Handling_Elements @TestOne @Regression @allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_parallelly_in_the_form
+Scenario Outline: Verify that user is able to fill the user details parallelly in the form              &amp#27;[90m# src/test/java/com/qa/features/Elements.feature:35&amp#27;[0m
+&amp#27;[34mVerify that user is able to fill the user details parallelly in the form&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open elements pane" classname="Verify that user is able to fill the user details parallelly in the form #1" time="0.305">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                                  &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I go to text box page" classname="Verify that user is able to fill the user details parallelly in the form #1" time="0.327">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open elements pane&amp#27;[0m                                                                             &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter the details &quot;Arjun Suravaram&quot;, &quot;arjunsuravaram@gmail.com&quot;, &quot;abc123street&quot;, &quot;abc123street&quot;" classname="Verify that user is able to fill the user details parallelly in the form #1" time="0.277">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI go to text box page&amp#27;[0m                                                                             &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_go_to_text_box_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I submit the form" classname="Verify that user is able to fill the user details parallelly in the form #1" time="1.088">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter the details &amp#27;[0m&amp#27;[32m&amp#27;[1m"Arjun Suravaram"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"arjunsuravaram@gmail.com"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"abc123street"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"abc123street"&amp#27;[0m &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_details(java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the details getting populated" classname="Verify that user is able to fill the user details parallelly in the form #1" time="0.508">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI submit the form&amp#27;[0m                                                                                 &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_submit_the_form()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that user is able to fill the user details parallelly in the form #2" time="7.269">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the details getting populated&amp#27;[0m                                                              &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_see_the_details_getting_populated()&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Handling_Elements @allure.label.feature:Feature-Handling_Elements @TestOne @Regression @allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_parallelly_in_the_form
+Scenario Outline: Verify that user is able to fill the user details parallelly in the form          &amp#27;[90m# src/test/java/com/qa/features/Elements.feature:36&amp#27;[0m
+&amp#27;[34mVerify that user is able to fill the user details parallelly in the form&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open elements pane" classname="Verify that user is able to fill the user details parallelly in the form #2" time="0.296">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                              &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I go to text box page" classname="Verify that user is able to fill the user details parallelly in the form #2" time="0.337">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open elements pane&amp#27;[0m                                                                         &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter the details &quot;Bobby Brahmam&quot;, &quot;bobybrahmam@gmail.com&quot;, &quot;qwe123street&quot;, &quot;aksdflkstreet&quot;" classname="Verify that user is able to fill the user details parallelly in the form #2" time="0.997">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI go to text box page&amp#27;[0m                                                                         &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_go_to_text_box_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I submit the form" classname="Verify that user is able to fill the user details parallelly in the form #2" time="2.67">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI enter the details &amp#27;[0m&amp#27;[32m&amp#27;[1m"Bobby Brahmam"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"bobybrahmam@gmail.com"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"qwe123street"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"aksdflkstreet"&amp#27;[0m &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_enter_the_details(java.lang.String,java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the details getting populated" classname="Verify that user is able to fill the user details parallelly in the form #2" time="0.243">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI submit the form&amp#27;[0m                                                                             &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_submit_the_form()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to delete all existing records in data table" time="21.026">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the details getting populated&amp#27;[0m                                                          &amp#27;[90m# com.qa.stepDefinitions.TextBoxFormSteps.i_see_the_details_getting_populated()&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Handling_Elements @allure.label.feature:Feature-Handling_Elements @Regression @allure.label.story:Verify_that_the_user_is_able_to_delete_all_existing_records_in_data_table
+Scenario: Verify that the user is able to delete all existing records in data table &amp#27;[90m# src/test/java/com/qa/features/Elements.feature:40&amp#27;[0m
+&amp#27;[34mVerify that the user is able to delete all existing records in data table&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open elements pane" classname="Verify that the user is able to delete all existing records in data table" time="0.3">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                              &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open WebTables page" classname="Verify that the user is able to delete all existing records in data table" time="0.304">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open elements pane&amp#27;[0m                                                         &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the existing records" classname="Verify that the user is able to delete all existing records in data table" time="0.099">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open WebTables page&amp#27;[0m                                                         &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_open_webtables_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I delete all existing records" classname="Verify that the user is able to delete all existing records in data table" time="2.234">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the existing records&amp#27;[0m                                                   &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_see_the_existing_records()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="All records are deleted" classname="Verify that the user is able to delete all existing records in data table" time="0.021">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI delete all existing records&amp#27;[0m                                                 &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_delete_all_existing_records()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that user is able to add a new records #1" time="27.442">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mAll records are deleted&amp#27;[0m                                                      &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.all_records_are_deleted()&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Handling_Elements @allure.label.feature:Feature-Handling_Elements @Regression @Draft @allure.label.story:Verify_that_user_is_able_to_add_a_new_records
+Scenario Outline: Verify that user is able to add a new records                                                         &amp#27;[90m# src/test/java/com/qa/features/Elements.feature:59&amp#27;[0m
+&amp#27;[34mVerify that user is able to add a new records&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open elements pane" classname="Verify that user is able to add a new records #1" time="0.368">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                                                  &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open WebTables page" classname="Verify that user is able to add a new records #1" time="0.252">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open elements pane&amp#27;[0m                                                                                             &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open the registration form" classname="Verify that user is able to add a new records #1" time="0.217">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open WebTables page&amp#27;[0m                                                                                             &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_open_webtables_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I fill the registration form with the details &quot;Dhoni&quot;, &quot;Mahendra Singh&quot;, &quot;dhoni@gmail.com&quot;, 30, 50000, &quot;Coaching&quot;" classname="Verify that user is able to add a new records #1" time="3.553">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open the registration form&amp#27;[0m                                                                                      &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_open_the_registration_form()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I submit the registratin form" classname="Verify that user is able to add a new records #1" time="0.173">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI fill the registration form with the details &amp#27;[0m&amp#27;[32m&amp#27;[1m"Dhoni"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Mahendra Singh"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"dhoni@gmail.com"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m30&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m50000&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Coaching"&amp#27;[0m &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.I_fill_the_registration_form_with_the_details(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the record with the details &quot;Dhoni&quot;, &quot;Mahendra Singh&quot;, &quot;dhoni@gmail.com&quot;, 30, 50000, &quot;Coaching&quot; added" classname="Verify that user is able to add a new records #1" time="1.099">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI submit the registratin form&amp#27;[0m                                                                                     &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_submit_the_registratin_form()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that user is able to add a new records #2" time="2.549">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the record with the details &amp#27;[0m&amp#27;[32m&amp#27;[1m"Dhoni"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Mahendra Singh"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"dhoni@gmail.com"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m30&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m50000&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Coaching"&amp#27;[0m&amp#27;[32m added&amp#27;[0m      &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_see_the_record_with_the_details_added(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,io.cucumber.datatable.DataTable)&amp#27;[0m
+    | First Name | Last Name | Email | Age | Salary | Department |
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Handling_Elements @allure.label.feature:Feature-Handling_Elements @Regression @Draft @allure.label.story:Verify_that_user_is_able_to_add_a_new_records
+Scenario Outline: Verify that user is able to add a new records                                                        &amp#27;[90m# src/test/java/com/qa/features/Elements.feature:60&amp#27;[0m
+&amp#27;[34mVerify that user is able to add a new records&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open elements pane" classname="Verify that user is able to add a new records #2" time="24.423">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                                                 &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open WebTables page" classname="Verify that user is able to add a new records #2" time="0.651">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open elements pane&amp#27;[0m                                                                                            &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open the registration form" classname="Verify that user is able to add a new records #2" time="2.005">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open WebTables page&amp#27;[0m                                                                                            &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_open_webtables_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I fill the registration form with the details &quot;Kohli&quot;, &quot;Virat&quot;, &quot;viratkohli@yahoomail.com&quot;, 31, 10000, &quot;Finance&quot;" classname="Verify that user is able to add a new records #2" time="1.58">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open the registration form&amp#27;[0m                                                                                     &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_open_the_registration_form()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I submit the registratin form" classname="Verify that user is able to add a new records #2" time="0.144">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI fill the registration form with the details &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kohli"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Virat"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"viratkohli@yahoomail.com"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m31&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m10000&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Finance"&amp#27;[0m &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.I_fill_the_registration_form_with_the_details(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the record with the details &quot;Kohli&quot;, &quot;Virat&quot;, &quot;viratkohli@yahoomail.com&quot;, 31, 10000, &quot;Finance&quot; added" classname="Verify that user is able to add a new records #2" time="0.369">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI submit the registratin form&amp#27;[0m                                                                                    &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_submit_the_registratin_form()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that user is able to add a new records #3" time="10.432">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the record with the details &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kohli"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Virat"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"viratkohli@yahoomail.com"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m31&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m10000&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Finance"&amp#27;[0m&amp#27;[32m added&amp#27;[0m      &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_see_the_record_with_the_details_added(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,io.cucumber.datatable.DataTable)&amp#27;[0m
+    | First Name | Last Name | Email | Age | Salary | Department |
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Handling_Elements @allure.label.feature:Feature-Handling_Elements @Regression @Draft @allure.label.story:Verify_that_user_is_able_to_add_a_new_records
+Scenario Outline: Verify that user is able to add a new records                                                    &amp#27;[90m# src/test/java/com/qa/features/Elements.feature:61&amp#27;[0m
+&amp#27;[34mVerify that user is able to add a new records&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open elements pane" classname="Verify that user is able to add a new records #3" time="0.27">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                                             &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open WebTables page" classname="Verify that user is able to add a new records #3" time="0.34">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open elements pane&amp#27;[0m                                                                                        &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open the registration form" classname="Verify that user is able to add a new records #3" time="0.664">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open WebTables page&amp#27;[0m                                                                                        &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_open_webtables_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I fill the registration form with the details &quot;Rohit&quot;, &quot;Sharma&quot;, &quot;rohitsharma200@gmail.com&quot;, 29, 70000, &quot;HR&quot;" classname="Verify that user is able to add a new records #3" time="2.334">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open the registration form&amp#27;[0m                                                                                 &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_open_the_registration_form()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I submit the registratin form" classname="Verify that user is able to add a new records #3" time="0.324">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI fill the registration form with the details &amp#27;[0m&amp#27;[32m&amp#27;[1m"Rohit"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sharma"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"rohitsharma200@gmail.com"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m29&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m70000&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"HR"&amp#27;[0m &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.I_fill_the_registration_form_with_the_details(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the record with the details &quot;Rohit&quot;, &quot;Sharma&quot;, &quot;rohitsharma200@gmail.com&quot;, 29, 70000, &quot;HR&quot; added" classname="Verify that user is able to add a new records #3" time="0.573">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI submit the registratin form&amp#27;[0m                                                                                &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_submit_the_registratin_form()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that user is able to download and upload a file" time="7.754">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the record with the details &amp#27;[0m&amp#27;[32m&amp#27;[1m"Rohit"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"Sharma"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"rohitsharma200@gmail.com"&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m29&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m70000&amp#27;[0m&amp#27;[32m, &amp#27;[0m&amp#27;[32m&amp#27;[1m"HR"&amp#27;[0m&amp#27;[32m added&amp#27;[0m      &amp#27;[90m# com.qa.stepDefinitions.ManageDataTableSteps.i_see_the_record_with_the_details_added(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,io.cucumber.datatable.DataTable)&amp#27;[0m
+    | First Name | Last Name | Email | Age | Salary | Department |
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Handling_Elements @allure.label.feature:Feature-Handling_Elements @Regression @TestOne @allure.label.story:Verify_that_user_is_able_to_download_and_upload_a_file
+Scenario: Verify that user is able to download and upload a file &amp#27;[90m# src/test/java/com/qa/features/Elements.feature:65&amp#27;[0m
+&amp#27;[34mVerify that user is able to download and upload a file&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open elements pane" classname="Verify that user is able to download and upload a file" time="0.326">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                           &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open upload-download page" classname="Verify that user is able to download and upload a file" time="0.409">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open elements pane&amp#27;[0m                                      &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_elements_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I download the file" classname="Verify that user is able to download and upload a file" time="2.125">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open upload-download page&amp#27;[0m                                &amp#27;[90m# com.qa.stepDefinitions.FileDownloadAndUploadSteps.i_open_upload_download_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the file got downloaded" classname="Verify that user is able to download and upload a file" time="0.003">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI download the file&amp#27;[0m                                        &amp#27;[90m# com.qa.stepDefinitions.FileDownloadAndUploadSteps.i_download_the_file()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I upload the file" classname="Verify that user is able to download and upload a file" time="0.217">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the file got downloaded&amp#27;[0m                             &amp#27;[90m# com.qa.stepDefinitions.FileDownloadAndUploadSteps.i_see_the_file_got_downloaded()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the file got uploaded" classname="Verify that user is able to download and upload a file" time="0.084">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI upload the file&amp#27;[0m                                         &amp#27;[90m# com.qa.stepDefinitions.FileDownloadAndUploadSteps.i_upload_the_file()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that user is able to sort the number list" time="7.566">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the file got uploaded&amp#27;[0m                               &amp#27;[90m# com.qa.stepDefinitions.FileDownloadAndUploadSteps.i_see_the_file_got_uploaded()&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Interactions_Page @allure.label.feature:Feature-Handling_Interactions @Regression @Draft @allure.label.story:Verify_that_user_is_able_to_sort_the_number_list
+Scenario: Verify that user is able to sort the number list &amp#27;[90m# src/test/java/com/qa/features/Interactions.feature:12&amp#27;[0m
+&amp#27;[34mVerify that user is able to sort the number list&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open interactions pane" classname="Verify that user is able to sort the number list" time="0.304">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                     &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open sortable page" classname="Verify that user is able to sort the number list" time="1.713">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open interactions pane&amp#27;[0m                            &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_interactions_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I re-sort the list in reverse order" classname="Verify that user is able to sort the number list" time="3.64">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open sortable page&amp#27;[0m                                 &amp#27;[90m# com.qa.stepDefinitions.DragAndDropSortableSteps.i_open_sortable_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to drag and drop" time="8.243">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI re-sort the list in reverse order&amp#27;[0m                  &amp#27;[90m# com.qa.stepDefinitions.DragAndDropSortableSteps.i_re_sort_the_list_in_reverse_order()&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Interactions_Page @allure.label.feature:Feature-Handling_Interactions @Regression @ReRun @allure.label.story:Verify_that_the_user_is_able_to_drag_and_drop
+Scenario: Verify that the user is able to drag and drop            &amp#27;[90m# src/test/java/com/qa/features/Interactions.feature:18&amp#27;[0m
+&amp#27;[34mVerify that the user is able to drag and drop&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open interactions pane" classname="Verify that the user is able to drag and drop" time="0.343">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                             &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Droppable page" classname="Verify that the user is able to drag and drop" time="0.307">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open interactions pane&amp#27;[0m                                    &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_interactions_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the drag and drop elements" classname="Verify that the user is able to drag and drop" time="1.145">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Droppable page&amp#27;[0m                                        &amp#27;[90m# com.qa.stepDefinitions.DragAndDropSteps.i_open_droppable_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I drag and drop the element" classname="Verify that the user is able to drag and drop" time="0.626">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the drag and drop elements&amp#27;[0m                            &amp#27;[90m# com.qa.stepDefinitions.DragAndDropSteps.i_see_the_drag_and_drop_elements()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see element got dropped displaying the message &quot;Dropped!&quot;" classname="Verify that the user is able to drag and drop" time="0.138">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI drag and drop the element&amp#27;[0m                                  &amp#27;[90m# com.qa.stepDefinitions.DragAndDropSteps.i_drag_and_drop_the_element()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to resize the inner box equal to the outer box" time="7.25">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see element got dropped displaying the message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Dropped!"&amp#27;[0m &amp#27;[90m# com.qa.stepDefinitions.DragAndDropSteps.i_see_element_got_dropped(java.lang.String)&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Interactions_Page @allure.label.feature:Feature-Handling_Interactions @Regression @allure.label.story:Verify_that_the_user_is_able_to_resize_the_inner_box_equal_to_the_outer_box
+Scenario: Verify that the user is able to resize the inner box equal to the outer box &amp#27;[90m# src/test/java/com/qa/features/Interactions.feature:26&amp#27;[0m
+&amp#27;[34mVerify that the user is able to resize the inner box equal to the outer box&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open interactions pane" classname="Verify that the user is able to resize the inner box equal to the outer box" time="0.276">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Resizable page" classname="Verify that the user is able to resize the inner box equal to the outer box" time="0.151">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open interactions pane&amp#27;[0m                                                       &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_interactions_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I hold and drag the inner resizable equal to outer box" classname="Verify that the user is able to resize the inner box equal to the outer box" time="0.744">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Resizable page&amp#27;[0m                                                           &amp#27;[90m# com.qa.stepDefinitions.ResizableSteps.i_open_resizable_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the inner box aligned with the outer box" classname="Verify that the user is able to resize the inner box equal to the outer box" time="1.638">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI hold and drag the inner resizable equal to outer box&amp#27;[0m                          &amp#27;[90m# com.qa.stepDefinitions.ResizableSteps.i_hold_and_drag_the_inner_resizable_equal_to_outer_box()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to select the sub-menu item" time="25.372">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the inner box aligned with the outer box&amp#27;[0m                                 &amp#27;[90m# com.qa.stepDefinitions.ResizableSteps.i_see_the_inner_box_aligned_with_the_outer_box()&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Widgets_Page @allure.label.feature:Feature-Handle_Widgets @Regression @TestOne @Draft @allure.label.story:Verify_that_the_user_is_able_to_select_the_sub-menu_item
+Scenario: Verify that the user is able to select the sub-menu item &amp#27;[90m# src/test/java/com/qa/features/Widgets.feature:22&amp#27;[0m
+&amp#27;[34mVerify that the user is able to select the sub-menu item&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open widgets pane" classname="Verify that the user is able to select the sub-menu item" time="0.271">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                             &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Menu page" classname="Verify that the user is able to select the sub-menu item" time="0.372">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open widgets pane&amp#27;[0m                                         &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the menu bar" classname="Verify that the user is able to select the sub-menu item" time="0.139">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Menu page&amp#27;[0m                                             &amp#27;[90m# com.qa.stepDefinitions.MenuSteps.i_open_menu_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I hover on the &quot;second&quot; main menu" classname="Verify that the user is able to select the sub-menu item" time="1.969">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the menu bar&amp#27;[0m                                          &amp#27;[90m# com.qa.stepDefinitions.MenuSteps.i_see_the_menu_bar()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the &quot;second&quot; main menu list" classname="Verify that the user is able to select the sub-menu item" time="0.056">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI hover on the &amp#27;[0m&amp#27;[32m&amp#27;[1m"second"&amp#27;[0m&amp#27;[32m main menu&amp#27;[0m                           &amp#27;[90m# com.qa.stepDefinitions.MenuSteps.i_hover_on_the_main_menu_bar(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I hover on sub menu of &quot;second&quot; main menu" classname="Verify that the user is able to select the sub-menu item" time="0.2">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the &amp#27;[0m&amp#27;[32m&amp#27;[1m"second"&amp#27;[0m&amp#27;[32m main menu list&amp#27;[0m                           &amp#27;[90m# com.qa.stepDefinitions.MenuSteps.i_see_the_menu_list(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the sub menu list of &quot;second&quot; main menu" classname="Verify that the user is able to select the sub-menu item" time="0.062">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI hover on sub menu of &amp#27;[0m&amp#27;[32m&amp#27;[1m"second"&amp#27;[0m&amp#27;[32m main menu&amp#27;[0m                   &amp#27;[90m# com.qa.stepDefinitions.MenuSteps.i_hover_on_the_sub_menu(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to select the auto complete suggestions" time="27.713">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the sub menu list of &amp#27;[0m&amp#27;[32m&amp#27;[1m"second"&amp#27;[0m&amp#27;[32m main menu&amp#27;[0m               &amp#27;[90m# com.qa.stepDefinitions.MenuSteps.i_see_the_sub_menu(java.lang.String)&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Widgets_Page @allure.label.feature:Feature-Handle_Widgets @Regression @TestOne @Draft @allure.label.story:Verify_that_the_user_is_able_to_select_the_auto_complete_suggestions
+Scenario: Verify that the user is able to select the auto complete suggestions &amp#27;[90m# src/test/java/com/qa/features/Widgets.feature:32&amp#27;[0m
+&amp#27;[34mVerify that the user is able to select the auto complete suggestions&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open widgets pane" classname="Verify that the user is able to select the auto complete suggestions" time="0.269">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                         &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Auto-Complete page" classname="Verify that the user is able to select the auto complete suggestions" time="0.277">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open widgets pane&amp#27;[0m                                                     &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I enter the initial letter of a word" classname="Verify that the user is able to select the auto complete suggestions" time="1.939">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Auto-Complete page&amp#27;[0m                                                &amp#27;[90m# com.qa.stepDefinitions.AutoCompleteSteps.i_open_auto_complete_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the related suggestions" classname="Verify that the user is able to select the auto complete suggestions" time="0.106">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI enter the initial letter of a word&amp#27;[0m                                    &amp#27;[90m# com.qa.stepDefinitions.AutoCompleteSteps.i_enter_the_initial_letter_of_a_word()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I select the first suggestion" classname="Verify that the user is able to select the auto complete suggestions" time="0.304">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the related suggestions&amp#27;[0m                                           &amp#27;[90m# com.qa.stepDefinitions.AutoCompleteSteps.i_see_the_related_suggestions()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the selected suggestion &quot;Black&quot; got entered" classname="Verify that the user is able to select the auto complete suggestions" time="0.224">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI select the first suggestion&amp#27;[0m                                            &amp#27;[90m# com.qa.stepDefinitions.AutoCompleteSteps.i_select_the_first_suggestion()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to select the values from bootstrap dropdrown #1" time="46.672">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the selected suggestion &amp#27;[0m&amp#27;[32m&amp#27;[1m"Black"&amp#27;[0m&amp#27;[32m got entered&amp#27;[0m                       &amp#27;[90m# com.qa.stepDefinitions.AutoCompleteSteps.i_see_the_selected_suggestion_got_entered(java.lang.String)&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Widgets_Page @allure.label.feature:Feature-Handle_Widgets @Regression @Retest @allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown
+Scenario Outline: Verify that the user is able to select the values from bootstrap dropdrown &amp#27;[90m# src/test/java/com/qa/features/Widgets.feature:48&amp#27;[0m
+&amp#27;[34mVerify that the user is able to select the values from bootstrap dropdrown&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open widgets pane" classname="Verify that the user is able to select the values from bootstrap dropdrown #1" time="0.427">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                       &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Select Menu page" classname="Verify that the user is able to select the values from bootstrap dropdrown #1" time="2.649">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open widgets pane&amp#27;[0m                                                                   &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #1" time="0.252">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Select Menu page&amp#27;[0m                                                                &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I select the option &quot;Group 1, option 1&quot; in the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #1" time="1.65">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the bootstrap dropdown&amp#27;[0m                                                          &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the &quot;Group 1, option 1&quot; get selected" classname="Verify that the user is able to select the values from bootstrap dropdrown #1" time="0.085">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select the option &amp#27;[0m&amp#27;[32m&amp#27;[1m"Group 1, option 1"&amp#27;[0m&amp#27;[32m in the bootstrap dropdown&amp#27;[0m                     &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to select the values from bootstrap dropdrown #2" time="47.349">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Group 1, option 1"&amp#27;[0m&amp#27;[32m get selected&amp#27;[0m                                            &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Widgets_Page @allure.label.feature:Feature-Handle_Widgets @Regression @Retest @allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown
+Scenario Outline: Verify that the user is able to select the values from bootstrap dropdrown &amp#27;[90m# src/test/java/com/qa/features/Widgets.feature:49&amp#27;[0m
+&amp#27;[34mVerify that the user is able to select the values from bootstrap dropdrown&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open widgets pane" classname="Verify that the user is able to select the values from bootstrap dropdrown #2" time="0.294">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                       &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Select Menu page" classname="Verify that the user is able to select the values from bootstrap dropdrown #2" time="0.412">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open widgets pane&amp#27;[0m                                                                   &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #2" time="0.828">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Select Menu page&amp#27;[0m                                                                &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I select the option &quot;Group 1, option 2&quot; in the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #2" time="0.792">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the bootstrap dropdown&amp#27;[0m                                                          &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the &quot;Group 1, option 2&quot; get selected" classname="Verify that the user is able to select the values from bootstrap dropdrown #2" time="0.056">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select the option &amp#27;[0m&amp#27;[32m&amp#27;[1m"Group 1, option 2"&amp#27;[0m&amp#27;[32m in the bootstrap dropdown&amp#27;[0m                     &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to select the values from bootstrap dropdrown #3" time="48.282">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Group 1, option 2"&amp#27;[0m&amp#27;[32m get selected&amp#27;[0m                                            &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Widgets_Page @allure.label.feature:Feature-Handle_Widgets @Regression @Retest @allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown
+Scenario Outline: Verify that the user is able to select the values from bootstrap dropdrown &amp#27;[90m# src/test/java/com/qa/features/Widgets.feature:50&amp#27;[0m
+&amp#27;[34mVerify that the user is able to select the values from bootstrap dropdrown&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open widgets pane" classname="Verify that the user is able to select the values from bootstrap dropdrown #3" time="0.293">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                       &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Select Menu page" classname="Verify that the user is able to select the values from bootstrap dropdrown #3" time="0.471">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open widgets pane&amp#27;[0m                                                                   &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #3" time="3.239">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Select Menu page&amp#27;[0m                                                                &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I select the option &quot;Group 2, option 1&quot; in the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #3" time="0.763">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the bootstrap dropdown&amp#27;[0m                                                          &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the &quot;Group 2, option 1&quot; get selected" classname="Verify that the user is able to select the values from bootstrap dropdrown #3" time="0.096">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select the option &amp#27;[0m&amp#27;[32m&amp#27;[1m"Group 2, option 1"&amp#27;[0m&amp#27;[32m in the bootstrap dropdown&amp#27;[0m                     &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to select the values from bootstrap dropdrown #4" time="26.218">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Group 2, option 1"&amp#27;[0m&amp#27;[32m get selected&amp#27;[0m                                            &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Widgets_Page @allure.label.feature:Feature-Handle_Widgets @Regression @Retest @allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown
+Scenario Outline: Verify that the user is able to select the values from bootstrap dropdrown &amp#27;[90m# src/test/java/com/qa/features/Widgets.feature:51&amp#27;[0m
+&amp#27;[34mVerify that the user is able to select the values from bootstrap dropdrown&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open widgets pane" classname="Verify that the user is able to select the values from bootstrap dropdrown #4" time="0.279">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                       &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Select Menu page" classname="Verify that the user is able to select the values from bootstrap dropdrown #4" time="0.362">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open widgets pane&amp#27;[0m                                                                   &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #4" time="2.224">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Select Menu page&amp#27;[0m                                                                &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I select the option &quot;Group 2, option 2&quot; in the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #4" time="0.996">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the bootstrap dropdown&amp#27;[0m                                                          &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the &quot;Group 2, option 2&quot; get selected" classname="Verify that the user is able to select the values from bootstrap dropdrown #4" time="0.076">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select the option &amp#27;[0m&amp#27;[32m&amp#27;[1m"Group 2, option 2"&amp#27;[0m&amp#27;[32m in the bootstrap dropdown&amp#27;[0m                     &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to select the values from bootstrap dropdrown #5" time="27.503">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Group 2, option 2"&amp#27;[0m&amp#27;[32m get selected&amp#27;[0m                                            &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Widgets_Page @allure.label.feature:Feature-Handle_Widgets @Regression @Retest @allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown
+Scenario Outline: Verify that the user is able to select the values from bootstrap dropdrown &amp#27;[90m# src/test/java/com/qa/features/Widgets.feature:52&amp#27;[0m
+&amp#27;[34mVerify that the user is able to select the values from bootstrap dropdrown&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open widgets pane" classname="Verify that the user is able to select the values from bootstrap dropdrown #5" time="0.267">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                       &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Select Menu page" classname="Verify that the user is able to select the values from bootstrap dropdrown #5" time="0.411">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open widgets pane&amp#27;[0m                                                                   &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #5" time="1.903">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Select Menu page&amp#27;[0m                                                                &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I select the option &quot;A root option&quot; in the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #5" time="1.431">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the bootstrap dropdown&amp#27;[0m                                                          &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the &quot;A root option&quot; get selected" classname="Verify that the user is able to select the values from bootstrap dropdrown #5" time="0.078">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select the option &amp#27;[0m&amp#27;[32m&amp#27;[1m"A root option"&amp#27;[0m&amp#27;[32m in the bootstrap dropdown&amp#27;[0m                         &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to select the values from bootstrap dropdrown #6" time="25.934">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the &amp#27;[0m&amp#27;[32m&amp#27;[1m"A root option"&amp#27;[0m&amp#27;[32m get selected&amp#27;[0m                                                &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Widgets_Page @allure.label.feature:Feature-Handle_Widgets @Regression @Retest @allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_bootstrap_dropdrown
+Scenario Outline: Verify that the user is able to select the values from bootstrap dropdrown &amp#27;[90m# src/test/java/com/qa/features/Widgets.feature:53&amp#27;[0m
+&amp#27;[34mVerify that the user is able to select the values from bootstrap dropdrown&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open widgets pane" classname="Verify that the user is able to select the values from bootstrap dropdrown #6" time="0.261">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                       &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Select Menu page" classname="Verify that the user is able to select the values from bootstrap dropdrown #6" time="0.255">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open widgets pane&amp#27;[0m                                                                   &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #6" time="1.009">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Select Menu page&amp#27;[0m                                                                &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I select the option &quot;Another root option&quot; in the bootstrap dropdown" classname="Verify that the user is able to select the values from bootstrap dropdrown #6" time="0.744">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the bootstrap dropdown&amp#27;[0m                                                          &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_bootstrap_dropdown()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the &quot;Another root option&quot; get selected" classname="Verify that the user is able to select the values from bootstrap dropdrown #6" time="0.069">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI select the option &amp#27;[0m&amp#27;[32m&amp#27;[1m"Another root option"&amp#27;[0m&amp#27;[32m in the bootstrap dropdown&amp#27;[0m                   &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_select_the_option_group_option_in_the_bootstrap_dropdown(java.lang.String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to select the values from old dropdrown" time="45.415">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Another root option"&amp#27;[0m&amp#27;[32m get selected&amp#27;[0m                                          &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_group_option_get_selected(java.lang.String)&amp#27;[0m
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Widgets_Page @allure.label.feature:Feature-Handle_Widgets @Regression @Draft @allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_old_dropdrown
+Scenario: Verify that the user is able to select the values from old dropdrown &amp#27;[90m# src/test/java/com/qa/features/Widgets.feature:57&amp#27;[0m
+&amp#27;[34mVerify that the user is able to select the values from old dropdrown&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open widgets pane" classname="Verify that the user is able to select the values from old dropdrown" time="0.28">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                         &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Select Menu page" classname="Verify that the user is able to select the values from old dropdrown" time="0.555">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open widgets pane&amp#27;[0m                                                     &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the old dropdown" classname="Verify that the user is able to select the values from old dropdrown" time="0.85">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Select Menu page&amp#27;[0m                                                  &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_open_select_menu_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I am able to select all the options in the old dropdown" classname="Verify that the user is able to select the values from old dropdrown" time="3.377">
+    <system-out><![CDATA[  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mI see the old dropdown&amp#27;[0m                                                  &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.i_see_the_old_dropdown()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I navigate to ToolsQA HomePage" classname="Verify that the user is able to see the tooltip after hovering on the button" time="7.962">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI am able to select all the options in the old dropdown&amp#27;[0m                  &amp#27;[90m# com.qa.stepDefinitions.SelectMenuSteps.I_am_able_to_select_all_the_options_in_the_old_dropdown(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | value   |
+    | Red     |
+    | Blue    |
+    | Green   |
+    | Yellow  |
+    | Purple  |
+    | Black   |
+    | White   |
+    | Voilet  |
+    | Indigo  |
+    | Magenta |
+    | Aqua    |
+
+@allure.label.owner=Bobby @allure.label.epic:Epic-Widgets_Page @allure.label.feature:Feature-Handle_Widgets @Regression @Retest @allure.label.story:Verify_that_the_user_is_able_to_see_the_tooltip_after_hovering_on_the_button
+Scenario: Verify that the user is able to see the tooltip after hovering on the button &amp#27;[90m# src/test/java/com/qa/features/Widgets.feature:76&amp#27;[0m
+&amp#27;[34mVerify that the user is able to see the tooltip after hovering on the button&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] WARN io.qameta.allure.cucumber7jvm.LabelBuilder - Composite tag @ALLURE.LABEL.OWNER is not supported. adding it as RAW
+]]></system-err>
+  </testcase>
+  <testcase name="I open widgets pane" classname="Verify that the user is able to see the tooltip after hovering on the button" time="0.412">
+    <system-out><![CDATA[  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI navigate to ToolsQA HomePage&amp#27;[0m                                                 &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_navigate_to_toolsqa_homepage()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I open Tool Tips page" classname="Verify that the user is able to see the tooltip after hovering on the button" time="0.302">
+    <system-out><![CDATA[  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mI open widgets pane&amp#27;[0m                                                             &amp#27;[90m# com.qa.stepDefinitions.HomeSteps.i_open_widgets_pane()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I hover on the given button" classname="Verify that the user is able to see the tooltip after hovering on the button" time="1.075">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI open Tool Tips page&amp#27;[0m                                                            &amp#27;[90m# com.qa.stepDefinitions.ToolTipSteps.i_open_tool_tips_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="I see the tool tip with the tip message &quot;You hovered over the Button&quot;" classname="Verify that the user is able to see the tooltip after hovering on the button" time="1.211">
+    <system-out><![CDATA[  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI hover on the given button&amp#27;[0m                                                      &amp#27;[90m# com.qa.stepDefinitions.ToolTipSteps.i_hover_on_the_given_button()&amp#27;[0m
+]]></system-out>
+  </testcase>
+</testsuite>
