@@ -1,5 +1,7 @@
 package com.qa.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -22,30 +24,36 @@ public class HomePage extends TestBase {
     @FindBy(how = How.CSS, using = "div[class='category-cards'] div.card:nth-child(5)")
 	public WebElement interactions;
 
+    @FindBy(how = How.CSS, using = "div#app div.body-height div.home-content div.home-body div.category-cards div.card.mt-4.top-card")
+	public List<WebElement> cards;
+
+    @FindBy(how = How.CSS, using = "div#app div.body-height div.home-content div.home-body div.category-cards")
+	public WebElement cardSet;
+
     public HomePage() {
         PageFactory.initElements(driver, this);
     }
 
     public void openWidgetsPane() {
-        WaitForElement.waitForHomepageToSettle();
+        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 10);
 		Action.scrollDownFluentlyTillElementVisible(widgetLink);
         Action.click(widgetLink);
 	}
 
     public void openInteractionsPane() {
-        WaitForElement.waitForHomepageToSettle();
+        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 10);
 		Action.scrollDownFluentlyTillElementVisible(interactions);
         Action.click(interactions);
 	}
 
     public void openElementsPane() {
-        WaitForElement.waitForHomepageToSettle();
+        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 10);
 		Action.scrollDownFluentlyTillElementVisible(elementsLink);
 		Action.click(elementsLink);
 	}
 
     public void openAlertsFramesAndWindowsPane() {
-        WaitForElement.waitForHomepageToSettle();
+        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 10);
         Action.scrollDownFluentlyTillElementVisible(alertsFrameAndWindowsPaneLink);
 		Action.click(alertsFrameAndWindowsPaneLink);
 	}

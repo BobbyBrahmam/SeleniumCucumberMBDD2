@@ -45,7 +45,7 @@ Feature: Feature-Handle Widgets
     Then I see the <value> get selected
     Examples:
       | value                 |
-      | "Group 1, option 1"   |
+      | "Group 1, option 3"   |
       | "Group 1, option 2"   |
       | "Group 2, option 1"   |
       | "Group 2, option 2"   |

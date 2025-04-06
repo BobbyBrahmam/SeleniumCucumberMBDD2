@@ -11,7 +11,9 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.UUID;
 import java.util.Base64;
+
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -46,6 +48,7 @@ public class TestBase {
 			ChromeOptions options = new ChromeOptions();
 			options.setExperimentalOption("prefs", prefs);
 			options.setCapability("browserName", "chrome");
+			options.setPageLoadStrategy(PageLoadStrategy.EAGER);
 			driver = new ChromeDriver(options);
 		}
 

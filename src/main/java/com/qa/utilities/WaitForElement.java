@@ -22,28 +22,35 @@ public class WaitForElement extends TestBase {
 	static final int MAX_TIME = 10;
 	static final int POLLING = 1;
 
-	public static void waitForHomepageToSettle() {
+	public static void fluentlyWaitUntilElementsAreVisible(List<WebElement> elements, int timeoutInSeconds) {
 		new FluentWait<>(driver)
-			.withTimeout(Duration.ofSeconds(10))
-			.pollingEvery(Duration.ofMillis(500))
-			.ignoring(Exception.class)
-			.until(d -> {
-				String state = ((JavascriptExecutor) d).executeScript("return document.readyState").toString();
-				return state.equals("interactive") || state.equals("complete");
-			});
+				.withTimeout(Duration.ofSeconds(timeoutInSeconds))
+				.pollingEvery(Duration.ofMillis(100)) // faster polling
+				.ignoring(Exception.class)
+				.until(driver -> {
+					for (WebElement element : elements) {
+						if (!element.isDisplayed()) {
+							return false; // as soon as one is not visible, keep waiting
+						}
+					}
+					return true; // all elements are visible
+				});
 	}
 
-	public static void waitUntilPageReadyAndElementVisible(WebElement element, int timeoutInSeconds) {
+	public static void waitBrieflyUntilCardsVisible(List<WebElement> elements, int timeoutInSeconds) {
 		new FluentWait<>(driver)
-			.withTimeout(Duration.ofSeconds(timeoutInSeconds))
-			.pollingEvery(Duration.ofMillis(500))
-			.ignoring(Exception.class)
-			.until(driver -> {
-				String state = ((JavascriptExecutor) driver).executeScript("return document.readyState").toString();
-				boolean domReady = state.equals("interactive") || state.equals("complete");
-				boolean elementVisible = element.isDisplayed();
-				return domReady && elementVisible;
-			});
+				.withTimeout(Duration.ofSeconds(timeoutInSeconds)) // super short max wait
+				.pollingEvery(Duration.ofMillis(100))
+				.ignoring(Exception.class)
+				.until(driver -> elements.stream().allMatch(WebElement::isDisplayed));
+	}
+
+	public static void waitBrieflyUntilCardsSetVisible(WebElement element, int timeoutInSeconds) {
+		new FluentWait<>(driver)
+				.withTimeout(Duration.ofSeconds(timeoutInSeconds)) // super short max wait
+				.pollingEvery(Duration.ofMillis(100))
+				.ignoring(Exception.class)
+				.until(driver -> element.isDisplayed());
 	}
 
 	public static WebElement waitForPresence(By element) {
@@ -73,8 +80,8 @@ public class WaitForElement extends TestBase {
 
 	public static Alert fluentWaitForVisibilityOfAlert(int maxWaitDuration, int polling) {
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(maxWaitDuration))
-		.pollingEvery(Duration.ofSeconds(polling)).ignoring(NoAlertPresentException.class);
-         return wait.until(ExpectedConditions.alertIsPresent());
+				.pollingEvery(Duration.ofSeconds(polling)).ignoring(NoAlertPresentException.class);
+		return wait.until(ExpectedConditions.alertIsPresent());
 	}
 
 	public static List<WebElement> waitForVisibilityOfWebElements(List<WebElement> element, int duration) {
@@ -109,20 +116,20 @@ public class WaitForElement extends TestBase {
 	}
 
 	public static void waitForAutoScrollToFinish(WebDriver driver, int timeoutInSeconds) {
-    new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds), Duration.ofMillis(100))  // Polling every 100ms
-        .until(new ExpectedCondition<Boolean>() {
-            private long lastScrollY = -1;
+		new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds), Duration.ofMillis(100)) // Polling every 100ms
+				.until(new ExpectedCondition<Boolean>() {
+					private long lastScrollY = -1;
 
-            @Override
-            public Boolean apply(WebDriver driver) {
-                JavascriptExecutor js = (JavascriptExecutor) driver;
-                long currentScrollY = ((Number) js.executeScript("return window.scrollY;")).longValue();
+					@Override
+					public Boolean apply(WebDriver driver) {
+						JavascriptExecutor js = (JavascriptExecutor) driver;
+						long currentScrollY = ((Number) js.executeScript("return window.scrollY;")).longValue();
 
-                // If scrollY hasn't changed since last check, scrolling has stopped
-                boolean scrollStopped = (currentScrollY == lastScrollY);
-                lastScrollY = currentScrollY;
-                return scrollStopped;
-            }
-        });
-}
+						// If scrollY hasn't changed since last check, scrolling has stopped
+						boolean scrollStopped = (currentScrollY == lastScrollY);
+						lastScrollY = currentScrollY;
+						return scrollStopped;
+					}
+				});
+	}
 }

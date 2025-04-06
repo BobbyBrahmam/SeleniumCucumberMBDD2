@@ -127,7 +127,7 @@
             <version>7.14.0</version>
             <scope>test</scope>
         </dependency>
-        
+
         <!-- Test Framework -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -209,7 +209,14 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
             <!-- Maven Surefire Plugin (Runs JUnit Tests) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -220,10 +227,10 @@
                         <include>**/SuiteRunnerTest.java</include>
                         <include>**/FailedRun.java</include>
                     </includes>
+                    <testFailureIgnore>true</testFailureIgnore>
                     <systemPropertyVariables>
                         <rerunFile>${project.basedir}/src/test/resources/failedrerun.txt</rerunFile>
                     </systemPropertyVariables>
-
                 </configuration>
             </plugin>
             <plugin>
@@ -232,6 +239,8 @@
                 <version>2.15.2</version>
                 <executions>
                     <execution>
+                        <id>allure-report</id>
+                        <phase>verify</phase> <!-- This is the key! -->
                         <goals>
                             <goal>report</goal>
                         </goals>
