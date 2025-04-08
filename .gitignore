@@ -24,5 +24,10 @@ hs_err_pid*
 replay_pid*
 
 # ignore the reporting folders
+**/test-reports/
+**/cucumber-reports/
+**/target/
 /test-reports/
 /cucumber-reports/
+/target/
+src/test/resources/failedrerun.txt

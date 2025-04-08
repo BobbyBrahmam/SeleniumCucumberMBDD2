@@ -24,6 +24,9 @@ public class HomePage extends TestBase {
     @FindBy(how = How.CSS, using = "div[class='category-cards'] div.card:nth-child(5)")
 	public WebElement interactions;
 
+    @FindBy(how = How.CSS, using = "div[class='category-cards'] div.card:nth-child(6)")
+	public WebElement bookStoreLink;
+
     @FindBy(how = How.CSS, using = "div#app div.body-height div.home-content div.home-body div.category-cards div.card.mt-4.top-card")
 	public List<WebElement> cards;
 
@@ -56,6 +59,12 @@ public class HomePage extends TestBase {
         WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 10);
         Action.scrollDownFluentlyTillElementVisible(alertsFrameAndWindowsPaneLink);
 		Action.click(alertsFrameAndWindowsPaneLink);
+	}
+
+    public void openBookStorePane() {
+        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 10);
+        Action.scrollDownFluentlyTillElementVisible(bookStoreLink);
+		Action.click(bookStoreLink);
 	}
 
 }

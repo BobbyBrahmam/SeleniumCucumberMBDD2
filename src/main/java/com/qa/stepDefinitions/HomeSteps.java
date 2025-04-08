@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 public class HomeSteps extends TestBase {
 
     HomeSteps home;
-    HomePage homePage; 
+    HomePage homePage;
 
     @Given("I navigate to ToolsQA HomePage")
     public void i_navigate_to_toolsqa_homepage() {
@@ -23,17 +23,22 @@ public class HomeSteps extends TestBase {
     }
 
     @When("I open interactions pane")
-	public void i_open_interactions_pane() {
-		homePage.openInteractionsPane();
-	}
+    public void i_open_interactions_pane() {
+        homePage.openInteractionsPane();
+    }
 
     @When("I open elements pane")
-	public void i_open_elements_pane() {
-		homePage.openElementsPane();
-	}
+    public void i_open_elements_pane() {
+        homePage.openElementsPane();
+    }
 
     @When("I open AlertsFramesAndWindows pane")
-	public void i_open_alerts_frames_and_windows_pane() {    
-		homePage.openAlertsFramesAndWindowsPane();
-	}
+    public void i_open_alerts_frames_and_windows_pane() {
+        homePage.openAlertsFramesAndWindowsPane();
+    }
+
+    @When("I opened the BookStore pane")
+    public void i_opened_the_book_store_pane() {
+        homePage.openBookStorePane();
+    }
 }
