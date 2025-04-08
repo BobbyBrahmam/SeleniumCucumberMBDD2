@@ -17,7 +17,7 @@ Feature: Feature-Handle Widgets
     When I drag the slider to the value 65
     Then I see the value 65 in input box
 
-  @Regression @TestOne @Draft
+  @Regression @TestOne
   @allure.label.story:Verify_that_the_user_is_able_to_select_the_sub-menu_item
   Scenario: Verify that the user is able to select the sub-menu item
     And I open Menu page
@@ -27,7 +27,7 @@ Feature: Feature-Handle Widgets
     When I hover on sub menu of "second" main menu
     Then I see the sub menu list of "second" main menu
 
-  @Regression @TestOne @Draft
+  @Regression @TestOne
   @allure.label.story:Verify_that_the_user_is_able_to_select_the_auto_complete_suggestions
   Scenario: Verify that the user is able to select the auto complete suggestions
     And I open Auto-Complete page
@@ -52,7 +52,7 @@ Feature: Feature-Handle Widgets
       | "A root option"       |
       | "Another root option" |
 
-  @Regression @Draft
+  @Regression
   @allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_old_dropdrown
   Scenario: Verify that the user is able to select the values from old dropdrown
     And I open Select Menu page
@@ -71,9 +71,16 @@ Feature: Feature-Handle Widgets
       | Magenta |
       | Aqua    |
 
-  @Regression @Retest
+  @Regression
   @allure.label.story:Verify_that_the_user_is_able_to_see_the_tooltip_after_hovering_on_the_button
   Scenario: Verify that the user is able to see the tooltip after hovering on the button
     And I open Tool Tips page
     And I hover on the given button
     Then I see the tool tip with the tip message "You hovered over the Button"
+
+  @Regression @Draft
+  @allure.label.story:Verify_that_the_user_is_able_to_select_the_date_and_time
+  Scenario Outline: Verify that the user is able to select the date and time
+    And I open Date Picker page
+    And I enter the date "05/25/2014"
+    Then I see the same year, month and date selected

@@ -41,4 +41,5 @@ public class HomeSteps extends TestBase {
     public void i_opened_the_book_store_pane() {
         homePage.openBookStorePane();
     }
+
 }

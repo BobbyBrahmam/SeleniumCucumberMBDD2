@@ -44,6 +44,15 @@ public class Action extends TestBase {
 		}
 	}
 
+	public static void performTasks(WebElement element, int wait, CharSequence... input) {
+		try {
+			WaitForElement.waitForVisibilityOf(element, wait).sendKeys(input);
+		} catch (NoSuchElementException e) {
+			System.out.println("The problem is: " + e);
+			e.printStackTrace();
+		}
+	}
+
 	public static void mouseHoverOnElement(WebElement element) {
 		Actions act = new Actions(driver);
 		act.moveToElement(element).build().perform();
