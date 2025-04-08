@@ -1,15 +1,15 @@
 @allure.label.owner=Bobby
 @allure.label.epic:Epic-Book_Store_Page
 @allure.label.feature:Feature-Book_Store
-Feature: Book Store
+Feature: Feature-Book Store
 
 Background:
   Given I navigate to ToolsQA HomePage
   When I opened the BookStore pane
 
   @Draft
-  @allure.label.story:Verify_that_the_user_is_able_to_use_the_slider
-  Scenario: Verify that the user is able to use the slider
+  @allure.label.story:Verify_that_the_user_is_able_to_login_to_the_Bookstore_search_page
+  Scenario: Verify that the user is able to login to the Bookstore search page
     And I open BookStore Login page
     Then I see the username and password fields
     When I enter the username "BobyBrahmam" in Bookstore login page

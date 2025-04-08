@@ -59,7 +59,7 @@ public class BookStorePage extends TestBase {
     }
 
     public Boolean isUserAbleToLogin() {
-        return Validations.validateVisibilityOfElement(searchBox, 2)
+        return Validations.validateVisibilityOfElement(searchBox, 5)
                 && Validations.validateTextOfElement(profileName, "BobyBrahmam", 0);
     }
 }
