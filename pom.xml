@@ -18,7 +18,7 @@
         <allure.version>2.29.1</allure.version>
         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
         <allure.report.directory>
-            E:/Programming/workspace/SeleniumCucumberMBDD2/test-reports/AllureReports</allure.report.directory>
+            ${project.basedir}/test-reports/AllureReports</allure.report.directory>
     </properties>
 
     <dependencyManagement>
@@ -96,7 +96,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.30.0</version>
+            <version>4.31.0</version>
         </dependency>
 
         <!-- Cucumber Dependencies -->
@@ -249,11 +249,11 @@
                 <configuration>
                     <!-- Set the custom directory for test results -->
                     <allure.results.directory>
-                        E:/Programming/workspace/SeleniumCucumberMBDD2/target/allure-results</allure.results.directory>
+                        ${project.basedir}/target/allure-results</allure.results.directory>
 
                     <!-- Set the custom directory for report generation -->
                     <allure.report.directory>
-                        E:/Programming/workspace/SeleniumCucumberMBDD2/test-reports/AllureReports</allure.report.directory>
+                        ${project.basedir}/test-reports/AllureReports</allure.report.directory>
                 </configuration>
             </plugin>
         </plugins>

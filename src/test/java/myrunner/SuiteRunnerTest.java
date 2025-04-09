@@ -5,9 +5,9 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/java/com/qa/features/Widgets.feature"}, 
+@CucumberOptions(features = {"src/test/java/com/qa/features"}, 
                      glue = {"com.qa.stepDefinitions", "com.qa.hooks"}, 
-                     tags = "@Draft", 
+                     tags = "@Regression", 
         stepNotifications = true, 
                    plugin = {
                              "pretty", 

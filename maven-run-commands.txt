@@ -33,11 +33,14 @@ mvn clean test -Dtest=myrunner.SuiteRunnerTest
 
 #To run main SuiteRunnerTest and generate allure report
 mvn clean verify -Dtest=myrunner.SuiteRunnerTest
+mvn clean verify -Dtest=myrunner.SuiteRunnerTest -Dbrowser=firefox
+mvn clean verify -Dtest=myrunner.SuiteRunnerTest -Dbrowser=edge
+
 
 #New failed rerun commands
 mvn clean test -Dtest=FailedRun -Dcucumber.features="@src/test/resources/failedrerun.txt"
 mvn clean test -Dtest=FailedRun
-mvn clean verify -Dtest=FailedRun
+mvn clean test -Dtest=FailedRun -Dbrowser=edge
 
 
 #defaul path format for retest of failed scenarios

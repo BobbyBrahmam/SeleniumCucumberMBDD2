@@ -2,6 +2,7 @@ package com.qa.pages;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.time.format.TextStyle;
 import java.util.List;
 import java.util.Locale;
@@ -22,7 +23,6 @@ public class DatePickerPage extends TestBase {
 
     private static String dateInput;
     private static int yearNumber;
-    private static int monthNumber;
     private static int dateNumber;
 
     @FindBy(how = How.XPATH, using = "//span[text()='Date Picker']")
@@ -47,13 +47,11 @@ public class DatePickerPage extends TestBase {
     }
 
     public void enterTheDate(String dateValue) {
-        WaitForElement.waitForAutoScrollToFinish(driver, 3);
+        WaitForElement.waitForAutoScrollToFinish(driver, 4);
         dateInput = dateValue;
         Action.scrollDownFluentlyTillElementVisible(dateInputField);
-        monthNumber = Integer.parseInt(dateValue.split("/")[0]);
         dateNumber = Integer.parseInt(dateValue.split("/")[1]);
         yearNumber = Integer.parseInt(dateValue.split("/")[2]);
-        System.out.println(monthNumber + ":" + dateNumber + ":" + yearNumber);
         Action.click(dateInputField);
         Action.performTasks(dateInputField, 0, Keys.chord(Keys.CONTROL, "a"));
         Action.performTasks(dateInputField, 0, Keys.BACK_SPACE);
@@ -62,16 +60,22 @@ public class DatePickerPage extends TestBase {
 
     public Boolean isTheDateMonthYearAccurate() {
 
-        //get expected month name from given date
+        // get expected month name from given date
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-        LocalDate date = LocalDate.parse(dateInput, formatter);
+        LocalDate date;
+        try {
+            date = LocalDate.parse(dateInput, formatter);
+        } catch (DateTimeParseException e) {
+            e.printStackTrace();
+            return false; // Invalid date
+        }
         String expectedMonthName = date.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH);
 
-        //get month name got selected
+        // get month name got selected
         Select monthDropdown = new Select(monthDropdownElement);
         String selectedMonthOption = monthDropdown.getFirstSelectedOption().getText();
 
-        //get selected date
+        // get selected date
         String xpathOfDate = "//div[contains(@class, 'react-datepicker__day') and text()='" + dateNumber + "']";
         int actualDateDisplayed = 0;
         List<WebElement> elements = driver.findElements(By.xpath(xpathOfDate));
@@ -90,14 +94,13 @@ public class DatePickerPage extends TestBase {
             actualDateDisplayed = Integer.parseInt(elements.get(0).getText());
         }
 
-        //get selected year
+        // get selected year
         Select yearDropdown = new Select(yearDropdownElement);
         int selectedYearOption = Integer.parseInt(yearDropdown.getFirstSelectedOption().getText());
 
-        System.out.println(":"+expectedMonthName+":"+dateNumber+":"+yearNumber);
-        System.out.println(":"+selectedMonthOption+":"+actualDateDisplayed+":"+selectedYearOption);
-        //validate the actual displayed values with given expected values
-        return (expectedMonthName.equals(selectedMonthOption) && dateNumber == actualDateDisplayed &&  yearNumber == selectedYearOption);
+        // validate the actual displayed values with given expected values
+        return (expectedMonthName.equals(selectedMonthOption) && dateNumber == actualDateDisplayed
+                && yearNumber == selectedYearOption);
     }
 
 }

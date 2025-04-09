@@ -40,23 +40,24 @@ public class FileDownloadAndUploadPage extends TestBase {
 	}
 
 	public void downloadFile() {
-		folder.mkdir();
+		downloadsFolder.mkdir();
 		Action.click(downloadButton, 1);
 	}
 
 	public Boolean isFileDownloaded(int timeoutInSeconds) {
-		boolean check = Validations.validateTheDownloaded(folder, timeoutInSeconds, 1);
+		boolean check = Validations.validateTheDownloaded(downloadsFolder, timeoutInSeconds, 1);
 		if(check){
-			for (File file : folder.listFiles()) {
+			for (File file : downloadsFolder.listFiles()) {
 				file.delete();
 			}
-			folder.delete();
 		}
 		return check;
 	}
 
 	public void uploadFile() {
-		Action.sendKeys(uploadButton, "E:\\Programming\\sampleFile.jpeg", 1);
+		String filePath = System.getProperty("user.dir")+prop.getProperty("sampleImagePath");
+		filePath = filePath.replace("/", "\\").replace("\\", "\\\\");
+		Action.sendKeys(uploadButton, filePath, 1);
 	}
 
 	public Boolean isFileUploaded() {

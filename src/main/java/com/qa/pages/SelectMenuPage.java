@@ -49,7 +49,7 @@ public class SelectMenuPage extends TestBase {
 	}
 
 	public void selectTheBootstrapOption(String value) {
-		Action.scrollDownFluentlyTillElementVisible(lastSelectMenu);
+		Action.scrollDownFluentlyTillElementVisible(bootstrapMenu);
 		Action.click(bootstrapMenu, 1);
 		Action.mouseHoverOnElement(
 				driver.findElement(By.xpath("//*[@class!=' css-1uccc91-singleValue' and text()='" + value + "']")));

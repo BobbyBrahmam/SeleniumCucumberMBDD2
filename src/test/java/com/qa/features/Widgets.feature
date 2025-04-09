@@ -27,7 +27,7 @@ Feature: Feature-Handle Widgets
     When I hover on sub menu of "second" main menu
     Then I see the sub menu list of "second" main menu
 
-  @Regression @TestOne
+  @Regression @TestOne @Draft
   @allure.label.story:Verify_that_the_user_is_able_to_select_the_auto_complete_suggestions
   Scenario: Verify that the user is able to select the auto complete suggestions
     And I open Auto-Complete page
@@ -45,7 +45,7 @@ Feature: Feature-Handle Widgets
     Then I see the <value> get selected
     Examples:
       | value                 |
-      | "Group 1, option 3"   |
+      | "Group 1, option 1"   |
       | "Group 1, option 2"   |
       | "Group 2, option 1"   |
       | "Group 2, option 2"   |
@@ -71,7 +71,7 @@ Feature: Feature-Handle Widgets
       | Magenta |
       | Aqua    |
 
-  @Regression
+  @Regression @Draft
   @allure.label.story:Verify_that_the_user_is_able_to_see_the_tooltip_after_hovering_on_the_button
   Scenario: Verify that the user is able to see the tooltip after hovering on the button
     And I open Tool Tips page
@@ -82,5 +82,5 @@ Feature: Feature-Handle Widgets
   @allure.label.story:Verify_that_the_user_is_able_to_select_the_date_and_time
   Scenario Outline: Verify that the user is able to select the date and time
     And I open Date Picker page
-    And I enter the date "05/25/2014"
+    And I enter the date "02/28/2014"
     Then I see the same year, month and date selected

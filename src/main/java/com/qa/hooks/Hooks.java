@@ -9,21 +9,20 @@ import java.nio.file.StandardCopyOption;
 import com.qa.utilities.TestBase;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
-//import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-//import io.qameta.allure.Allure;
+
 
 public class Hooks extends TestBase {
-
-	// @Before
-	// public void beforeScenario(Scenario scenario) {
-	// 	Allure.getLifecycle().updateTestCase(tc -> tc.setName(scenario.getName()));
-	// }
 	
-
 	@After
 	public void endTest(Scenario scenario) throws IOException {
-		if (scenario.isFailed()) {
+		try {
+			if (scenario.isFailed()) {
+				super.takeScreenshot(scenario);
+			}
+		} catch (Exception e) {
+			// Assume scenario is broken and take a screenshot anyway
+			System.out.println("Scenario may be broken. Taking screenshot as precaution.");
 			super.takeScreenshot(scenario);
 		}
 		driver.quit();
@@ -32,10 +31,11 @@ public class Hooks extends TestBase {
 	@AfterAll
 	public static void backupReportsAndFailedFeatures() {
 		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-			Path source = Paths.get(prop.getProperty("failedrerunbackup.file.path"));
-			Path destination = Paths.get(prop.getProperty("failedrerun.file.path"));
-			String allureReportsPath = "E:/Programming/workspace/SeleniumCucumberMBDD2/test-reports/AllureReports";
-			String backupBasePath = "E:/Programming/workspace/SeleniumCucumberMBDD2/test-reports/AllureReportsBackup";
+			downloadsFolder.delete();
+			Path source = Paths.get(System.getProperty("user.dir")+prop.getProperty("failedrerunbackup.file.path"));
+			Path destination = Paths.get(System.getProperty("user.dir")+prop.getProperty("failedrerun.file.path"));
+			String allureReportsPath = System.getProperty("user.dir")+prop.getProperty("allureReports.folder.path");
+			String backupBasePath = System.getProperty("user.dir")+prop.getProperty("backupBase.folder.path");
 			String timestamp = java.time.LocalDateTime.now().toString().replace(":", "-").replace("T", "_");
 			File sourceDir = new File(allureReportsPath);
 			File destinationDir = new File(backupBasePath + "/AllureReports-" + timestamp);

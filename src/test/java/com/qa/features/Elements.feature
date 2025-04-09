@@ -6,7 +6,7 @@ Feature: Feature-Handling Elements
     Background:
         Given I navigate to ToolsQA HomePage
 
-    @TestOne @Regression
+    @Regression
     @allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_form
     Scenario Outline: Verify that user is able to fill the user details form
         When I open elements pane
@@ -22,7 +22,7 @@ Feature: Feature-Handling Elements
             | "Arjun Suravaram" | "arjunsuravaram@gmail.com" | "abc123street" | "abc123street"   |
             | "Bobby Brahmama"  | "bobybrahmam@gmail.com"    | "qwe123street" | "aksdflkstreet"  |
 
-    @TestOne @Regression
+    @Regression
     @allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_parallelly_in_the_form
     Scenario Outline: Verify that user is able to fill the user details parallelly in the form
         When I open elements pane
@@ -44,7 +44,7 @@ Feature: Feature-Handling Elements
         And I delete all existing records
         Then All records are deleted
 
-    @Regression @Draft
+    @Regression
     @allure.label.story:Verify_that_user_is_able_to_add_a_new_records
     Scenario Outline: Verify that user is able to add a new records
         When I open elements pane
@@ -60,7 +60,7 @@ Feature: Feature-Handling Elements
             | Kohli      | Virat          | viratkohli@yahoomail.com | 31  | 10000  | Finance    |
             | Rohit      | Sharma         | rohitsharma200@gmail.com | 29  | 70000  | HR         |
 
-    @Regression @TestOne
+    @Regression @Draft
     @allure.label.story:Verify_that_user_is_able_to_download_and_upload_a_file
     Scenario: Verify that user is able to download and upload a file
         When I open elements pane
