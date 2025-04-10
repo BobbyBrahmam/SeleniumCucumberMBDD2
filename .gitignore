@@ -29,5 +29,9 @@ replay_pid*
 **/target/
 /test-reports/
 /cucumber-reports/
-/target/
-src/test/resources/failedrerun.txt
+
+
+# ignore .classpath, .factorypath, .project
+.classpath
+.factorypath
+.project
