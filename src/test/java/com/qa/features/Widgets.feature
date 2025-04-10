@@ -27,7 +27,7 @@ Feature: Feature-Handle Widgets
     When I hover on sub menu of "second" main menu
     Then I see the sub menu list of "second" main menu
 
-  @Regression @TestOne @Draft
+  @Regression @TestOne
   @allure.label.story:Verify_that_the_user_is_able_to_select_the_auto_complete_suggestions
   Scenario: Verify that the user is able to select the auto complete suggestions
     And I open Auto-Complete page
@@ -71,16 +71,25 @@ Feature: Feature-Handle Widgets
       | Magenta |
       | Aqua    |
 
-  @Regression @Draft
+  @Regression
   @allure.label.story:Verify_that_the_user_is_able_to_see_the_tooltip_after_hovering_on_the_button
   Scenario: Verify that the user is able to see the tooltip after hovering on the button
     And I open Tool Tips page
     And I hover on the given button
     Then I see the tool tip with the tip message "You hovered over the Button"
 
-  @Regression @Draft
+  @Regression
   @allure.label.story:Verify_that_the_user_is_able_to_select_the_date_and_time
-  Scenario Outline: Verify that the user is able to select the date and time
+  Scenario: Verify that the user is able to select the date and time
     And I open Date Picker page
     And I enter the date "02/28/2014"
     Then I see the same year, month and date selected
+
+  @Regression @Draft
+  @allure.label.story:Verify_that_the_user_is_able_to_select_the_date_and_time_by_using_dropdowns
+  Scenario: Verify that the user is able to select the date and time by using dropdowns
+    And I open Date Picker page
+    And I select the month "February"
+    And I select the year 2023
+    And I select the date 1 
+    Then I see the same year, month and date populated

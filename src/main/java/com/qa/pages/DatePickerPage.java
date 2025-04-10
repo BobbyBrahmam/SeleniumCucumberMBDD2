@@ -1,6 +1,7 @@
 package com.qa.pages;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.format.TextStyle;
@@ -24,6 +25,7 @@ public class DatePickerPage extends TestBase {
     private static String dateInput;
     private static int yearNumber;
     private static int dateNumber;
+    private static String nameOfMonth;
 
     @FindBy(how = How.XPATH, using = "//span[text()='Date Picker']")
     public WebElement datePickerLink;
@@ -88,7 +90,6 @@ public class DatePickerPage extends TestBase {
             } else if (dateNumber >= 15 && dateNumber <= 21) {
                 actualDateDisplayed = Integer.parseInt(elements.get(0).getText());
             } else {
-
             }
         } else if (elements.size() == 1) {
             actualDateDisplayed = Integer.parseInt(elements.get(0).getText());
@@ -101,6 +102,50 @@ public class DatePickerPage extends TestBase {
         // validate the actual displayed values with given expected values
         return (expectedMonthName.equals(selectedMonthOption) && dateNumber == actualDateDisplayed
                 && yearNumber == selectedYearOption);
+    }
+
+    public void selectTheMonth(String monthName) {
+        nameOfMonth = monthName;
+        WaitForElement.waitForAutoScrollToFinish(driver, 4);
+        Action.scrollDownFluentlyTillElementVisible(dateInputField, 3, 1);
+        Action.click(dateInputField);
+        Action.selectDropdownValue(monthDropdownElement, monthName, 1);
+    }
+
+    public void selectTheYear(int year) {
+        yearNumber = year;
+        Action.selectDropdownValue(yearDropdownElement, String.valueOf(year), 0);
+    }
+
+    public void selectTheDate(int dateValue) {
+        dateNumber = dateValue;
+        String xpathOfDate = "//div[contains(@class, 'react-datepicker__day') and text()='" + dateValue + "']";
+        List<WebElement> elements = driver.findElements(By.xpath(xpathOfDate));
+        if (elements.size() > 1) {
+            if (dateValue >= 1 && dateValue <= 14) {
+                Action.click(elements.get(0));
+            } else if (dateValue >= 22 && dateValue <= 31) {
+                Action.click(elements.get(1));
+            } else if (dateNumber >= 15 && dateNumber <= 21) {
+                Action.click(elements.get(0));
+            } else {
+
+            }
+        } else if (elements.size() == 1) {
+            Action.click(elements.get(0));
+        }
+    }
+
+    public Boolean isDatePopulatedAccurate() {
+        int monthValue = Month.valueOf(nameOfMonth.toUpperCase()).getValue(); // converting month name into its
+                                                                              // numerical value;
+        String expectedMonthValue = (monthValue > 0 && monthValue < 10) ? String.format("0%d", monthValue)
+                : String.valueOf(monthValue); // adding 0 as prefix if it is a single digit number
+        String expectedDateValue = (dateNumber > 0 && dateNumber < 10) ? String.format("0%d", dateNumber)
+                : String.valueOf(dateNumber); // adding 0 as prefix if it is a single digit number
+        String expectedDateFormatValue = expectedMonthValue + "/" + expectedDateValue + "/" + yearNumber;
+        String actualDateFormatValue = dateInputField.getDomAttribute("value");
+        return expectedDateFormatValue.equals(actualDateFormatValue);
     }
 
 }

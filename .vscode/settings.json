@@ -8,26 +8,38 @@
     },
     "window.zoomLevel": 0,
     "gherkin-autocomplete.featuresPath": "src/test/java/com/qa/features/*.feature",
-    "cucumberautocomplete.steps": ["src/main/java/com/qa/stepDefinitions/*.java"],
+    "cucumberautocomplete.steps": [
+        "src/main/java/com/qa/stepDefinitions/*.java"
+    ],
     "cucumberautocomplete.syncfeatures": "src/test/java/com/qa/features/*.feature",
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-        {
-            "scope": [
-                "keyword.feature.gherkin",
-                "keyword.background.gherkin",
-                "keyword.scenario.gherkin",
-                "keyword.given.gherkin",
-                "keyword.when.gherkin",
-                "keyword.then.gherkin",
-                "keyword.and.gherkin"
-            ],
-            "settings": {
-                "foreground": "#569CD6"  // Blue color same as Java keywords
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "keyword.feature.gherkin",
+                    "keyword.background.gherkin",
+                    "keyword.scenario.gherkin",
+                    "keyword.given.gherkin",
+                    "keyword.when.gherkin",
+                    "keyword.then.gherkin",
+                    "keyword.and.gherkin"
+                ],
+                "settings": {
+                    "foreground": "#569CD6" // Blue color same as Java keywords
+                }
             }
-        }
+        ]
+    },
+    "java.debug.settings.stepping.skipClasses": [
+        "java.*",
+        "javax.*",
+        "sun.*",
+        "com.sun.*",
+        "io.cucumber.*",
+        "org.openqa.*",
+        "java.nio.*",
+        "jdk.internal.*",
+        "sun.reflect.*",
+        "java.lang.*"
     ]
-}
-
-
 }

@@ -20,7 +20,8 @@ public class Validations extends TestBase {
 		return false;
 	}
 
-	public static Boolean validateAttributeValueOfElement(WebElement element, String attribute, String expectedValue, int wait) {
+	public static Boolean validateAttributeValueOfElement(WebElement element, String attribute, String expectedValue,
+			int wait) {
 		try {
 			return WaitForElement.waitForVisibilityOf(element, wait).getDomAttribute(attribute).equals(expectedValue);
 		} catch (Exception e) {
@@ -32,7 +33,8 @@ public class Validations extends TestBase {
 	public static Boolean validateTextOfAlertFluently(String expectedValue, int maxWait, int polling) {
 		boolean check = false;
 		try {
-			check = WaitForElement.fluentWaitForVisibilityOfAlert(maxWait, polling).getText().trim().equals(expectedValue);
+			check = WaitForElement.fluentWaitForVisibilityOfAlert(maxWait, polling).getText().trim()
+					.equals(expectedValue);
 			return check;
 		} catch (NoAlertPresentException e) {
 			actions = new Actions(driver);
@@ -75,6 +77,10 @@ public class Validations extends TestBase {
 			e.printStackTrace();
 		}
 		return false;
+	}
+
+	public static Boolean validateTheCurrentPageUrl(String expectedURL) {
+		return driver.getCurrentUrl().equals(expectedURL);
 	}
 
 }

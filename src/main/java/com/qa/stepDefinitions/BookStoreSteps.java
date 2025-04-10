@@ -42,4 +42,13 @@ public class BookStoreSteps extends TestBase {
         Assert.assertTrue("User is not able to login", read.isUserAbleToLogin());
     }
 
+    @Then("I click on Logout button")
+    public void i_click_on_logout_button() {
+        read.clickLogoutButton();
+    }
+
+    @Then("I am able to logout")
+    public void i_am_able_to_logout() {
+        Assert.assertTrue("User is not able to logout", read.isUserAbleToLogout());
+    }
 }

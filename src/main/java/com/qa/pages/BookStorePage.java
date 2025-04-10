@@ -30,6 +30,9 @@ public class BookStorePage extends TestBase {
     @FindBy(how = How.CSS, using = "input[id='searchBox']")
     public WebElement searchBox;
 
+    @FindBy(how = How.CSS, using = "button#submit")
+    public WebElement logoutButton;
+
     public BookStorePage() {
         PageFactory.initElements(driver, this);
     }
@@ -61,5 +64,15 @@ public class BookStorePage extends TestBase {
     public Boolean isUserAbleToLogin() {
         return Validations.validateVisibilityOfElement(searchBox, 5)
                 && Validations.validateTextOfElement(profileName, "BobyBrahmam", 0);
+    }
+
+    public void clickLogoutButton() {
+        Action.click(logoutButton);
+    }
+
+    public Boolean isUserAbleToLogout() {
+        return Validations.validateVisibilityOfElement(username, 0)
+                && Validations.validateVisibilityOfElement(password, 0)
+                && Validations.validateTheCurrentPageUrl(prop.getProperty("bookStoreLoginPageURL"));
     }
 }
