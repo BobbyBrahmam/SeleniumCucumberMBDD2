@@ -1,0 +1,46 @@
+#To run failed testcases (both work the same way with no difference)
+mvn test -Dtest=FailedRun -Dcucumber.features="@failedrerun.txt"
+mvn test -Dcucumber.features="@failedrerun.txt" -Dtest=FailedRun
+
+#To run specific feature
+mvn test -Dcucumber.features=src/test/java/com/qa/features/Elements.feature
+
+#To run specific scenarios containing specific tags in a specific feature 
+mvn test -Dcucumber.feature="src/test/java/com/qa/features/Widgets.feature" -Dcucumber.filter.tags="@TestOne"
+
+Chrome cors
+chrome.exe --disable-web-security --allow-file-access-from-files
+
+Firefox cors
+type in search bar and hit enter: about:config
+search this policy in next search and hit enter: security.fileuri.strict_origin_policy
+double click and reset it to false
+
+-----------------------------------------------------------------------------------------------------------------
+mvn allure:report
+mvn allure:serve
+
+#To run main SuiteRunnerTest and generate allure report
+mvn clean verify -Dtest=myrunner.SuiteRunnerTest
+mvn clean verify -Dtest=myrunner.SuiteRunnerTest -Dbrowser=firefox
+mvn clean verify -Dtest=myrunner.SuiteRunnerTest -Dbrowser=edge
+mvn clean verify -Dtest=myrunner.SuiteRunnerTest -Dbrowser=chrome
+mvn clean verify -Dtest=myrunner.SuiteRunnerTest -Dbrowser=firefox -Dcucumber.filter.tags="@TestOne"
+
+#New failed rerun commands
+mvn clean verify -Dtest=FailedRun
+mvn clean verify -Dtest=FailedRun -Dbrowser=edge
+mvn clean verify -Dtest=FailedRun -Dcucumber.features="@src/test/resources/failedrerun.txt"
+
+#To run runTest.bat file
+runTest.bat BookStore.feature @Draft chrome SuiteRunnerTest
+runTest.bat Elements.feature @Regression edge SuiteRunnerTest
+
+#To run runAllBrowsers.bat file to run in all browsers parallell
+runAllBrowsers.bat
+
+#To run scenarios without runner file involvement
+mvn clean verify -Dbrowser=edge -Dcucumber.features="src/test/java/com/qa/features/Elements.feature" -Dcucumber.filter.tags="@Draft"
+
+#defaul path format for retest of failed scenarios in failedrun.txt
+file:src/test/java/com/qa/features/Widgets.feature:44

@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.*;
+import org.openqa.selenium.support.ui.Select;
 
 public class Action extends TestBase {
 
@@ -36,6 +37,20 @@ public class Action extends TestBase {
 	}
 
 	public static void sendKeys(WebElement element, String input, int wait) {
+		try {
+			WaitForElement.waitForVisibilityOf(element, wait).sendKeys(input);
+		} catch (NoSuchElementException e) {
+			System.out.println("The problem is: " + e);
+			e.printStackTrace();
+		}
+	}
+
+	public static void selectDropdownValue(WebElement element, String option, int wait) {
+		Select select = new Select(element);
+		select.selectByVisibleText(option);
+	}
+
+	public static void performTasks(WebElement element, int wait, CharSequence... input) {
 		try {
 			WaitForElement.waitForVisibilityOf(element, wait).sendKeys(input);
 		} catch (NoSuchElementException e) {
