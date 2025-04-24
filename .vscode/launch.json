@@ -6,8 +6,8 @@
       "name": "Debug Cucumber Tests",
       "request": "launch",
       "mainClass": "io.cucumber.core.cli.Main",
-      "args": "--glue com.qa.stepDefinitions --tags \"@Draft\" src/test/java/com/qa/features/BookStore.feature",
-      "projectName": "SeleniumCucumberMBDD2"
+      "args": "--glue com.qa.stepDefinitions --glue com.qa.hooks --tags \"@Debug\" src/test/java/com/qa/features/Widgets.feature",
+      "projectName": "SeleniumCucumberMBDD2",
     }
   ]
 }

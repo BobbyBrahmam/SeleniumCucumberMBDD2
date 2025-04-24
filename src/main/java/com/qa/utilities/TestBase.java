@@ -1,8 +1,9 @@
 package com.qa.utilities;
 
 import java.io.File;
-import java.io.FileInputStream;
+//import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -35,10 +36,11 @@ public class TestBase {
 
 	public TestBase() {
 		try {
+			InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties");
 			prop = new Properties();
-			FileInputStream file = new FileInputStream(
-					System.getProperty("user.dir") + "/src/main/java/com/qa/configuration/config.properties");
-			prop.load(file);
+			 //FileInputStream file = new FileInputStream(
+					//System.getProperty("user.dir") + "/src/main/java/com/qa/configuration/config.properties");
+			prop.load(input);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -92,7 +94,7 @@ public class TestBase {
 	//@Attachment(value = "Screenshot of {0}", type = "image/png")
 	public static void takeScreenshot(Scenario scenario) throws IOException {
 		String date = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
-		String destinationPath = System.getProperty("user.dir") + "/cucumber-reports/screenshots/" + scenario.getName()
+		String destinationPath = System.getProperty("user.dir") + prop.getProperty("cucumberReportsScreenshots") + scenario.getName()
 				+ date + ".jpg";
 		File screenshotFile = new File(destinationPath);
 		screenshotFile.getParentFile().mkdirs();

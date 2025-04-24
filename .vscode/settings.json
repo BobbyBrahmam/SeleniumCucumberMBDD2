@@ -1,6 +1,7 @@
 {
     "java.compile.nullAnalysis.mode": "automatic",
     "java.configuration.updateBuildConfiguration": "automatic",
+    "java.project.outputPath": "target/classes",
     "editor.quickSuggestions": {
         "comments": "on",
         "strings": "on",
@@ -30,13 +31,17 @@
             }
         ]
     },
+    "java.debug.settings.showStaticVariables": true,
+    "java.debug.settings.showLogicalStructure": true,
     "java.debug.settings.stepping.skipClasses": [
         "java.*",
         "javax.*",
         "sun.*",
         "com.sun.*",
         "io.cucumber.*",
+        "cucumber.*",
         "org.openqa.*",
+        "org.junit.*",
         "java.nio.*",
         "jdk.internal.*",
         "sun.reflect.*",

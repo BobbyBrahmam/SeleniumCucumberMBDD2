@@ -21,11 +21,14 @@ public class Hooks extends TestBase {
 				super.takeScreenshot(scenario);
 			}
 		} catch (Exception e) {
-			// Assume scenario is broken and take a screenshot anyway
 			System.out.println("Scenario may be broken. Taking screenshot as precaution.");
 			super.takeScreenshot(scenario);
 		}
-		driver.quit();
+		
+		if (driver != null) {
+			driver.quit();
+			driver = null;
+		}
 	}
 
 	@AfterAll
@@ -59,6 +62,7 @@ public class Hooks extends TestBase {
 			}
 
 		}));
+
 	}
 
 }
