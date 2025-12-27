@@ -66,13 +66,12 @@ public class BrowserWindowsPage extends TestBase {
 	}
 
 	public void switchToNewWindow(String windowUrl) {
-		String url = "";
 		for (String e : hList) {
-			url = driver.switchTo().window(e).getCurrentUrl();
-			if (url.equals(windowUrl))
-				break;
-			else
-				continue;
+			String url = driver.switchTo().window(e).getCurrentUrl();
+				if (url != null && windowUrl.equals(url))
+					break;
+				else
+					continue;
 		}
 	}
 

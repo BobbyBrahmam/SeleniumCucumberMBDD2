@@ -38,3 +38,14 @@ replay_pid*
 
 # ignore bin
 /bin/
+
+# IDE files
+.settings/
+.vscode/
+.idea/
+
+# Rerun files
+failedrerun.txt
+
+# OS
+.DS_Store

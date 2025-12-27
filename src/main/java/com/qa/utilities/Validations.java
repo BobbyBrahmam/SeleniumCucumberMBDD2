@@ -2,6 +2,8 @@ package com.qa.utilities;
 
 import java.io.File;
 import java.util.List;
+import java.util.Objects;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
@@ -22,8 +24,12 @@ public class Validations extends TestBase {
 
 	public static Boolean validateAttributeValueOfElement(WebElement element, String attribute, String expectedValue,
 			int wait) {
-		try {
-			return WaitForElement.waitForVisibilityOf(element, wait).getDomAttribute(attribute).equals(expectedValue);
+		try { 
+			String actualValue = WaitForElement
+                .waitForVisibilityOf(element, wait)
+                .getDomAttribute(attribute);
+				return Objects.equals(actualValue, expectedValue);
+			//return WaitForElement.waitForVisibilityOf(element, wait).getDomAttribute(attribute).equals(expectedValue);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -79,8 +85,8 @@ public class Validations extends TestBase {
 		return false;
 	}
 
-	public static Boolean validateTheCurrentPageUrl(String expectedURL) {
-		return driver.getCurrentUrl().equals(expectedURL);
+	public static boolean validateTheCurrentPageUrl(String expectedURL) {
+		return Objects.equals(driver.getCurrentUrl(), expectedURL);
 	}
 
 }
