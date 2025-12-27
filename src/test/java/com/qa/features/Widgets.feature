@@ -17,7 +17,7 @@ Feature: Feature-Handle Widgets
     When I drag the slider to the value 65
     Then I see the value 65 in input box
 
-  @Regression @TestOne
+  @Regression
   @allure.label.story:Verify_that_the_user_is_able_to_select_the_sub-menu_item
   Scenario: Verify that the user is able to select the sub-menu item
     And I open Menu page

@@ -1,1 +1,0 @@
-file:src/test/java/com/qa/features/BookStore.feature:22
