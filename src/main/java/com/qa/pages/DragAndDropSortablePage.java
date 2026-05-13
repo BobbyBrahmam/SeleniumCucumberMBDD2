@@ -27,7 +27,11 @@ public class DragAndDropSortablePage extends TestBase {
 	public WebElement lastItem;
 
 	public DragAndDropSortablePage() {
+	}
+
+	public DragAndDropSortablePage initElements() {
 		PageFactory.initElements(driver, this);
+		return this;
 	}
 
 	public void openSortablePage() {

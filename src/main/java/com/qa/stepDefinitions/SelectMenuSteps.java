@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 
 public class SelectMenuSteps extends TestBase {
 
-	SelectMenuPage select = new SelectMenuPage();
+	SelectMenuPage select = new SelectMenuPage().initElements();
 	
 	@When("I open Select Menu page")
 	public void i_open_select_menu_page() {

@@ -7,7 +7,7 @@ import org.junit.Assert;
 
 public class DragAndDropSteps extends TestBase {
 
-	DragAndDropPage drop = new DragAndDropPage();
+	DragAndDropPage drop = new DragAndDropPage().initElements();
 
 	@When("I open Droppable page")
 	public void i_open_droppable_page() {

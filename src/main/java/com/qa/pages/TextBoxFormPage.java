@@ -49,7 +49,11 @@ public class TextBoxFormPage extends TestBase {
     String permanentAddressEntered;
 
     public TextBoxFormPage() {
+    }
+
+    public TextBoxFormPage initElements() {
         PageFactory.initElements(driver, this);
+        return this;
     }
 
     public void openTextBoxFormPage() {

@@ -14,7 +14,7 @@ public class HomeSteps extends TestBase {
     public void i_navigate_to_toolsqa_homepage() {
         TestBase.initialization();
         home = new HomeSteps();
-        homePage = new HomePage();
+        homePage = new HomePage().initElements();
     }
 
     @When("I open widgets pane")

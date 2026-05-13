@@ -24,7 +24,7 @@ public class SelectMenuPage extends TestBase {
 	@FindBy(how = How.CSS, using = "[id='withOptGroup']")
 	public WebElement bootstrapMenu;
 
-	@FindBy(how = How.CSS, using = "[class=' css-1uccc91-singleValue']")
+	@FindBy(how = How.XPATH, using = "//*[@id='withOptGroup']/div/div[1]/div[1]")
 	public WebElement selectedValueOfBootstrapMenu;
 
 	@FindBy(how = How.CSS, using = "[id='oldSelectMenu']")
@@ -34,7 +34,11 @@ public class SelectMenuPage extends TestBase {
 	public WebElement lastSelectMenu;
 
 	public SelectMenuPage() {
+	}
+
+	public SelectMenuPage initElements() {
 		PageFactory.initElements(driver, this);
+		return this;
 	}
 
 	public void openSelectMenuPage() {

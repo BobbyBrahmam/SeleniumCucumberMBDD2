@@ -1,17 +1,16 @@
 package com.qa.utilities;
 
 import java.io.File;
-//import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
+import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.UUID;
-import java.util.Base64;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.PageLoadStrategy;
@@ -24,25 +23,27 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import io.cucumber.java.Scenario;
 
 public class TestBase {
+	public static final Logger log = LoggerFactory.getLogger(TestBase.class);
+
 	public static WebDriver driver;
 	public static Properties prop;
 	public static File downloadsFolder;
 	public static final File DOWNLOADS_FOLDER = new File(System.getProperty("user.dir") + "/downloads");
 	public static String runnerLable = "";
 
-	public TestBase() {
+	    public TestBase() {
 		try {
 			InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties");
 			prop = new Properties();
-			 //FileInputStream file = new FileInputStream(
-					//System.getProperty("user.dir") + "/src/main/java/com/qa/configuration/config.properties");
 			prop.load(input);
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error("Error occurred while doing X", e);
 		}
 	}
 
@@ -54,7 +55,7 @@ public class TestBase {
 		}
 		if (browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.silentOutput", "true");
-			Map<String, Object> prefs = new HashMap<String, Object>();
+			Map<String, Object> prefs = new HashMap<>();
 			prefs.put("download.default_directory", downloadsFolder.getAbsolutePath());
 			ChromeOptions options = new ChromeOptions();
 			options.setExperimentalOption("prefs", prefs);
@@ -100,7 +101,7 @@ public class TestBase {
 		screenshotFile.getParentFile().mkdirs();
 
 		//Full Page Screenshot for only chrome
-		if (driver instanceof ChromeDriver) {
+		if(driver instanceof ChromeDriver) {
 			try {
 				Map<String, Object> params = new HashMap<>();
 				params.put("format", "png");
@@ -110,7 +111,7 @@ public class TestBase {
 				byte[] decodedScreenshot = Base64.getDecoder().decode(screenshotBase64);
 				Files.write(screenshotFile.toPath(), decodedScreenshot);
 				scenario.attach(decodedScreenshot, "image/png", "Full_Screen_Screenshot_For: " + scenario.getName());
-			} catch (Exception e) {
+			} catch (IOException e) {
 				System.out.println("Chrome full-page screenshot failed: " + e.getMessage());
 			}
 		}

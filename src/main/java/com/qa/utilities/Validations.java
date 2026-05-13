@@ -17,7 +17,7 @@ public class Validations extends TestBase {
 		try {
 			return WaitForElement.waitForVisibilityOf(element, wait).getText().equals(expectedValue);
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Error occurred while doing X", e);
 		}
 		return false;
 	}
@@ -31,7 +31,7 @@ public class Validations extends TestBase {
 				return Objects.equals(actualValue, expectedValue);
 			//return WaitForElement.waitForVisibilityOf(element, wait).getDomAttribute(attribute).equals(expectedValue);
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Error occurred while doing X", e);
 		}
 		return false;
 	}
@@ -62,16 +62,16 @@ public class Validations extends TestBase {
 		try {
 			return WaitForElement.waitForVisibilityOf(element, wait).isDisplayed();
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Error occurred while doing X", e);
 		}
 		return false;
 	}
 
 	public static Boolean validateVisibilityOfElements(List<WebElement> element, int wait) {
 		try {
-			return WaitForElement.waitForVisibilityOfWebElements(element, wait).size() > 0;
+			return !WaitForElement.waitForVisibilityOfWebElements(element, wait).isEmpty();
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Error occurred while doing X", e);
 		}
 		return false;
 	}
@@ -80,7 +80,7 @@ public class Validations extends TestBase {
 		try {
 			return WaitForElement.fluentWaitForDowloadOf(folder, max, polling);
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Error occurred while doing X", e);
 		}
 		return false;
 	}

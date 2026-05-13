@@ -22,7 +22,11 @@ public class ToolTipsPage extends TestBase {
     public WebElement toolTip;
 
     public ToolTipsPage() {
+    }
+
+    public ToolTipsPage initElements() {
         PageFactory.initElements(driver, this);
+        return this;
     }
 
     public void goToToolTipsPage() {

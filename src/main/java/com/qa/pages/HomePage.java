@@ -1,68 +1,68 @@
 package com.qa.pages;
 
-import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+
 import com.qa.utilities.Action;
 import com.qa.utilities.TestBase;
 import com.qa.utilities.WaitForElement;
 
 public class HomePage extends TestBase {
 
-    @FindBy(how = How.CSS, using = "div[class='category-cards'] div.card:nth-child(1)")
+    @FindBy(how = How.CSS, using = "div[class='category-cards'] a:nth-child(1) div div div:nth-child(2)")
 	public WebElement elementsLink;
 
-    @FindBy(how = How.CSS, using = "div[class='category-cards'] div.card:nth-child(3)")
+    @FindBy(how = How.CSS, using = "div[class='category-cards'] a:nth-child(3) div div div:nth-child(2)")
 	public WebElement alertsFrameAndWindowsPaneLink;
 
-    @FindBy(how = How.CSS, using = "div[class='category-cards'] div.card:nth-child(4)")
+    @FindBy(how = How.CSS, using = "div[class='category-cards'] a:nth-child(4) div div div:nth-child(2)")
 	public WebElement widgetLink;
 
-    @FindBy(how = How.CSS, using = "div[class='category-cards'] div.card:nth-child(5)")
+    @FindBy(how = How.CSS, using = "div[class='category-cards'] a:nth-child(5) div div div:nth-child(2)")
 	public WebElement interactions;
 
-    @FindBy(how = How.CSS, using = "div[class='category-cards'] div.card:nth-child(6)")
+    @FindBy(how = How.CSS, using = "div[class='category-cards'] a:nth-child(6) div div div:nth-child(2)")
 	public WebElement bookStoreLink;
 
-    @FindBy(how = How.CSS, using = "div#app div.body-height div.home-content div.home-body div.category-cards div.card.mt-4.top-card")
-	public List<WebElement> cards;
-
-    @FindBy(how = How.CSS, using = "div#app div.body-height div.home-content div.home-body div.category-cards")
+    @FindBy(how = How.CSS, using = "div[class='category-cards'] a")
 	public WebElement cardSet;
 
     public HomePage() {
+    }
+
+    public HomePage initElements() {
         PageFactory.initElements(driver, this);
+        return this;
     }
 
     public void openWidgetsPane() {
-        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 10);
+        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 12);
 		Action.scrollDownFluentlyTillElementVisible(widgetLink);
         Action.click(widgetLink);
 	}
 
     public void openInteractionsPane() {
-        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 10);
+        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 12);
 		Action.scrollDownFluentlyTillElementVisible(interactions);
         Action.click(interactions);
 	}
 
     public void openElementsPane() {
-        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 10);
+        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 12);
 		Action.scrollDownFluentlyTillElementVisible(elementsLink);
 		Action.click(elementsLink);
 	}
 
     public void openAlertsFramesAndWindowsPane() {
-        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 10);
+        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 12);
         Action.scrollDownFluentlyTillElementVisible(alertsFrameAndWindowsPaneLink);
 		Action.click(alertsFrameAndWindowsPaneLink);
 	}
 
     public void openBookStorePane() {
-        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 10);
+        WaitForElement.waitBrieflyUntilCardsSetVisible(cardSet, 12);
         Action.scrollDownFluentlyTillElementVisible(bookStoreLink);
 		Action.click(bookStoreLink);
 	}

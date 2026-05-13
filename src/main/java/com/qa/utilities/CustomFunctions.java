@@ -14,7 +14,7 @@ public class CustomFunctions extends TestBase {
                 try {
                     entry.getKey().sendKeys(entry.getValue());
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    log.error("Error occurred while doing X", e);
                 }
             });
         }

@@ -40,7 +40,11 @@ public class DatePickerPage extends TestBase {
     public WebElement yearDropdownElement;
 
     public DatePickerPage() {
+    }
+
+    public DatePickerPage initElements() {
         PageFactory.initElements(driver, this);
+        return this;
     }
 
     public void openDatePickerPage() {
@@ -68,7 +72,7 @@ public class DatePickerPage extends TestBase {
         try {
             date = LocalDate.parse(dateInput, formatter);
         } catch (DateTimeParseException e) {
-            e.printStackTrace();
+            log.error("Error occurred while doing X", e);
             return false; // Invalid date
         }
         String expectedMonthName = date.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH);

@@ -7,7 +7,7 @@ import io.cucumber.java.en.*;
 
 public class FileDownloadAndUploadSteps extends TestBase {
 
-	FileDownloadAndUploadPage handler = new FileDownloadAndUploadPage();
+	FileDownloadAndUploadPage handler = new FileDownloadAndUploadPage().initElements();
 
 	@When("I open upload-download page")
 	public void i_open_upload_download_page() {

@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 
 public class ToolTipSteps extends TestBase {
 
-    ToolTipsPage tip = new ToolTipsPage();
+    ToolTipsPage tip = new ToolTipsPage().initElements();
 
     @When("I open Tool Tips page")
     public void i_open_tool_tips_page() {

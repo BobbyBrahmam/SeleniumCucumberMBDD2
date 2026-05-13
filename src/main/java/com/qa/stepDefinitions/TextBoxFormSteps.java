@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 
 public class TextBoxFormSteps extends TestBase {
 
-    TextBoxFormPage fill = new TextBoxFormPage();
+    TextBoxFormPage fill = new TextBoxFormPage().initElements();
 
     @When("I go to text box page")
     public void i_go_to_text_box_page() {

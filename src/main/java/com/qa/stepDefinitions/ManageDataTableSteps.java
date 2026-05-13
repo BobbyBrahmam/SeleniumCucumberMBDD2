@@ -8,7 +8,7 @@ import io.cucumber.java.en.*;
 
 public class ManageDataTableSteps extends TestBase {
 
-	ManageDataTablePage manage = new ManageDataTablePage();
+	ManageDataTablePage manage = new ManageDataTablePage().initElements();
 
 	@When("I open WebTables page")
 	public void i_open_webtables_page() {
@@ -17,7 +17,6 @@ public class ManageDataTableSteps extends TestBase {
 
 	@Then("I see the existing records")
 	public void i_see_the_existing_records() {
-		manage = new ManageDataTablePage();
 		Assert.assertTrue("User couldn't navigate to WebTables Page", manage.isUserOnWebTablePage());
 	}
 

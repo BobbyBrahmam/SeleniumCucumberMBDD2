@@ -31,7 +31,11 @@ public class AutoCompletePage extends TestBase {
 	public WebElement enteredValue;
 
 	public AutoCompletePage() {
+	}
+
+	public AutoCompletePage initElements() {
 		PageFactory.initElements(driver, this);
+		return this;
 	}
 
 	public void openAutoCompletePage() {

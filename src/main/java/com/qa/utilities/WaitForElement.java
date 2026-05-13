@@ -25,9 +25,9 @@ public class WaitForElement extends TestBase {
 	public static void fluentlyWaitUntilElementsAreVisible(List<WebElement> elements, int timeoutInSeconds) {
 		new FluentWait<>(driver)
 				.withTimeout(Duration.ofSeconds(timeoutInSeconds))
-				.pollingEvery(Duration.ofMillis(100)) // faster polling
+				.pollingEvery(Duration.ofMillis(1000)) // faster polling
 				.ignoring(Exception.class)
-				.until(driver -> {
+				.until(d -> {
 					for (WebElement element : elements) {
 						if (!element.isDisplayed()) {
 							return false; // as soon as one is not visible, keep waiting
@@ -40,17 +40,17 @@ public class WaitForElement extends TestBase {
 	public static void waitBrieflyUntilCardsVisible(List<WebElement> elements, int timeoutInSeconds) {
 		new FluentWait<>(driver)
 				.withTimeout(Duration.ofSeconds(timeoutInSeconds)) // super short max wait
-				.pollingEvery(Duration.ofMillis(100))
+				.pollingEvery(Duration.ofMillis(1000))
 				.ignoring(Exception.class)
-				.until(driver -> elements.stream().allMatch(WebElement::isDisplayed));
+				.until(d -> elements.stream().allMatch(WebElement::isDisplayed));
 	}
 
 	public static void waitBrieflyUntilCardsSetVisible(WebElement element, int timeoutInSeconds) {
 		new FluentWait<>(driver)
 				.withTimeout(Duration.ofSeconds(timeoutInSeconds)) // super short max wait
-				.pollingEvery(Duration.ofMillis(100))
+				.pollingEvery(Duration.ofMillis(1000))
 				.ignoring(Exception.class)
-				.until(driver -> element.isDisplayed());
+				.until(d -> element.isDisplayed());
 	}
 
 	public static WebElement waitForPresence(By element) {
@@ -79,7 +79,7 @@ public class WaitForElement extends TestBase {
 	}
 
 	public static Alert fluentWaitForVisibilityOfAlert(int maxWaitDuration, int polling) {
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(maxWaitDuration))
+		FluentWait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(maxWaitDuration))
 				.pollingEvery(Duration.ofSeconds(polling)).ignoring(NoAlertPresentException.class);
 		return wait.until(ExpectedConditions.alertIsPresent());
 	}
@@ -90,14 +90,14 @@ public class WaitForElement extends TestBase {
 	}
 
 	public static WebElement fluentWaitForVisibilityOf(WebElement element, int max, int polling) {
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(max))
+		FluentWait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(max))
 				.pollingEvery(Duration.ofSeconds(polling)).ignoring(NoSuchElementException.class)
 				.ignoring(StaleElementReferenceException.class);
 		return wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	public static WebElement fluentWaitForClickabilityOf(WebElement element, int max, int polling) {
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(max))
+		FluentWait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(max))
 				.pollingEvery(Duration.ofSeconds(polling)).ignoring(NoSuchElementException.class);
 		return wait.until(ExpectedConditions.elementToBeClickable(element));
 	}

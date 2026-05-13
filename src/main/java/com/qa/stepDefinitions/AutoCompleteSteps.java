@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 
 public class AutoCompleteSteps extends TestBase {
 	
-	AutoCompletePage enter = new AutoCompletePage();
+	AutoCompletePage enter = new AutoCompletePage().initElements();
 	
 	@When("I open Auto-Complete page")
 	public void i_open_auto_complete_page() {

@@ -7,7 +7,7 @@ import io.cucumber.java.en.*;
 
 public class BrowserWindowsSteps extends TestBase {
 
-	BrowserWindowsPage window = new BrowserWindowsPage();
+	BrowserWindowsPage window = new BrowserWindowsPage().initElements();
 	
 	@When("I open Browser Windows page")
 	public void i_open_browser_windows_page() {

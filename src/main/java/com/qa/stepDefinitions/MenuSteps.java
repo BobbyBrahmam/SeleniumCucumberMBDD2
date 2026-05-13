@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 
 public class MenuSteps extends TestBase {
 
-	MenuPage menu = new MenuPage();
+	MenuPage menu = new MenuPage().initElements();
 	
 	@When("I open Menu page")
 	public void i_open_menu_page() {

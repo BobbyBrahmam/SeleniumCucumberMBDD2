@@ -30,7 +30,11 @@ public class AlertsPage extends TestBase {
 	public WebElement textEnteredInPromptAlert;
 
 	public AlertsPage() {
+	}
+
+	public AlertsPage initElements() {
 		PageFactory.initElements(driver, this);
+		return this;
 	}
 
 	public void openAlertsPage() {

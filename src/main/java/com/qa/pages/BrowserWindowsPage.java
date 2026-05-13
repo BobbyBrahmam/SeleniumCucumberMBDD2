@@ -33,7 +33,11 @@ public class BrowserWindowsPage extends TestBase {
 	List<String> hList;
 
 	public BrowserWindowsPage() {
+	}
+
+	public BrowserWindowsPage initElements() {
 		PageFactory.initElements(driver, this);
+		return this;
 	}
 
 	public void openBrowserWindowsPage() {
@@ -43,7 +47,7 @@ public class BrowserWindowsPage extends TestBase {
 	public void instigateNewTab() {
 		Action.scrollDownFluentlyTillElementVisible(newTabButton);
 		Action.click(newTabButton, 1);
-		tabs = new ArrayList<String>(driver.getWindowHandles());
+		tabs = new ArrayList<>(driver.getWindowHandles());
 	}
 
 	public void switchToNewTab() {
@@ -62,7 +66,7 @@ public class BrowserWindowsPage extends TestBase {
 		parentWindow = driver.getWindowHandle();
 		Action.click(newWindowButton, 1);
 		handles = driver.getWindowHandles();
-		hList = new ArrayList<String>(handles);
+		hList = new ArrayList<>(handles);
 	}
 
 	public void switchToNewWindow(String windowUrl) {

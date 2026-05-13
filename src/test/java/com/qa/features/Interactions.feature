@@ -13,7 +13,7 @@ Feature: Feature-Handling Interactions
         And I open sortable page
         And I re-sort the list in reverse order
 
-    @Regression @ReRun @TestOne
+    @ReRun @TestOne @NotAutomatable
     @allure.label.story:Verify_that_the_user_is_able_to_drag_and_drop
     Scenario: Verify that the user is able to drag and drop
         And I open Droppable page
@@ -21,7 +21,7 @@ Feature: Feature-Handling Interactions
         And I drag and drop the element
         Then I see element got dropped displaying the message "Dropped!"
 
-    @Regression @TestOne
+    @Regression
     @allure.label.story:Verify_that_the_user_is_able_to_resize_the_inner_box_equal_to_the_outer_box
     Scenario: Verify that the user is able to resize the inner box equal to the outer box
         And I open Resizable page

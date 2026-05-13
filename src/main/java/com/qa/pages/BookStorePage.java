@@ -30,11 +30,15 @@ public class BookStorePage extends TestBase {
     @FindBy(how = How.CSS, using = "input[id='searchBox']")
     public WebElement searchBox;
 
-    @FindBy(how = How.CSS, using = "button#submit")
+    @FindBy(how = How.XPATH, using = "//button[text()='Logout']")
     public WebElement logoutButton;
 
     public BookStorePage() {
+    }
+
+    public BookStorePage initElements() {
         PageFactory.initElements(driver, this);
+        return this;
     }
 
     public void openLoginPage() {
@@ -67,6 +71,7 @@ public class BookStorePage extends TestBase {
     }
 
     public void clickLogoutButton() {
+        Action.scrollDownFluentlyTillElementVisible(logoutButton);
         Action.click(logoutButton);
     }
 

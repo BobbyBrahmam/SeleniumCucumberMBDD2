@@ -24,7 +24,11 @@ public class ResizablePage extends TestBase {
     public WebElement outerBox;
 
     public ResizablePage() {
+    }
+
+    public ResizablePage initElements() {
         PageFactory.initElements(driver, this);
+        return this;
     }
 
     public void openResizablePage() {

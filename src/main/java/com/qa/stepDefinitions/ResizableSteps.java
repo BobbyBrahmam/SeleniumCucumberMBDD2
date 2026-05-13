@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 
 public class ResizableSteps extends TestBase {
 
-    ResizablePage expand = new ResizablePage();
+    ResizablePage expand = new ResizablePage().initElements();
 
     @When("I open Resizable page")
     public void i_open_resizable_page() {

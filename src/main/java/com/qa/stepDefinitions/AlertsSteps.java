@@ -8,7 +8,7 @@ import io.cucumber.java.en.When;
 
 public class AlertsSteps extends TestBase {
    
-	AlertsPage trigger = new AlertsPage();
+	AlertsPage trigger = new AlertsPage().initElements();
 	
 	@When("I open Alerts page")
 	public void i_open_alerts_page() { 

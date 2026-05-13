@@ -30,7 +30,11 @@ public class MenuPage extends TestBase {
 	public WebElement subMenuList;
 
 	public MenuPage() {
+	}
+
+	public MenuPage initElements() {
 		PageFactory.initElements(driver, this);
+		return this;
 	}
 
 	public void openMenuPage() {

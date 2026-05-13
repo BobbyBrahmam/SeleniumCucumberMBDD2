@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.qa.utilities.Action;
 import com.qa.utilities.TestBase;
+import com.qa.utilities.Validations;
 
 import io.cucumber.datatable.DataTable;
 
@@ -20,13 +21,13 @@ public class ManageDataTablePage extends TestBase {
 	@FindBy(how = How.XPATH, using = "//span[text()='Web Tables']")
 	public WebElement webtableLink;
 
-	@FindBy(how = How.CSS, using = "[class='rt-table']")
+	@FindBy(how = How.CSS, using = "[class='-striped -highlight table table-striped table-bordered table-hover']")
 	public WebElement webtable;
 
 	@FindBy(how = How.CSS, using = "[role='rowgroup'] span[title='Delete']")
 	public List<WebElement> records;
 
-	@FindBy(how = How.CSS, using = "div[role='rowgroup']:nth-child(1) span[title='Delete'] svg path")
+	@FindBy(how = How.CSS, using = "table tbody tr:last-child td:last-child [id*='delete']")
 	public WebElement deleteRowIcon;
 
 	@FindBy(how = How.CSS, using = "button[id='addNewRecordButton']")
@@ -53,36 +54,22 @@ public class ManageDataTablePage extends TestBase {
 	@FindBy(how = How.CSS, using = "[class='modal-content'] div.modal-body button[id='submit']")
 	public WebElement submitButton;
 
-	@FindBy(how = How.CSS, using = "[class='pagination-bottom']")
+	@FindBy(how = How.CSS, using = "div[role='group']")
 	public WebElement pagination;
 
-	// @FindBy(how = How.CSS, using = "[class='modal-content'] div.modal-body div[id='firstName-wrapper'] div input[id='firstName']")
-	// public WebElement firstNameInput;
-
-	// @FindBy(how = How.CSS, using = "[class='modal-content'] div.modal-body div[id='lastName-wrapper'] div input[id='lastName']")
-	// public WebElement lastNameInput;
-
-	// @FindBy(how = How.CSS, using = "[class='modal-content'] div.modal-body div[id='userEmail-wrapper'] div input[id='userEmail']")
-	// public WebElement emailInput;
-
-	// @FindBy(how = How.CSS, using = "[class='modal-content'] div.modal-body div[id='age-wrapper'] div input[id='age']")
-	// public WebElement ageInput;
-
-	// @FindBy(how = How.CSS, using = "[class='modal-content'] div.modal-body div[id='salary-wrapper'] div input[id='salary']")
-	// public WebElement salaryInput;
-
-	// @FindBy(how = How.CSS, using = "[class='modal-content'] div.modal-body div[id='department-wrapper'] div input[id='department']")
-	// public WebElement departmentInput;
-
-private static String tableRecordSegmentOne = "(//div[@class='rt-tbody']//div[@role='row'][.//div[text()[normalize-space()]]]/div[count(//div[@class='rt-thead -header']//div[normalize-space()='";
-	private static String tableRecordSegmenttwo = "']/preceding-sibling::div) + 1])[last()]";
+    private static final String tableRecordSegmentOne = "//table//tbody//tr[td][last()]/td[ count(//table//th[normalize-space()='";
+	private static final String tableRecordSegmenttwo = "']/preceding-sibling::th)+1 ]";
 
 	public static String returnElementValueHavingXpath(String headerName) {
 		return driver.findElement(By.xpath(tableRecordSegmentOne + headerName + tableRecordSegmenttwo)).getText();
 	}
 
 	public ManageDataTablePage() {
+	}
+
+	public ManageDataTablePage initElements() {
 		PageFactory.initElements(driver, this);
+		return this;
 	}
 
 	public void openWebElementsTablePage() {
@@ -91,7 +78,7 @@ private static String tableRecordSegmentOne = "(//div[@class='rt-tbody']//div[@r
 	}
 
 	public Boolean isUserOnWebTablePage() {
-		return webtable.isDisplayed();
+		return Validations.validateVisibilityOfElement(webtable, 5);
 	}
 
 	public void deleteAllExistingRecords() {

@@ -8,7 +8,7 @@ import org.junit.Assert;
 
 public class DatePickerSteps {
 
-    DatePickerPage schedule = new DatePickerPage();
+    DatePickerPage schedule = new DatePickerPage().initElements();
 
     @When("I open Date Picker page")
     public void i_open_date_picker_page() {

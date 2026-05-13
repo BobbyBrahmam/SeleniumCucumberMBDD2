@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 
 public class DragAndDropSortableSteps extends TestBase{
 	
-	DragAndDropSortablePage sort = new DragAndDropSortablePage();
+	DragAndDropSortablePage sort = new DragAndDropSortablePage().initElements();
 
 	@When("I open sortable page")
 	public void i_open_sortable_page() {

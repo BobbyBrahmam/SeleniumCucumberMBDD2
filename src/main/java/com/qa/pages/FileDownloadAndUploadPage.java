@@ -2,10 +2,12 @@ package com.qa.pages;
 
 import java.io.File;
 import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+
 import com.qa.utilities.Action;
 import com.qa.utilities.TestBase;
 import com.qa.utilities.Validations;
@@ -31,7 +33,11 @@ public class FileDownloadAndUploadPage extends TestBase {
 	public WebElement topItem;
 
 	public FileDownloadAndUploadPage() {
+	}
+
+	public FileDownloadAndUploadPage initElements() {
 		PageFactory.initElements(driver, this);
+		return this;
 	}
 
 	public void openUploadAndDownloadPage() {
@@ -41,7 +47,8 @@ public class FileDownloadAndUploadPage extends TestBase {
 
 	public void downloadFile() {
 		downloadsFolder.mkdir();
-		Action.click(downloadButton, 1);
+		Action.scrollDownFluentlyTillElementVisible(downloadButton);
+		Action.click(downloadButton, 2);
 	}
 
 	public Boolean isFileDownloaded(int timeoutInSeconds) {

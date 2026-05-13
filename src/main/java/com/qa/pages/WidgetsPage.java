@@ -26,7 +26,11 @@ public class WidgetsPage extends TestBase {
 	public WebElement slideToolTip;
 
 	public WidgetsPage() {
+	}
+
+	public WidgetsPage initElements() {
 		PageFactory.initElements(driver, this);
+		return this;
 	}
 
 	public void openSliderPage() {

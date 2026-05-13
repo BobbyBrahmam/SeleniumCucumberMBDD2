@@ -9,7 +9,7 @@ import com.qa.pages.WidgetsPage;
 
 public class WidgetsSteps extends TestBase{
 	
-	WidgetsPage widget = new WidgetsPage();
+	WidgetsPage widget = new WidgetsPage().initElements();
 
 	@When("I open Slider page")
 	public void i_open_slider_page() {

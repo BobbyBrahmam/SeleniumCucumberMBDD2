@@ -10,7 +10,7 @@ import org.junit.Assert;
 
 public class BookStoreSteps extends TestBase {
 
-    BookStorePage read = new BookStorePage();
+    BookStorePage read = new BookStorePage().initElements();
 
     @When("I open BookStore Login page")
     public void i_open_book_store_login_page() {
