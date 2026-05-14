@@ -44,7 +44,3 @@ mvn clean verify -Dbrowser=edge -Dcucumber.features="src/test/java/com/qa/featur
 
 #defaul path format for retest of failed scenarios in failedrun.txt
 file:src/test/java/com/qa/features/Widgets.feature:44
-
-#Jenkins
-Username: bobybrahmam
-Password: BobyJenkins@108

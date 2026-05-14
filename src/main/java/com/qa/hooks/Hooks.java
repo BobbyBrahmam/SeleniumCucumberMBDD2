@@ -43,7 +43,7 @@ public class Hooks extends TestBase {
 			File sourceDir = new File(allureReportsPath);
 			File destinationDir = new File(backupBasePath + "/AllureReports-" + timestamp);
 			try {
-				if (runnerLable == "FailedRunTest" && Files.exists(source)) {
+				if (runnerLable.equals("FailedRunTest") && Files.exists(source)) {
 					Files.copy(source, destination, StandardCopyOption.REPLACE_EXISTING);
 				}
 			} catch (IOException e) {
