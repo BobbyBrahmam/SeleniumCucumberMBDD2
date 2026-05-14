@@ -20,8 +20,11 @@ public class Hooks extends TestBase {
 			if (scenario.isFailed()) {
 				super.takeScreenshot(scenario);
 			}
-		} catch (Exception e) {
-			System.out.println("Scenario may be broken. Taking screenshot as precaution.");
+		} catch (IOException e) {
+			log.error("An IOException occurred while taking screenshot for failed scenario: " + scenario.getName(), e);
+		}
+		catch (Exception e) {
+			log.error("An Exception occurred while taking screenshot for failed scenario: " + scenario.getName(), e);
 			super.takeScreenshot(scenario);
 		}
 		
@@ -47,18 +50,22 @@ public class Hooks extends TestBase {
 					Files.copy(source, destination, StandardCopyOption.REPLACE_EXISTING);
 				}
 			} catch (IOException e) {
-				System.out.println("An error occurred: " + e.getMessage());
+				log.error("An error occurred while copying failed rerun file: " + e.getMessage(), e);
 			}
 
 			try {
 				if (sourceDir.exists()) {
 					Files.move(sourceDir.toPath(), destinationDir.toPath(), StandardCopyOption.REPLACE_EXISTING);
-					System.out.println("Allure report moved to: " + destinationDir.getAbsolutePath());
+					log.info("Allure report moved to: " + destinationDir.getAbsolutePath());
 				} else {
-					System.out.println("No Allure report found to backup.");
+					log.warn("No Allure report found to backup.");
 				}
-			} catch (Exception e) {
-				System.out.println("An error occurred: " + e.getMessage());
+			} 
+			catch(IOException e) {
+				log.error("An IOException occurred while backing up Allure reports: " + e.getMessage(), e);
+			}
+			catch (Exception e) {
+				log.error("An Exception occurred while backing up Allure reports: " + e.getMessage(), e);
 			}
 
 		}));

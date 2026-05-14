@@ -26,8 +26,7 @@ public class Action extends TestBase {
         try {
             WaitForElement.waitForClickability(element, wait).click();
         } catch (NoSuchElementException e) {
-            System.out.println("The problem is: " + e);
-            log.error("Error occurred while doing X", e);
+            log.error("There is no such element with locator: " + element + "to click(WebElement element, int wait)", e);
         }
     }
 
@@ -35,8 +34,7 @@ public class Action extends TestBase {
         try {
             WaitForElement.fluentWaitForClickabilityOf(element, maxTime, DEFAULT_POLLING).click();
         } catch (NoSuchElementException | ElementClickInterceptedException e) {
-            System.out.println("The problem is: " + e);
-            log.error("Error occurred while doing X", e);
+            log.error("There is no such element with locator: " + element + "to fluentClick(WebElement element, int maxTime)", e);
         }
     }
 
@@ -44,8 +42,7 @@ public class Action extends TestBase {
         try {
             WaitForElement.waitForVisibilityOf(element, wait).sendKeys(input);
         } catch (NoSuchElementException e) {
-            System.out.println("The problem is: " + e);
-            log.error("Error occurred while doing X", e);
+            log.error("There is no such element with locator: " + element + "to sendKeys(WebElement element, String input, int wait)", e);
         }
     }
 
@@ -58,8 +55,7 @@ public class Action extends TestBase {
         try {
             WaitForElement.waitForVisibilityOf(element, wait).sendKeys(input);
         } catch (NoSuchElementException e) {
-            System.out.println("The problem is: " + e);
-            log.error("Error occurred while doing X", e);
+            log.error("There is no such element with locator: " + element + "to performTasks(WebElement element, int wait, CharSequence... input)", e);
         }
     }
 
@@ -94,7 +90,7 @@ public class Action extends TestBase {
             Actions act = new Actions(driver);
             act.moveToElement(WaitForElement.waitForVisibilityOf(element, wait)).build().perform();
         } catch (NoSuchElementException e) {
-            log.error("Error occurred while doing X", e);
+            log.error("There is no such element with locator: " + element + "to waitAndHoverOnElement(WebElement element, int wait)", e);
         }
     }
 
@@ -104,7 +100,7 @@ public class Action extends TestBase {
             act.moveToElement(WaitForElement.fluentWaitForVisibilityOf(element, wait, DEFAULT_POLLING)).build()
                     .perform();
         } catch (NoSuchElementException e) {
-            log.error("Error occurred while doing X", e);
+            log.error("There is no such element with locator: " + element + "to waitFluentlyAndHoverOnElement(WebElement element, int wait)", e);
         }
     }
 
@@ -115,7 +111,7 @@ public class Action extends TestBase {
 
     public static void scrollDown(int pixels) {
         JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("window.scrollBy(0, pixels)");
+        executor.executeScript("window.scrollBy(0, " + pixels + ")");
     }
 
     public static void scrollDownTillElementVisible(WebElement element) {
@@ -162,7 +158,7 @@ public class Action extends TestBase {
             executor.executeScript("arguments[0].scrollIntoView();",
                     WaitForElement.fluentWaitForVisibilityOf(element, maxTime, polling));
         } catch (Exception e) {
-            System.out.println("The problem is: " + e);
+            log.error("There is no such element with locator: " + element + "to scrollDownFluentlyTillElementVisible(WebElement element, int maxTime, int polling)", e);
         }
     }
 
@@ -170,7 +166,7 @@ public class Action extends TestBase {
         try {
             driver.switchTo().alert().accept();
         } catch (Exception e) {
-            System.out.println("escape from alert");
+            log.error("No alert is present to acceptAlert()", e);  
             actions = new Actions(driver);
             actions.keyDown(Keys.ESCAPE);
         }
@@ -180,7 +176,7 @@ public class Action extends TestBase {
         try {
             driver.switchTo().alert().dismiss();
         } catch (Exception e) {
-            System.out.println("escape from alert");
+            log.error("No alert is present to dismissAlert()", e);
             actions = new Actions(driver);
             actions.keyDown(Keys.ESCAPE);
         }

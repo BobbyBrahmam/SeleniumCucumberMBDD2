@@ -72,7 +72,7 @@ public class DatePickerPage extends TestBase {
         try {
             date = LocalDate.parse(dateInput, formatter);
         } catch (DateTimeParseException e) {
-            log.error("Error occurred while doing X", e);
+            log.error("The provided date string is not in the expected format: " + dateInput, e);
             return false; // Invalid date
         }
         String expectedMonthName = date.getMonth().getDisplayName(TextStyle.FULL, Locale.ENGLISH);

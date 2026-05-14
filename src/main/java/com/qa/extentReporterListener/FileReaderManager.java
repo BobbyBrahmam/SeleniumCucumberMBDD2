@@ -26,10 +26,10 @@ public class FileReaderManager extends TestBase {
 		try (Stream<String> lines = Files.lines(filePath)) {
 			return lines.anyMatch(line -> line.trim().length() > 0); // At least one non-whitespace character
 		} catch (IOException e) {
-			log.error("Error occurred while doing X", e);
+			log.error("IO Exception occurred at containsVisibleCharacter(Path filePath),while reading the file: " + filePath, e);
 			return false;
 		} catch (Exception e) {
-			log.error("Error occurred while doing X", e);
+			log.error("Exception occurred at containsVisibleCharacter(Path filePath),while reading the file: " + filePath, e);
 			return false;
 		}
 	}

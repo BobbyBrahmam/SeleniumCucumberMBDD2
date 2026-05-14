@@ -1,9 +1,11 @@
 package com.qa.reporter;
 
+import com.qa.utilities.TestBase;
+
 import io.cucumber.plugin.EventListener;
 import io.cucumber.plugin.event.*;
 
-public class CustomCucumberFormatter implements EventListener {
+public class CustomCucumberFormatter extends TestBase implements EventListener {
     
     private static final String BLUE = "\u001B[34m";  // ANSI Blue
     private static final String RESET = "\u001B[0m";  // Reset color
@@ -14,8 +16,6 @@ public class CustomCucumberFormatter implements EventListener {
     }
 
     private void onTestCaseStarted(TestCaseStarted event) {
-        //String tags = String.join(", ", event.getTestCase().getTags());
-        //System.out.println("\033[33m" + tags + "\033[0m");  
-        System.out.println(BLUE + event.getTestCase().getName() + RESET);
+        log.info("Starting scenario: " + BLUE + event.getTestCase().getName() + RESET);
     }
 }

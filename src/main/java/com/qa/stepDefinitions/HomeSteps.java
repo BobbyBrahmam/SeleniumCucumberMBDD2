@@ -7,12 +7,12 @@ import io.cucumber.java.en.When;
 
 public class HomeSteps extends TestBase {
 
-    HomeSteps home;
-    HomePage homePage;
+    public HomeSteps home;
+    public HomePage homePage;
 
     @Given("I navigate to ToolsQA HomePage")
     public void i_navigate_to_toolsqa_homepage() {
-        TestBase.initialization();
+        super.initialization();
         home = new HomeSteps();
         homePage = new HomePage().initElements();
     }

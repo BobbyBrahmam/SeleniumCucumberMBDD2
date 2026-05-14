@@ -17,7 +17,7 @@ public class Validations extends TestBase {
 		try {
 			return WaitForElement.waitForVisibilityOf(element, wait).getText().equals(expectedValue);
 		} catch (Exception e) {
-			log.error("Error occurred while doing X", e);
+			log.error("Error occurred while validating text of element at validateTextOfElement(WebElement element, String expectedValue, int wait) : " + element, e);
 		}
 		return false;
 	}
@@ -31,7 +31,7 @@ public class Validations extends TestBase {
 				return Objects.equals(actualValue, expectedValue);
 			//return WaitForElement.waitForVisibilityOf(element, wait).getDomAttribute(attribute).equals(expectedValue);
 		} catch (Exception e) {
-			log.error("Error occurred while doing X", e);
+			log.error("Error occurred while validating attribute value of element at validateAttributeValueOfElement(WebElement element, String attribute, String expectedValue, int wait) : " + element, e);
 		}
 		return false;
 	}
@@ -62,7 +62,7 @@ public class Validations extends TestBase {
 		try {
 			return WaitForElement.waitForVisibilityOf(element, wait).isDisplayed();
 		} catch (Exception e) {
-			log.error("Error occurred while doing X", e);
+			log.error("Error occurred while validating visibility of element at validateVisibilityOfElement(WebElement element, int wait) : " + element, e);
 		}
 		return false;
 	}
@@ -71,7 +71,7 @@ public class Validations extends TestBase {
 		try {
 			return !WaitForElement.waitForVisibilityOfWebElements(element, wait).isEmpty();
 		} catch (Exception e) {
-			log.error("Error occurred while doing X", e);
+			log.error("Error occurred while validating visibility of elements at validateVisibilityOfElements(List<WebElement> element, int wait) : " + element, e);
 		}
 		return false;
 	}
@@ -80,7 +80,7 @@ public class Validations extends TestBase {
 		try {
 			return WaitForElement.fluentWaitForDowloadOf(folder, max, polling);
 		} catch (Exception e) {
-			log.error("Error occurred while doing X", e);
+			log.error("Error occurred while validating downloaded files in folder: " + folder, e);
 		}
 		return false;
 	}

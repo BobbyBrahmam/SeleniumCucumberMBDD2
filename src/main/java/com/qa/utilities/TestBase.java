@@ -44,11 +44,11 @@ public class TestBase {
             prop = new Properties();
             prop.load(input);
         } catch (IOException e) {
-            log.error("Error occurred while doing X", e);
+            log.error("Error occurred while loading config properties at TestBase()", e);
         }
     }
 
-    public static WebDriver initialization() {
+    public WebDriver initialization() {
         downloadsFolder = new File(DOWNLOADS_FOLDER, UUID.randomUUID().toString());
         String browserName = System.getProperty("browser"); // First try to read from CLI if given
         if (browserName == null || browserName.isEmpty()) {
@@ -91,7 +91,7 @@ public class TestBase {
             options.setPageLoadStrategy(PageLoadStrategy.EAGER);
             driver = new EdgeDriver(options);
         } else {
-            System.out.println("Unmatched browser name");
+            log.error("Browser name is not correct or supported: " + browserName);
         }
 
         driver.manage().window().maximize();
@@ -102,7 +102,7 @@ public class TestBase {
 
     //Extent Reports
     //@Attachment(value = "Screenshot of {0}", type = "image/png")
-    public static void takeScreenshot(Scenario scenario) throws IOException {
+    public void takeScreenshot(Scenario scenario) throws IOException {
         String date = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
         String destinationPath = System.getProperty("user.dir") + prop.getProperty("cucumberReportsScreenshots") + scenario.getName()
                 + date + ".jpg";
@@ -121,7 +121,7 @@ public class TestBase {
                 Files.write(screenshotFile.toPath(), decodedScreenshot);
                 scenario.attach(decodedScreenshot, "image/png", "Full_Screen_Screenshot_For: " + scenario.getName());
             } catch (IOException e) {
-                System.out.println("Chrome full-page screenshot failed: " + e.getMessage());
+                log.error("An error occurred while taking full page screenshot for scenario: " + scenario.getName(), e);
             }
         }
 

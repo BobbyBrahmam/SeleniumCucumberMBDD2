@@ -14,7 +14,7 @@ public class CustomFunctions extends TestBase {
                 try {
                     entry.getKey().sendKeys(entry.getValue());
                 } catch (Exception e) {
-                    log.error("Error occurred while doing X", e);
+                    log.error("Error occurred while filling the form field using 'fillFormSimultaneously(Map<WebElement, String> fieldElements)' : " + entry.getKey(), e);
                 }
             });
         }
