@@ -22,14 +22,14 @@ public class BookStoreSteps extends TestBase {
         Assert.assertTrue("Username or Password fields are not as expected", read.validateLoginPage());
     }
 
-    @When("I enter the username {string} in Bookstore login page")
-    public void i_enter_the_username_in_bookstore_login_page(String username) {
-        read.enterUsername(username);
+    @When("I enter the username in Bookstore login page")
+    public void i_enter_the_username_in_bookstore_login_page() {
+        read.enterUsername(prop.getProperty("username"));
     }
 
-    @When("I enter the password {string} in Bookstore login page")
-    public void i_enter_the_password_in_bookstore_login_page(String password) {
-        read.enterPassword(password);
+    @When("I enter the password in Bookstore login page")
+    public void i_enter_the_password_in_bookstore_login_page() {
+        read.enterPassword(prop.getProperty("password"));
     }
 
     @When("I click Login button")

@@ -1,4 +1,4 @@
-@allure.label.owner=Bobby
+@allure.label.owner:Bobby
 @allure.label.epic:Epic-Interactions_Page
 @allure.label.feature:Feature-Handling_Interactions
 Feature: Feature-Handling Interactions

@@ -80,7 +80,6 @@ public class SelectMenuPage extends TestBase {
 			option.selectByVisibleText(options.get(i).get(0));
 			if (options.get(i).get(0).equals(option.getFirstSelectedOption().getText())) {
 				check = true;
-				continue;
 			}
 			else {
 				check = false;

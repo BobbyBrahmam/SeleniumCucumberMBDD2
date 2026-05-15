@@ -1,4 +1,4 @@
-@allure.label.owner=Bobby
+@allure.label.owner:Bobby
 @allure.label.epic:Epic-Book_Store_Page
 @allure.label.feature:Feature-Book_Store
 Feature: Feature-Book Store
@@ -12,8 +12,8 @@ Background:
   Scenario: Verify that the user is able to login to the Bookstore search page
     And I open BookStore Login page
     Then I see the username and password fields
-    When I enter the username "BobyBrahmam" in Bookstore login page
-    And I enter the password "TestBoby@108" in Bookstore login page
+    When I enter the username in Bookstore login page
+    And I enter the password in Bookstore login page
     And I click Login button
     Then I am able to login to the Bookstore search page
 
@@ -22,8 +22,8 @@ Background:
   Scenario: Verify that the user is able to logout of the Bookstore search page
     And I open BookStore Login page
     Then I see the username and password fields
-    When I enter the username "BobyBrahmam" in Bookstore login page
-    And I enter the password "TestBoby@108" in Bookstore login page
+    When I enter the username in Bookstore login page
+    And I enter the password in Bookstore login page
     And I click Login button
     Then I am able to login to the Bookstore search page
     And I click on Logout button

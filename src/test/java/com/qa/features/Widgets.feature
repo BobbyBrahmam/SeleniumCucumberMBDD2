@@ -1,4 +1,4 @@
-@allure.label.owner=Bobby
+@allure.label.owner:Bobby
 @allure.label.epic:Epic-Widgets_Page
 @allure.label.feature:Feature-Handle_Widgets
 Feature: Feature-Handle Widgets
@@ -41,16 +41,16 @@ Feature: Feature-Handle Widgets
   Scenario Outline: Verify that the user is able to select the values from bootstrap dropdrown
     And I open Select Menu page
     Then I see the bootstrap dropdown
-    When I select the option <value> in the bootstrap dropdown
-    Then I see the <value> get selected
+    When I select the option "<value>" in the bootstrap dropdown
+    Then I see the "<value>" get selected
     Examples:
-      | value                 |
-      | "Group 1, option 1"   |
-      | "Group 1, option 2"   |
-      | "Group 2, option 1"   |
-      | "Group 2, option 2"   |
-      | "A root option"       |
-      | "Another root option" |
+      | value               |
+      | Group 1, option 1   |
+      | Group 1, option 2   |
+      | Group 2, option 1   |
+      | Group 2, option 2   |
+      | A root option       |
+      | Another root option |
 
   @Regression
   @allure.label.story:Verify_that_the_user_is_able_to_select_the_values_from_old_dropdrown
@@ -87,7 +87,7 @@ Feature: Feature-Handle Widgets
 
   @Regression @Draft
   @allure.label.story:Verify_that_the_user_is_able_to_select_the_date_and_time_by_using_dropdowns
-  Scenario: Verify that the user is able to select the date and time by using dropdowns
+  Scenario: Verify that the user is able to select the date by using dropdowns
     And I open Date Picker page
     And I select the month "February"
     And I select the year 2023

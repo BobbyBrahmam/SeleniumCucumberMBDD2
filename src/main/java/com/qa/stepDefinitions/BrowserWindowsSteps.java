@@ -1,9 +1,12 @@
 package com.qa.stepDefinitions;
 
 import org.junit.Assert;
+
 import com.qa.pages.BrowserWindowsPage;
 import com.qa.utilities.TestBase;
-import io.cucumber.java.en.*;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class BrowserWindowsSteps extends TestBase {
 
@@ -34,9 +37,9 @@ public class BrowserWindowsSteps extends TestBase {
 	    window.switchBackToMainTab();
 	}
 		
-	@Then("I am able to switch to main tab {string}")
-	public void i_am_able_to_switch_to_main_tab(String url) {
-		Assert.assertTrue("Couldn't switch back to main tab", window.validateCurrentWindow(url));
+	@Then("I am able to switch to main tab")
+	public void i_am_able_to_switch_to_main_tab() {
+		Assert.assertTrue("Couldn't switch back to main tab", window.validateCurrentWindow(prop.getProperty("browserWindowsPageURL")));
 	}
 	
 	@When("I click on new window button")
@@ -44,9 +47,9 @@ public class BrowserWindowsSteps extends TestBase {
 		window.instigateNewWindow();
 	}
 	
-	@When("I try switching to new window {string}")
-	public void i_try_switching_to_new_window(String windowUrl) {
-		window.switchToNewWindow(windowUrl);
+	@When("I try switching to new window")
+	public void i_try_switching_to_new_window() {
+		window.switchToNewWindow(prop.getProperty("browserWindowsSamplePageURL"));
 	}
 	
 	@Then("I am able to switch to new window")
@@ -59,8 +62,8 @@ public class BrowserWindowsSteps extends TestBase {
 		window.switchBackToMainWindow();
 	}
 	
-	@Then("I am able to switch to main window {string}")
-	public void i_am_able_to_switch_to_main_window(String url) {
-	   Assert.assertTrue("Couldn't switch back to main window", window.validateCurrentWindow(url));
+	@Then("I am able to switch to main window")
+	public void i_am_able_to_switch_to_main_window() {
+	   Assert.assertTrue("Couldn't switch back to main window", window.validateCurrentWindow(prop.getProperty("browserWindowsPageURL")));
 	}
 }

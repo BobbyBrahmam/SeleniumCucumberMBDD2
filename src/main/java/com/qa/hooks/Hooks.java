@@ -9,10 +9,38 @@ import java.nio.file.StandardCopyOption;
 import com.qa.utilities.TestBase;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
+import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 
 public class Hooks extends TestBase {
+
+
+	@BeforeAll
+	public static void consoleFilterSetup() {
+		    
+        // Silences the Selenium DevTools Protocol (CDP) warnings
+        Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
+        
+        // Silences the specific CDP version finder warning
+        Logger.getLogger("org.openqa.selenium.devtools.CdpVersionFinder").setLevel(Level.OFF);
+        
+        // Optional: Silences the WebDriver Manager logs if you use it
+        System.setProperty("webdriver.chrome.silentOutput", "true");
+	}
+
+	@Before
+    public void startScenario(Scenario scenario) {
+        // ANSI Escape Codes for Blue and Reset
+        String blue = "\u001B[34m";
+        String reset = "\u001B[0m";
+
+        // This prints directly to the console WITHOUT the [main] INFO prefix
+        System.out.println(blue + "Scenario: " + scenario.getName() + reset);
+    }
 	
 	@After
 	public void endTest(Scenario scenario) throws IOException {

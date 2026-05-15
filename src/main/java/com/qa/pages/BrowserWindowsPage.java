@@ -74,8 +74,6 @@ public class BrowserWindowsPage extends TestBase {
 			String url = driver.switchTo().window(e).getCurrentUrl();
 				if (url != null && windowUrl.equals(url))
 					break;
-				else
-					continue;
 		}
 	}
 

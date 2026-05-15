@@ -1,4 +1,4 @@
-@allure.label.owner=Bobby
+@allure.label.owner:Bobby
 @allure.label.epic:Epic-Handling_Elements
 @allure.label.feature:Feature-Handling_Elements
 Feature: Feature-Handling Elements
@@ -11,29 +11,29 @@ Feature: Feature-Handling Elements
     Scenario Outline: Verify that user is able to fill the user details form
         When I open elements pane
         And I go to text box page
-        And I enter the full name <fullName>
-        And I enter the eamil address <emailAddress>
-        And I enter the current address <currentAddress>
-        And I enter the permanent address <permanentAddress>
+        And I enter the full name "<fullName>"
+        And I enter the eamil address "<emailAddress>"
+        And I enter the current address "<currentAddress>"
+        And I enter the permanent address "<permanentAddress>"
         And I submit the form
         Then I see the details getting populated
         Examples:
-            | fullName          | emailAddress               | currentAddress | permanentAddress |
-            | "Arjun Suravaram" | "arjunsuravaram@gmail.com" | "abc123street" | "abc123street"   |
-            | "Bobby Brahmama"  | "bobybrahmam@gmail.com"    | "qwe123street" | "aksdflkstreet"  |
+            | fullName        | emailAddress             | currentAddress| permanentAddress |
+            | Arjun Suravaram | arjunsuravaram@gmail.com | abc123street  | abc123street     |
+            | Bobby Brahmama  | bobybrahmam@gmail.com    | qwe123street  | aksdflkstreet    |
 
     @Regression @Test1
     @allure.label.story:Verify_that_user_is_able_to_fill_the_user_details_parallelly_in_the_form
     Scenario Outline: Verify that user is able to fill the user details parallelly in the form
         When I open elements pane
         And I go to text box page
-        And I enter the details <fullName>, <emailAddress>, <currentAddress>, <permanentAddress>
+        And I enter the details "<fullName>", "<emailAddress>", "<currentAddress>", "<permanentAddress>"
         And I submit the form
         Then I see the details getting populated
         Examples:
-            | fullName          | emailAddress               | currentAddress | permanentAddress |
-            | "Arjun Suravaram" | "arjunsuravaram@gmail.com" | "abc123street" | "abc123street"   |
-            | "Bobby Brahmam"   | "bobybrahmam@gmail.com"    | "qwe123street" | "aksdflkstreet"  |
+            | fullName          | emailAddress             | currentAddress | permanentAddress |
+            | Arjun Suravaram   | arjunsuravaram@gmail.com | abc123street   | abc123street     |
+            | Bobby Brahmam     | bobybrahmam@gmail.com    | qwe123street   | aksdflkstreet    |
 
     @Regression @Rerun @Test2
     @allure.label.story:Verify_that_the_user_is_able_to_delete_all_existing_records_in_data_table
