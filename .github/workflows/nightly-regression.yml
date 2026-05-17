@@ -32,7 +32,7 @@ jobs:
             ${{ runner.os }}-m2
 
       - name: Run Regression Suite
-        run: mvn clean verify -Dheadless=true -Dtest=myrunner.SuiteRunnerTest
+        run: mvn clean verify -Dtest=myrunner.SuiteRunnerTest -Dheadless=true
 
       - name: Upload Test Reports
         if: always()
